@@ -3,7 +3,7 @@
 /server/node_modules
 /server/package-lock.json
 Dockerfile
-docker-compose.yml
+.dockerignore
 
 .sass-cache
 sassdoc
