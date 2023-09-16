@@ -198,7 +198,7 @@ export default function Data() {
                                 </div>
                                 <div className="p-fluid formgrid grid ">
                                     <div className="field col-12 ">
-                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(data)} />
+                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(data,typeTran)} />
                                         <Button className="p-button-raised p-button-warning w-10rem" label="Clear Data" icon="pi pi-undo" onClick={() => onClearData()} />
                                     </div>
                                 </div>
