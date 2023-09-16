@@ -3,6 +3,8 @@ import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/primereact.min.css';
 
+import Dashboard from 'pages/dashboard/Dashboard';
+import Data from 'pages/data/data';
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
 import { classNames } from 'primereact/utils';
@@ -13,41 +15,15 @@ import AppConfig from './AppConfig';
 import AppFooter from './AppFooter';
 import AppMenu from './AppMenu';
 import AppTopbar from './AppTopbar';
-import BlocksDemo from './components/BlocksDemo';
-import ButtonDemo from './components/ButtonDemo';
-import ChartDemo from './components/ChartDemo';
-import Dashboard from './components/Dashboard';
-import Documentation from './components/Documentation';
-import FileDemo from './components/FileDemo';
-import FloatLabelDemo from './components/FloatLabelDemo';
-import FormLayoutDemo from './components/FormLayoutDemo';
-import InputDemo from './components/InputDemo';
-import InvalidStateDemo from './components/InvalidStateDemo';
-import ListDemo from './components/ListDemo';
-import MediaDemo from './components/MediaDemo';
-import MenuDemo from './components/MenuDemo';
-import MessagesDemo from './components/MessagesDemo';
-import MiscDemo from './components/MiscDemo';
-import OverlayDemo from './components/OverlayDemo';
-import PanelDemo from './components/PanelDemo';
-import TableDemo from './components/TableDemo';
-import TreeDemo from './components/TreeDemo';
-import CalendarDemo from './pages/CalendarDemo';
-import CrudDemo from './pages/CrudDemo';
-import EmptyPage from './pages/EmptyPage';
-import Help from './pages/Help';
-import Invoice from './pages/Invoice';
 import Params from './pages/params/Params';
 import Service from './pages/service/Service';
-import TimelineDemo from './pages/TimelineDemo';
-import IconsDemo from './utilities/IconsDemo';
 
 const App = (props) => {
 
     const [configActive, setConfigActive] = useState(false);
-    const [menuMode, setMenuMode] = useState('slim');
+    const [menuMode] = useState('slim');
     const [overlayMenuActive, setOverlayMenuActive] = useState(false);
-    const [ripple, setRipple] = useState(true);
+    const [ripple] = useState(true);
     const [sidebarStatic, setSidebarStatic] = useState(false);
     const [staticMenuDesktopInactive, setStaticMenuDesktopInactive] = useState(false);
     const [staticMenuMobileActive, setStaticMenuMobileActive] = useState(false);
@@ -70,8 +46,13 @@ const App = (props) => {
             items: [{ label: 'Home', icon: 'pi pi-home', to: '/' }]
         },
         {
-            label: 'Transform Params',
+            label: 'Transform Data',
             icon: 'pi pi-book',
+            items: [{ label: 'Data', icon: 'pi pi-sort-alt', to: '/data' }]
+        },
+        {
+            label: 'Transform Params',
+            icon: 'pi pi-server',
             items: [{ label: 'Params', icon: 'pi pi-sort-alt', to: '/params' }]
         },
         {
@@ -134,11 +115,6 @@ const App = (props) => {
         searchClick = false;
     };
 
-    const onMenuModeChange = (menuMode) => {
-        setMenuMode(menuMode);
-        setOverlayMenuActive(false);
-    };
-
     const onConfigClick = () => {
         configClick = true;
     };
@@ -147,11 +123,6 @@ const App = (props) => {
         setConfigActive((prevState) => !prevState);
         configClick = true;
         event.preventDefault();
-    };
-
-    const onRippleChange = (e) => {
-        PrimeReact.ripple = e.value;
-        setRipple(e.value);
     };
 
     const onMenuButtonClick = (event) => {
@@ -324,54 +295,22 @@ const App = (props) => {
                         <Route path="/" exact="true" element={<Dashboard />} />
                         <Route path="/service" element={<Service />} />
                         <Route path="/params" element={<Params />} />
-
-                        <Route path="/documentation" element={<Documentation />} />
-                        <Route path="/formlayout" element={<FormLayoutDemo />} />
-                        <Route path="/floatlabel" element={<FloatLabelDemo />} />
-                        <Route path="/input" element={<InputDemo />} />
-                        <Route path="/invalidstate" element={<InvalidStateDemo />} />
-                        <Route path="/button" element={<ButtonDemo />} />
-                        <Route path="/table" element={<TableDemo />} />
-                        <Route path="/list" element={<ListDemo />} />
-                        <Route path="/tree" element={<TreeDemo />} />
-                        <Route path="/panel" element={<PanelDemo />} />
-                        <Route path="/overlay" element={<OverlayDemo />} />
-                        <Route path="/menu/*" element={<MenuDemo />} />
-                        <Route path="/message" element={<MessagesDemo />} />
-                        <Route path="/media" element={<MediaDemo />} />
-                        <Route path="/file" element={<FileDemo />} />
-                        <Route path="/chart" element={<ChartDemo colorMode={props.colorScheme} location={location} />} />
-                        <Route path="/misc" element={<MiscDemo />} />
-                        <Route path="/blocks" element={<BlocksDemo />} />
-                        <Route path="/icons" element={<IconsDemo />} />
-                        <Route path="/crud" element={<CrudDemo />} />
-                        <Route path="/calendar" element={<CalendarDemo />} />
-                        <Route path="/help" element={<Help />} />
-                        <Route path="/invoice" element={<Invoice colorMode={props.colorScheme} location={location} />} />
-                        <Route path="/empty" element={<EmptyPage />} />
-                        <Route path="/timeline" element={<TimelineDemo />} />
+                        <Route path="/data" element={<Data />} />
                     </Routes>
                 </div>
 
                 <AppFooter colorScheme={props.colorScheme} />
             </div>
-
-            {/* <AppRightMenu rightMenuActive={rightMenuActive} onRightMenuClick={onRightMenuClick} onRightMenuActiveChange={onRightMenuActiveChange} /> */}
-
             <AppConfig
                 configActive={configActive}
                 onConfigButtonClick={onConfigButtonClick}
                 onConfigClick={onConfigClick}
-                menuMode={menuMode}
-                changeMenuMode={onMenuModeChange}
                 colorScheme={props.colorScheme}
                 changeColorScheme={props.onColorSchemeChange}
                 theme={props.theme}
                 changeTheme={props.onMenuThemeChange}
                 componentTheme={props.componentTheme}
                 changeComponentTheme={props.onComponentThemeChange}
-                ripple={ripple}
-                onRippleChange={onRippleChange}
             />
         </div>
     );

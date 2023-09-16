@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+
 import App from './App';
-import { Login } from './pages/Login';
 import { Error } from './pages/Error';
 import { NotFound } from './pages/NotFound';
-import { Access } from './pages/Access';
 
 const AppWrapper = (props) => {
     const [colorScheme, setColorScheme] = useState('dark');
@@ -79,10 +78,8 @@ const AppWrapper = (props) => {
 
     return (
         <Routes>
-            <Route path="/login" element={<Login />} />
             <Route path="/error" element={<Error />} />
             <Route path="/notfound" element={<NotFound />} />
-            <Route path="/access" element={<Access />} />
             <Route path="*" element={<App colorScheme={colorScheme} onColorSchemeChange={onColorSchemeChange} componentTheme={componentTheme} onComponentThemeChange={onComponentThemeChange} theme={theme} onMenuThemeChange={onMenuThemeChange} />} />
         </Routes>
     );

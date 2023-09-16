@@ -1,5 +1,8 @@
 import MessagesAlert from 'components/Alert/MessagesAlert';
 import { Button } from 'primereact/button';
+import { Column } from 'primereact/column';
+import { DataTable } from 'primereact/datatable';
+import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { RadioButton } from 'primereact/radiobutton';
@@ -9,77 +12,87 @@ import { NullString } from 'utility-fns';
 
 export default function Params() {
 
-    const initData = {
-        appName : 'APP',
-        text : ""
-    }
-    const [data, setData] = useState(initData);
-    const [transData, setTransData] = useState('');
-    const [transDataView, setTransDataView] = useState('list');
+    const [data, setData] = useState("");
     const [transDataList, setTransDataList] = useState([]);
 
     const [transFile, setTransFile] = useState('');
-    const [transFileView, setTransFileView] = useState('list');
+    const [transFileView, setTransFileView] = useState('text');
     const [transFileList, setTransFileList] = useState([]);
 
     const [lineHeight, setLineHeight] = useState(4);
     const [alert, setAlert] = useState(null);
-    const [typeTran, setTypeTran] = useState('file');
+    const [typeTran, setTypeTran] = useState('req');
 
-    const onChangeType = (e) => {
-        let val = e.value
-        setTypeTran(val)
-        if(data.text !== ""){
-            onClickTranForm(data,val)
-        }
-    }
+    const columns = [
+        { field: 'text', header: 'Text' },
+        { field: 'type', header: 'Type' },
+    ];
 
-    const onClickTranForm = (_data,type) => {
-        let newText = "", newFile = "",newTextList = [], newFileList = [];
-        if(_data  && NullString(_data.text) !== "" ){
-            let upperCase =  _data.text.toUpperCase();
-            let lowerCase = _data.text.toLowerCase();
-            if(type === 'rest'){
-                let appName = NullString(_data.appName) !== ""?_data.appName.toUpperCase()+"_":""
-                newText = "public final static String SERVICE_NAME_"+appName+upperCase+" = \""+lowerCase+"\";"
-                setTransDataView('text')
-            }else{
-                setTransDataView('list')
-                setTransFileView('list')
+    const typeList = [
+        { value : 'String' , label : 'String' },
+        { value : 'Integer' , label : 'Integer ' },
+        { value : 'Date' , label : 'Date ' },
+        { value : 'Double' , label : 'Double ' },
+        { value : 'Boolean' , label : 'Boolean ' },
+        { value : 'Byte' , label : 'Byte ' },
+        { value : 'long' , label : 'long ' },
+    ]
 
+    // useEffect(() => {
+    //     onClickSubmit(data)
+    // }, [])
 
-                let pascal = renderPascal(lowerCase)
-                newText += "upper :\t"+ upperCase+"\n"
-                newTextList.push({ tags : 'upper' , text : upperCase })
-                newText += "lower :\t"+lowerCase+"\n"
-                newTextList.push({ tags : 'lower' , text : lowerCase })
-                newText += "camel :\t"+renderCamel(lowerCase)+"\n"
-                newTextList.push({ tags : 'camel' , text : renderCamel(lowerCase) })
-                newText += "pascal :\t"+pascal+"\n"
-                newTextList.push({ tags : 'pascal' , text : pascal })
-
-
-                newFile += "resFile :\t"+pascal+"Res\n"
-                newFileList.push({ tags : 'resFile' , text : pascal+"Res" })
-                newFile += "reqFile :\t"+pascal+"Req\n"
-                newFileList.push({ tags : 'reqFile' , text : pascal+"Req" })
-                newFile += "toFile :\t"+pascal+"TO\n"
-                newFileList.push({ tags : 'toFile' , text : pascal+"TO" })
-                newFile += "daoFile :\t"+pascal+"Dao\n"
-                newFileList.push({ tags : 'daoFile' , text : pascal+"Dao" })
-                newFile += "serviceFile :\t"+pascal+"Service\n"
-                newFileList.push({ tags : 'serviceFile' , text : pascal+"Service" })
-
-
-                setLineHeight(10)
-            }
+    const onClickSubmit = (_data) => {
+        let newTextList = [];
+        if(_data  && NullString(_data) !== "" ){
+            let _list = _data.split(",")
+            _list.forEach((e,i)=>{
+                let text = e.trim()
+                newTextList.push({
+                    text ,
+                    type : 'String',
+                    id : i
+                })
+            })
+            setLineHeight(10)
         }else{
             setAlert({ type : 'warn' , text : 'กรุณาใส่ข้อมูลที่ต้องการ Tranform !!' })
         }
-        setTransData(newText)
-        setTransFile(newFile)
         setTransDataList(newTextList)
-        setTransFileList(newFileList)
+    };
+
+    const onClickTranForm = (list=[],type) => {
+        let newFile = "", newFileList = [], lineHeight = 4;
+        list.forEach((e)=>{
+            let text =""
+            let lowerCase = e.text.toLowerCase();
+            let camelCase = renderCamel(lowerCase)
+            let param = "private "+e.type+" "+camelCase+";"
+            let column = ""
+            if(e.type === "Date"){
+                column = "@Temporal(TemporalType.TIMESTAMP)\n"
+            }
+            column += "@Column(name = \""+lowerCase.toUpperCase()+"\")\n";
+            column += param
+
+            if(type === "req"){
+                text = param+"\n"
+                lineHeight++
+            }else if(type === "res"){
+                text = column+"\n\n"
+                lineHeight+=3
+            }
+            newFile += text
+            newFileList.push({
+                tags : camelCase,
+                text : text
+            })
+        })
+        setLineHeight(lineHeight)
+        setTransFile(newFile)
+        setTransFileList(newFileList);
+
+        
     };
 
     const renderCamel = (text="") => {
@@ -94,29 +107,13 @@ export default function Params() {
         return text
     }
 
-    const renderPascal = (text="") => {
-        if(text){
-            let _text = text.split("_")
-            let newData = ""
-            _text.forEach(e=>{
-                newData += e.charAt(0).toUpperCase() + e.slice(1);
-            })
-            text = newData
-        }
-        return text
-    }
-
     const onClearData = () => {
-        setData(initData);
+        setData("");
         setLineHeight(4);
-        setTypeTran('file');
-
-        setTransData('')
-        setTransDataView('list')
-        setTransDataList([]);
-
+        setTypeTran('req');
+        setTransDataList([])
         setTransFile('')
-        setTransFileView('list')
+        setTransFileView('text')
         setTransFileList([]);
     };
 
@@ -125,14 +122,52 @@ export default function Params() {
         navigator.clipboard.writeText(text);
     };
 
-    const renderDataListView = (list =[]) => {
+
+    const textEditor = (rowData, { column }) => {
+        const { field = ""} = column.props;
+        return <InputText type="text" value={rowData[field]}
+            onChange={(e) => onCellEditComplete(e,field,rowData)}
+        />;
+    };
+
+    const dropEditor = (rowData, { column }) => {
+        const { field = ""} = column.props;
+        return <Dropdown
+            value={rowData[field]}
+            onChange={(e) => onCellEditComplete(e,field,rowData)}
+            options={typeList}
+        />;
+    };
+
+    const onCellEditComplete = (e,key , rowData) => {
+        let val = (e.target && e.target.value !== undefined)?e.target.value:"";
+        const id = key && key !== "" ? key : (e.target && e.target.id) || "";
+        let newList = [...transDataList];
+        let findIndex =  newList.findIndex((item)=>item.i ===  rowData.i)
+
+        if(findIndex > -1 ){
+            newList[findIndex]={
+                ...newList[findIndex],
+                [id] : val
+            }
+            setTransDataList(newList)
+        }
+
+    };
+
+    const renderFileListView = (list =[],type) => {
         return list.map(e=>{
             return (
                 <div className="p-fluid formgrid grid ">
                     <div className="field col-12 ">
                         <div className="p-inputgroup">
-                            <span className="p-inputgroup-addon w-10rem font-bold">{e.tags}</span>
-                            <InputText id={e.tags} placeholder="..." value={e.text} />
+                            {
+                                type === "req"?
+                                <InputText id={e.tags} placeholder="..." value={e.text} />
+                                :
+                                <InputTextarea id={e.tags} placeholder="..." value={e.text} rows={3} />
+
+                            }
                             <Button 
                                 icon="pi pi-copy" 
                                 onClick={() => onClickCopy(e.text)}
@@ -142,6 +177,14 @@ export default function Params() {
                 </div>
             )
         });
+    }
+
+    const onChangeType = (e) => {
+        let val = e.value
+        setTypeTran(val)
+        // if(data !== ""){
+            onClickTranForm(transDataList,val)
+        // }
     }
 
     return (
@@ -155,54 +198,19 @@ export default function Params() {
                         <div className="grid">
                             <div className="col-12 ">
                                 <div className="p-fluid formgrid grid ">
-                                    <div className="field col-12 md:col-2">
-                                        <div className="field-radiobutton">
-                                            <RadioButton inputId="typeTran1" name="typeTran" value="file" checked={typeTran === 'file'} onChange={(e) =>onChangeType(e)} />
-                                            <label htmlFor="typeTran1">FileName/Text</label>
-                                        </div>
-                                    </div>
-                                    <div className="field col-12 md:col-2">
-                                        <div className="field-radiobutton">
-                                            <RadioButton inputId="typeTran2" name="typeTran" value="rest" checked={typeTran === 'rest'} onChange={(e) => onChangeType(e)} />
-                                            <label htmlFor="typeTran2">Rest-const</label>
-                                        </div>
-                                    </div>
-                                    {/* <div className="field col-12 md:col-2">
-                                        <div className="field-radiobutton">
-                                            <RadioButton inputId="typeTran3" name="typeTran" value="base" checked={typeTran === 'base'} onChange={(e) => setTypeTran(e.value)} />
-                                            <label htmlFor="typeTran3">DataBase</label>
-                                        </div>
-                                    </div> */}
-                                </div>
-                                {
-                                    typeTran === 'rest' && (
-                                        <div className="p-fluid formgrid grid ">
-                                            <div className="field col-12 md:col-4">
-                                                <label htmlFor="url">App Name</label>
-                                                <div className="p-inputgroup">
-                                                    <span className="p-inputgroup-addon">
-                                                        <i className="pi pi-hashtag"></i>
-                                                    </span>
-                                                    <InputText id="appName" type="text" className='font-bold' placeholder="Data for Tranform ..." value={data.appName} onChange={(e) => setData((pre)=>({...pre , appName : e.target.value }))} />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )
-                                }
-                                <div className="p-fluid formgrid grid ">
                                     <div className="field col-12 ">
                                         <label htmlFor="url">Data</label>
                                         <div className="p-inputgroup">
                                             <span className="p-inputgroup-addon">
                                                 <i className="pi pi-book"></i>
                                             </span>
-                                            <InputText id="text" type="text" placeholder="Data for Tranform ..."  value={data.text} onChange={(e) => setData((pre)=>({...pre , text : e.target.value }))}/>
+                                            <InputTextarea id="text" type="text" placeholder="Data for Tranform ..."  value={data} onChange={(e) => setData(e.target.value)} />
                                         </div>
                                     </div>
                                 </div>
                                 <div className="p-fluid formgrid grid ">
                                     <div className="field col-12 ">
-                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(data)} />
+                                        <Button className="p-button-raised w-10rem mr-2" label="Submit" icon="pi pi-sliders-h" onClick={() => onClickSubmit(data)} />
                                         <Button className="p-button-raised p-button-warning w-10rem" label="Clear Data" icon="pi pi-undo" onClick={() => onClearData()} />
                                     </div>
                                 </div>
@@ -219,40 +227,49 @@ export default function Params() {
                         <div className="grid">
                             <div className="col-12 ">
                                 <div className="p-fluid formgrid grid ">
-                                    <div className={"field col-12 "+(typeTran === 'file'?"md:col-6":"md:col-12")}>
+                                    {/* <div className={"field col-12 "+(transData !== ''?"md:col-6":"md:col-12")}> */}
+                                    <div className={"field col-12 md:col-6"}>
+
                                         <h6>Transform Case</h6>
+                                        <div className="p-fluid formgrid grid ">
+                                            <div className="field col-12 md:col-6">
+                                                <div className="field-radiobutton">
+                                                    <RadioButton inputId="typeTran1" name="typeTran" value="req" checked={typeTran === 'req'} onChange={(e) =>onChangeType(e)} />
+                                                    <label htmlFor="typeTran1">Param - Request</label>
+                                                </div>
+                                            </div>
+                                            <div className="field col-12 md:col-6">
+                                                <div className="field-radiobutton">
+                                                    <RadioButton inputId="typeTran2" name="typeTran" value="res" checked={typeTran === 'res'} onChange={(e) => onChangeType(e)} />
+                                                    <label htmlFor="typeTran2">Entity -Respon</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {/* <Button onClick={() => setTransDataView('text')} icon="pi pi-code" disabled={transData === ''} /> */}
+                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(transDataList,typeTran)} disabled={transDataList.length === 0} />
+                                        <DataTable value={transDataList} >
+                                            {columns.map(({ field, header }) => {
+                                                return <Column key={field} field={field} header={header}
+                                                    style={{ width: '50%' }} 
+                                                    body={field === 'type'? dropEditor : textEditor}
+                                                    />;
+                                            })}
+                                        </DataTable>
+                                    </div>
+                                    <div className="field col-12 md:col-6">
+                                        <h6>Transform File</h6>
+                                        <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transFileView === 'text' },{ "p-button-success" : transFileView === 'list' && transFile !== '' },{ "p-button-secondary" : transFile === '' } )} onClick={() => setTransFileView('list')} icon="pi pi-list" disabled={transFile === ''} />
+                                        <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transFileView === 'list' },{ "p-button-success" : transFileView === 'text' && transFile !== '' },{ "p-button-secondary" : transFile === '' } )} onClick={() => setTransFileView('text')} icon="pi pi-code" disabled={transFile === ''} />
                                         {
-                                            typeTran === 'file' && <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transDataView === 'text' },{ "p-button-success" : transDataView === 'list' && transData !== '' },{ "p-button-secondary" : transData === '' } )} onClick={() => setTransDataView('list')} icon="pi pi-list" disabled={transData === ''} />
+                                            transFileView === 'text' && <Button className="p-button-outlined p-button-secondary w-3rem mb-2" onClick={() => onClickCopy(transFile)} icon="pi pi-copy" disabled={transFile === ''} />
                                         }
-                                        <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transDataView === 'list' },{ "p-button-success" : transDataView === 'text' && transData !== '' },{ "p-button-secondary" : transData === '' } )} onClick={() => setTransDataView('text')} icon="pi pi-code" disabled={transData === ''} />
                                         {
-                                            transDataView === 'text' && <Button className="p-button-outlined p-button-secondary w-3rem mb-2" onClick={() => onClickCopy(transData)} icon="pi pi-copy" disabled={transData === ''} />
+                                            transFileView === 'list' && renderFileListView(transFileList,typeTran)
                                         }
                                         {
-                                            transDataView === 'list' && renderDataListView(transDataList)
-                                        }
-                                        {
-                                            (transDataView === 'text' || transData === "")  && <InputTextarea id="transData" rows={lineHeight} value={transData} />
+                                            (transFileView === 'text' || transFile === "")  && <InputTextarea id="transData" rows={lineHeight} value={transFile} />
                                         }
                                     </div>
-                                    {
-                                        typeTran === 'file' && (
-                                            <div className="field col-12 md:col-6">
-                                                <h6>Transform File</h6>
-                                                <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transFileView === 'text' },{ "p-button-success" : transFileView === 'list' && transFile !== '' },{ "p-button-secondary" : transFile === '' } )} onClick={() => setTransFileView('list')} icon="pi pi-list" disabled={transFile === ''} />
-                                                <Button className={classNames("p-button-outlined w-3rem mb-2 mr-2 ",{ "p-button-secondary" : transFileView === 'list' },{ "p-button-success" : transFileView === 'text' && transFile !== '' },{ "p-button-secondary" : transFile === '' } )} onClick={() => setTransFileView('text')} icon="pi pi-code" disabled={transFile === ''} />
-                                                {
-                                                    transFileView === 'text' && <Button className="p-button-outlined p-button-secondary w-3rem mb-2" onClick={() => onClickCopy(transFile)} icon="pi pi-copy" disabled={transData === ''} />
-                                                }
-                                                {
-                                                    transFileView === 'list' && renderDataListView(transFileList)
-                                                }
-                                                {
-                                                    (transFileView === 'text' || transFile === "")  && <InputTextarea id="transData" rows={lineHeight} value={transFile} />
-                                                }
-                                            </div>
-                                        )
-                                    }
                                 </div>
                             </div>
                         </div>
