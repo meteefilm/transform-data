@@ -9,6 +9,7 @@ import { RadioButton } from 'primereact/radiobutton';
 import { classNames } from 'primereact/utils';
 import React, { useState } from 'react';
 import { NullString } from 'utility-fns';
+import { onCopyText } from 'utils/CopyUtils';
 
 export default function Params() {
 
@@ -118,8 +119,8 @@ export default function Params() {
     };
 
     const onClickCopy = (text) => {
-        setAlert({ type: 'success', text: 'คัดลอก สำเร็จ !' });
-        navigator.clipboard.writeText(text);
+        onCopyText(text)
+        setAlert({ type: 'success', text: 'Copy Success !' });
     };
 
 

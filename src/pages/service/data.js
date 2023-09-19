@@ -1,12129 +1,15338 @@
 export const data = {
-    openapi: '3.0.1',
-    info: {
-        title: 'GSB App API',
-        contact: {
-            name: 'Sense Info Tech Software',
-            url: 'http://www.sense-infotech.com/',
-            email: 'sense@sense-infotech.com'
-        },
-        version: '1.0'
+    "openapi": "3.0.1",
+    "info": {
+      "title": "GSB App API",
+      "contact": {
+        "name": "Sense Info Tech Software",
+        "url": "http://www.sense-infotech.com/",
+        "email": "sense@sense-infotech.com"
+      },
+      "version": "1.0"
     },
-    servers: [
-        {
-            url: 'http://sitdev.dyndns.org:9148/GSBCustService',
-            description: 'Generated server url'
-        }
+    "servers": [
+      {
+        "url": "http://sitdev.dyndns.org:9148/GSBLegalService",
+        "description": "Generated server url"
+      }
     ],
-    paths: {
-        '/rest/internal/app/cust/cust_guarantor_telephone_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_TELEPHONE_UPDATE',
-                operationId: 'custGuarantorTelephoneUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorTelephoneUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorTelephoneUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_telephone_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_TELEPHONE_LIST_TO',
-                operationId: 'custGuarantorTelephoneListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorTelephoneListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorTelephoneListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_telephone_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_TELEPHONE_FIND',
-                operationId: 'custGuarantorTelephoneFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorTelephoneFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorTelephoneFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_info_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_INFO_UPDATE',
-                operationId: 'custGuarantorInfoUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorInfoUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorInfoUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_info_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_INFO_LIST_TO',
-                operationId: 'custGuarantorInfoListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorInfoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorInfoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_info_find_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_INFO_FIND_TO',
-                operationId: 'custGuarantorInfoFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorInfoFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_info_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_INFO_FIND',
-                operationId: 'custGuarantorInfoFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorInfoFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorInfoFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_info_debtor_information': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_INFO_DEBTOR_INFORMATION',
-                operationId: 'custGuarantorInfoDebtorInformation',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorInfoDebtorInformationReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorInfoDebtorInformationRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_decease_attach_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_DECEASE_ATTACH_UPDATE',
-                operationId: 'custGuarantorDeceaseAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorDeceaseAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorDeceaseAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_decease_attach_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_DECEASE_ATTACH_LIST_TO',
-                operationId: 'CustGuarantorDeceaseAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorDeceaseAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorDeceaseAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_decease_attach_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_DECEASE_ATTACH_FIND',
-                operationId: 'custGuarantorDeceaseAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorDeceaseAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorDeceaseAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_UPDATE',
-                operationId: 'custGuarantorContactPersonUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_LIST_TO',
-                operationId: 'custGuarantorContactPerson',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_find_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_FIND_TO',
-                operationId: 'custGuarantorContactPersonFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_FIND',
-                operationId: 'custGuarantorContactPersonFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_card_attach_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_CARD_ATTACH_UPDATE',
-                operationId: 'custGuarantorContactPersonCardAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_contact_person_card_attach_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CONTACT_PERSON_CARD_ATTACH_FIND',
-                operationId: 'custGuarantorContactPersonCardAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_closedown_attach_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CLOSEDOWN_ATTACH_UPDATE',
-                operationId: 'custGuarantorClosedownAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorClosedownAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorClosedownAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_closedown_attach_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CLOSEDOWN_ATTACH_LIST_TO',
-                operationId: 'custGuarantorClosedownAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorClosedownAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorClosedownAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_closedown_attach_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CLOSEDOWN_ATTACH_FIND',
-                operationId: 'custGuarantorClosedownAttach',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorClosedownAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorClosedownAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_card_attach_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CARD_ATTACH_UPDATE',
-                operationId: 'custGuarantorCardAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorCardAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorCardAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_card_attach_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CARD_ATTACH_LIST_TO',
-                operationId: 'custGuarantorCardAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorCardAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorCardAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_card_attach_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_CARD_ATTACH_FIND',
-                operationId: 'custGuarantorCardAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorCardAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorCardAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_address_update': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_ADDRESS_UPDATE',
-                operationId: 'custGuarantorAddressUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorAddressUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorAddressUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_address_list_to': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_ADDRESS_LIST_TO',
-                operationId: 'custGuarantorAddressListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorAddressListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorAddressListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_guarantor_address_find': {
-            post: {
-                tags: ['App Cust Guarantor Service'],
-                summary: 'CUST_GUARANTOR_ADDRESS_FIND',
-                operationId: 'custGuarantorAddressFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustGuarantorAddressFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustGuarantorAddressFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_executor_info_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_EXECUTOR_INFO_UPDATE',
-                operationId: 'CustExecutorInfoUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustExecutorInfoUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustExecutorInfoUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_executor_info_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_EXECUTOR_INFO_LIST_TO',
-                operationId: 'CustExecutorInfoListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustExecutorInfoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustExecutorInfoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_executor_info_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_EXECUTOR_INFO_FIND',
-                operationId: 'custExecutorInfoFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustExecutorInfoFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustExecutorInfoFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_telephone_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_TELEPHONE_UPDATE',
-                operationId: 'custCustomerTelephoneUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerTelephoneUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerTelephoneUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_telephone_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_TELEPHONE_LIST_TO',
-                operationId: 'custCustomerTelephoneListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerTelephoneListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerTelephoneListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_telephone_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_TELEPHONE_FIND',
-                operationId: 'custCustomerTelephoneFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerTelephoneFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerTelephoneFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_UPDATE',
-                operationId: 'custCustomerInfoUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_related_person_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_RELATED_PERSON_TO',
-                operationId: 'custCustomerInfoRelatedPersonTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_own_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_OWN_TO',
-                operationId: 'CustCustomerInfoOwnTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoOwnTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_LIST_TO',
-                operationId: 'custCustomerInfoListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_guarantor_person_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_GUARANTOR_PERSON_TO',
-                operationId: 'custCustomerInfoGuarantorPersonTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoGuarantorPersonTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_FIND_TO',
-                operationId: 'custCustomerInfoFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_FIND',
-                operationId: 'custCustomerInfoFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_debtor_person_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_DEBTOR_PERSON_TO',
-                operationId: 'custCustomerInfoDebtorPersonTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoDebtorPersonTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_debtor_information': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_DEBTOR_INFORMATION',
-                operationId: 'custCustomerInfoDebtorInformation',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoDebtorInformationRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_customer': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_CUSTOMER',
-                operationId: 'custCustomerInfoCustomer',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoCustomerReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoCustomerRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_cust_detail_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_CUST_DETAIL_LIST_TO',
-                operationId: 'custCustomerInfoCustDetailListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoCustDetailListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoCustDetailListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_cif_no_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_CIF_NO_LIST_TO',
-                operationId: 'custCustomerInfoCifNoListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoCifNoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoCifNoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_cif_no_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_CIF_NO_FIND_TO',
-                operationId: 'custCustomerInfoCifNoFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoCifNoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoCifNoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_borrower_group_code': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_BORROWER_GROUP_CODE',
-                operationId: 'custCustomerInfoBorrowerGroupCode',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoBorrowerGroupCodeRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_borrower_code_old': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_BORROWER_CODE_OLD',
-                operationId: 'custCustomerInfoBorrowerCodeOld',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoBorrowerCodeOldRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_info_borrower_code': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_INFO_BORROWER_CODE',
-                operationId: 'custCustomerInfoBorrowerCode',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerInfoBorrowerCodeRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_decease_attach_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_DECEASE_ATTACH_UPDATE',
-                operationId: 'custCustomerDeceaseAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerDeceaseAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerDeceaseAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_decease_attach_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_DECEASE_ATTACH_LIST_TO',
-                operationId: 'CustCustomerDeceaseAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerDeceaseAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerDeceaseAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_decease_attach_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_DECEASE_ATTACH_FIND',
-                operationId: 'custCustomerDeceaseAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerDeceaseAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerDeceaseAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_closedown_attach_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CLOSEDOWN_ATTACH_UPDATE',
-                operationId: 'custCustomerClosedownAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerClosedownAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerClosedownAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_closedown_attach_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CLOSEDOWN_ATTACH_LIST_TO',
-                operationId: 'custCustomerClosedownAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerClosedownAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerClosedownAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_closedown_attach_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CLOSEDOWN_ATTACH_FIND',
-                operationId: 'custCustomerClosedownAttach',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerClosedownAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerClosedownAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_card_attach_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CARD_ATTACH_UPDATE',
-                operationId: 'custCustomerCardAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerCardAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerCardAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_card_attach_idcard_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CARD_ATTACH_IDCARD_LIST_TO',
-                operationId: 'custCustomerCardAttachIdcardListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerCardAttachIdcardFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_card_attach_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_CARD_ATTACH_FIND',
-                operationId: 'custCustomerCardAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerCardAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerCardAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_address_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_ADDRESS_UPDATE',
-                operationId: 'custCustomerAddressUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerAddressUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerAddressUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_address_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_ADDRESS_LIST_TO',
-                operationId: 'CustCustomerAddressListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerAddressListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerAddressListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_address_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_ADDRESS_FIND',
-                operationId: 'custCustomerAddressFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerAddressFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerAddressFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_account_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_ACCOUNT_UPDATE',
-                operationId: 'custCustomerAccountUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerAccountUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerAccountUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_customer_account_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CUSTOMER_ACCOUNT_FIND',
-                operationId: 'custCustomerAccountFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerAccountFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCustomerAccountFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_UPDATE',
-                operationId: 'custContactPersonUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_LIST_TO',
-                operationId: 'custContactPersonListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_FIND_TO',
-                operationId: 'custContactPersonFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCustomerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_FIND',
-                operationId: 'custContactPersonFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_card_attach_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_CARD_ATTACH_UPDATE',
-                operationId: 'custContactPersonCardAttachUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonCardAttachUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonCardAttachUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_card_attach_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_CARD_ATTACH_LIST_TO',
-                operationId: 'custContactPersonCardAttachListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonCardAttachListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonCardAttachListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_contact_person_card_attach_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_CONTACT_PERSON_CARD_ATTACH_FIND',
-                operationId: 'custContactPersonCardAttachFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustContactPersonCardAttachFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustContactPersonCardAttachFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_collateral_land_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_COLLATERAL_LAND_UPDATE',
-                operationId: 'custCollateralLandUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCollateralLandUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCollateralLandUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_collateral_land_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_COLLATERAL_LAND_LIST_TO',
-                operationId: 'custCollateralLandListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCollateralLandListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCollateralLandListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_collateral_land_information': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_COLLATERAL_LAND_INFORMATION',
-                operationId: 'custCollateralLandInformation',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCollateralLandInformationReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCollateralLandInformationRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_collateral_land_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_COLLATERAL_LAND_FIND_TO',
-                operationId: 'custCollateralLandFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCollateralLandListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCollateralLandListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_collateral_land_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_COLLATERAL_LAND_FIND',
-                operationId: 'custCollateralLandFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustCollateralLandFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustCollateralLandFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_mapping_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_MAPPING_UPDATE',
-                operationId: 'custBorrowerMappingUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerMappingUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerMappingUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_mapping_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_MAPPING_FIND',
-                operationId: 'custBorrowerMappingFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerMappingFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerMappingFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_UPDATE',
-                operationId: 'custBorrowerInfoUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_LIST_TO',
-                operationId: 'custBorrowerInfoListTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_FIND_TO',
-                operationId: 'custBorrowerInfoCustomerFindTORes',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_FIND',
-                operationId: 'custBorrowerInfoFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_customer_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_CUSTOMER_LIST_TO',
-                operationId: 'custBorrowerInfoCustomerListTORes',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoCustomerListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoCustomerListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_borrower_group_code': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_BORROWER_GROUP_CODE',
-                operationId: 'custBorrowerInfoBorrowerGroupCode',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoBorrowerGroupCodeRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_borrower_find_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_BORROWER_FIND_TO',
-                operationId: 'custBorrowerInfoBorrowerFindTO',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerInfoFindTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoBorrowerFindTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_borrower_code_old': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_BORROWER_CODE_OLD',
-                operationId: 'custBorrowerInfoBorrowerCodeOld',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoBorrowerCodeOldRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_info_borrower_code': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_INFO_BORROWER_CODE',
-                operationId: 'custBorrowerInfoBorrowerCode',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerInfoBorrowerCodeRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_group_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_GROUP_UPDATE',
-                operationId: 'custBorrowerGroupUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerGroupUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerGroupUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_group_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_GROUP_FIND',
-                operationId: 'custBorrowerGroupFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerGroupFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerGroupFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_detail_update': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_DETAIL_UPDATE',
-                operationId: 'custBorrowerDetailUpdate',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerDetailUpdateReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerDetailUpdateRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_detail_list_to': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_DETAIL_LIST_TO',
-                operationId: 'custBorrowerInfoCustomerListTORes_1',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerDetailListTOReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerDetailListTORes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/cust/cust_borrower_detail_find': {
-            post: {
-                tags: ['App Cust Service'],
-                summary: 'CUST_BORROWER_DETAIL_FIND',
-                operationId: 'custBorrowerDetailFind',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/CustBorrowerDetailFindReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CustBorrowerDetailFindRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/common/upload_multipart_file': {
-            post: {
-                tags: ['App Common Service'],
-                summary: 'Upload Multipart File',
-                operationId: 'uploadMultipartFile',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: true,
-                        schema: {
-                            type: 'string'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'multipart/form-data': {
-                            schema: {
-                                required: ['file', 'uploadFileReq'],
-                                type: 'object',
-                                properties: {
-                                    uploadFileReq: {
-                                        type: 'string'
-                                    },
-                                    file: {
-                                        type: 'string',
-                                        format: 'binary'
-                                    }
-                                }
-                            }
-                        },
-                        'application/json': {
-                            schema: {
-                                required: ['file', 'uploadFileReq'],
-                                type: 'object',
-                                properties: {
-                                    uploadFileReq: {
-                                        type: 'string'
-                                    },
-                                    file: {
-                                        type: 'string',
-                                        format: 'binary'
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/UploadFileRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/common/upload_file': {
-            post: {
-                tags: ['App Common Service'],
-                summary: 'Upload File',
-                operationId: 'uploadFile',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: true,
-                        schema: {
-                            type: 'string'
-                        }
-                    }
-                ],
-                requestBody: {
-                    content: {
-                        'application/json': {
-                            schema: {
-                                $ref: '#/components/schemas/UploadFileReq'
-                            }
-                        }
-                    },
-                    required: true
-                },
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/UploadFileRes'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/common/reload_config': {
-            get: {
-                tags: ['App Common Service'],
-                summary: 'Reload Config',
-                operationId: 'reload',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    type: 'string'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/common/info': {
-            get: {
-                tags: ['App Common Service'],
-                summary: 'App Common Info',
-                operationId: 'info',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/AppCommonInfoResp'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        '/rest/internal/app/common/check_info': {
-            get: {
-                tags: ['App Common Service'],
-                summary: 'Check Info',
-                operationId: 'checkInfo',
-                parameters: [
-                    {
-                        name: 'nplToken',
-                        in: 'header',
-                        required: false,
-                        schema: {
-                            type: 'string',
-                            default: 'dev'
-                        }
-                    }
-                ],
-                responses: {
-                    200: {
-                        description: 'OK',
-                        content: {
-                            '*/*': {
-                                schema: {
-                                    $ref: '#/components/schemas/CheckInfoResp'
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    "paths": {
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_UPDATE",
+          "operationId": "legalCasePlaintiffUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffUpdateRes"
+                  }
+                }
+              }
+            }
+          }
         }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_LIST_TO",
+          "operationId": "legalCasePlaintiffListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_FIND",
+          "operationId": "legalCasePlaintiffFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_UPDATE",
+          "operationId": "legalCasePlaintiffAddressUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_LIST_TO",
+          "operationId": "legalCasePlaintiffListTO_1",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_FIND",
+          "operationId": "legalCasePlaintiffAddressFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_UPDATE",
+          "operationId": "legalCaseDefendantUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_LIST_TO",
+          "operationId": "legalCaseDefendantListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_FIND",
+          "operationId": "legalCaseDefendantFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_UPDATE",
+          "operationId": "legalCaseDefendantAddressUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_LIST_TO",
+          "operationId": "legalCaseDefendantListTO_1",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantAddressListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantAddressListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Plaintiff/defendant Service"
+          ],
+          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_FIND",
+          "operationId": "legalCaseDefendantAddressFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDefendantAddressFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDefendantAddressFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_request_attach_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_REQUEST_ATTACH_UPDATE",
+          "operationId": "ReqRequestAttachUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqRequestAttachUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqRequestAttachUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_request_attach_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_REQUEST_ATTACH_LIST_TO",
+          "operationId": "ReqRequestAttachListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqRequestAttachListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqRequestAttachListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_request_attach_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_REQUEST_ATTACH_FIND",
+          "operationId": "ReqRequestAttachFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqRequestAttachFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqRequestAttachFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_UPDATE",
+          "operationId": "ReqCaseRequestUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_request_no": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_REQUEST_NO",
+          "operationId": "ReqCaseRequestRequestNo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestRequestNoRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_minutes_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_MINUTES_UPDATE",
+          "operationId": "ReqCaseRequestMinutesUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_minutes_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_MINUTES_LIST_TO",
+          "operationId": "ReqCaseRequestMinutesListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestMinutesListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestMinutesListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_minutes_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_MINUTES_FIND",
+          "operationId": "ReqCaseRequestMinutesFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestMinutesFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestMinutesFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_LIST_TO",
+          "operationId": "ReqCaseRequestListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_FIND",
+          "operationId": "ReqCaseRequestFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_detail_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_DETAIL_UPDATE",
+          "operationId": "ReqCaseRequestDetailUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestDetailUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestDetailUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_detail_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_DETAIL_FIND",
+          "operationId": "ReqCaseRequestDetailFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestDetailFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestDetailFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_contract_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_CONTRACT_UPDATE",
+          "operationId": "ReqCaseRequestContractUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestContractUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestContractUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_contract_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_CONTRACT_LIST_TO",
+          "operationId": "ReqCaseRequestContractListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestContractListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestContractListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_contract_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_CONTRACT_FIND",
+          "operationId": "ReqCaseRequestContractFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestContractFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestContractFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_contract_and_collateral_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_CONTRACT_AND_COLLATERAL_LIST_TO",
+          "operationId": "ReqCaseRequestContractAndCollateralListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_collateral_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_COLLATERAL_UPDATE",
+          "operationId": "ReqCaseRequestCollateralUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_collateral_number": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_COLLATERAL_NUMBER",
+          "operationId": "ReqCaseRequestCollateralNumber",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_collateral_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_COLLATERAL_LIST_TO",
+          "operationId": "ReqCaseRequestCollateralListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestCollateralListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestCollateralListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_case_request_collateral_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_CASE_REQUEST_COLLATERAL_FIND",
+          "operationId": "ReqCaseRequestContractFind_1",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqCaseRequestCollateralFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqCaseRequestCollateralFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_auction_info_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_AUCTION_INFO_UPDATE",
+          "operationId": "reqAuctionInfoUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqAuctionInfoUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqAuctionInfoUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_auction_info_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_AUCTION_INFO_FIND",
+          "operationId": "reqAuctionInfoFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqAuctionInfoFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqAuctionInfoFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_auction_appointment_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_AUCTION_APPOINTMENT_UPDATE",
+          "operationId": "ReqAuctionAppointmentUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_auction_appointment_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_AUCTION_APPOINTMENT_LIST",
+          "operationId": "ReqAuctionAppointmentList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqAuctionAppointmentListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqAuctionAppointmentFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/req_auction_appointment_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "REQ_AUCTION_APPOINTMENT_FIND",
+          "operationId": "ReqAuctionAppointmentFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReqAuctionAppointmentFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ReqAuctionAppointmentFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/p_create_legal_code": {
+        "post": {
+          "tags": [
+            "App Legal Store Service"
+          ],
+          "summary": "Store Procedure : P_CREATE_LEGAL_CODE",
+          "operationId": "pCreateLegalCode",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PCreateLegalCodeParam"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/PCreateLegalCodeRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_type_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_TYPE_UPDATE",
+          "operationId": "LegalTypeUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalTypeUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalTypeUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_type_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_TYPE_LIST",
+          "operationId": "legalTypeList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalTypeFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalTypeFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_type_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_TYPE_FIND",
+          "operationId": "legalTypeFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalTypeFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalTypeFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_status_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_STATUS_UPDATE",
+          "operationId": "LegalStatusUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalStatusUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalStatusUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_status_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_STATUS_LIST",
+          "operationId": "legalStatusList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalStatusFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalStatusFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_status_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_STATUS_FIND",
+          "operationId": "legalStatusFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalStatusFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalStatusFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_name_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_NAME_LIST_TO",
+          "operationId": "legalNameListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalNameListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalNameListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_name_find_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_NAME_FIND_TO",
+          "operationId": "legalNameFindTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalNameListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalNameListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_UPDATE",
+          "operationId": "LegalCaseUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_LIST_TO",
+          "operationId": "legalCaseListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_UPDATE",
+          "operationId": "LegalCaseLiabilityUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_panel_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_PANEL_UPDATE",
+          "operationId": "LegalCaseLiabilityPanelUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_panel_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_PANEL_LIST_TO",
+          "operationId": "LegalCaseLiabilityPanelListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_panel_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_PANEL_FIND",
+          "operationId": "LegalCaseLiabilityPanelFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_officer_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_OFFICER_UPDATE",
+          "operationId": "LegalCaseLiabilityOfficerUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_officer_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_OFFICER_LIST_TO",
+          "operationId": "LegalCaseLiabilityOfficerListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_officer_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_OFFICER_FIND",
+          "operationId": "LegalCaseLiabilityOfficerFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_litigant_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_UPDATE",
+          "operationId": "LegalCaseLiabilityLitigantUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLitigantUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_litigant_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_LIST_TO",
+          "operationId": "LegalCaseLiabilityLitigantListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_litigant_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_FIND",
+          "operationId": "LegalCaseLiabilityLitigantFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_LIST_TO",
+          "operationId": "LegalCaseLiabilityListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_FIND",
+          "operationId": "LegalCaseLiabilityFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_execution_officer_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_UPDATE",
+          "operationId": "LegalCaseLiabilityExecutionOfficerUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_execution_officer_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_LIST_TO",
+          "operationId": "LegalCaseLiabilityExecutionOfficerListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_execution_officer_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_FIND",
+          "operationId": "LegalCaseLiabilityExecutionOfficerFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_embezzler_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_UPDATE",
+          "operationId": "LegalCaseLiabilityEmbezzlerUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_embezzler_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_LIST_TO",
+          "operationId": "LegalCaseLiabilityEmbezzlerListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_embezzler_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_FIND",
+          "operationId": "LegalCaseLiabilityEmbezzlerFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_document_attach_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_UPDATE",
+          "operationId": "LegalCaseLiabilityDocumentAttachUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_document_attach_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_LIST_TO",
+          "operationId": "LegalCaseLiabilityDocumentAttachListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_document_attach_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_FIND",
+          "operationId": "LegalCaseLiabilityDocumentAttachFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_capital_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_UPDATE",
+          "operationId": "LegalCaseLiabilityCapitalUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_capital_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_LIST_TO",
+          "operationId": "LegalCaseLiabilityCapitalListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_capital_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_FIND",
+          "operationId": "LegalCaseLiabilityCapitalFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_recoupment_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_UPDATE",
+          "operationId": "LegalCaseLiabilityAccountRecoupmentUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_recoupment_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_LIST_TO",
+          "operationId": "LegalCaseLiabilityAccountRecoupmentListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_recoupment_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_FIND",
+          "operationId": "LegalCaseLiabilityAccountRecoupmentFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_inquiry_update": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_UPDATE",
+          "operationId": "LegalCaseLiabilityAccountInquiryUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_inquiry_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_LIST_TO",
+          "operationId": "LegalCaseLiabilityAccountInquiryListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_liability_account_inquiry_find": {
+        "post": {
+          "tags": [
+            "App Legal Case Liability Service"
+          ],
+          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_FIND",
+          "operationId": "LegalCaseLiabilityAccountInquiryFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_high_court_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_HIGH_COURT_UPDATE",
+          "operationId": "LegalCaseHighCourtUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseHighCourtUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseHighCourtUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_high_court_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_HIGH_COURT_LIST_TO",
+          "operationId": "legalCaseDocumentAttach",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseHighCourtListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseHighCourtListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_high_court_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_HIGH_COURT_FIND",
+          "operationId": "LegalCaseHighCourtFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseHighCourtReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseHighCourtRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_FIND",
+          "operationId": "legalCaseFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_enforcement_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_ENFORCEMENT_UPDATE",
+          "operationId": "LegalCaseEnforcementUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseEnforcementUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseEnforcementUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_enforcement_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_ENFORCEMENT_LIST_TO",
+          "operationId": "LegalCaseEnforcementListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseEnforcementListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseEnforcementListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_enforcement_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_ENFORCEMENT_FIND",
+          "operationId": "LegalCaseEnforcementFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseEnforcementFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseEnforcementFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_document_attach_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_UPDATE",
+          "operationId": "legalCaseDocumentAttachUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_document_attach_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_LIST_TO",
+          "operationId": "legalCaseDocumentAttach_1",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDocumentAttachListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDocumentAttachListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_document_attach_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_FIND",
+          "operationId": "LegalCaseDocumentAttachFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseDocumentAttachReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseDocumentAttachRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_cost_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_COST_UPDATE",
+          "operationId": "LegalCaseCostUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseCostUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseCostUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_cost_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_COST_LIST_TO",
+          "operationId": "legalCaseCostListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseCostListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseCostListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_cost_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_COST_FIND",
+          "operationId": "legalCaseCostFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseCostFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseCostFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_bank_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_BANK_UPDATE",
+          "operationId": "LegalCaseBankUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseBankUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseBankUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_bank_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_BANK_LIST",
+          "operationId": "LegalCaseBankList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseBankReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseBankRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_bank_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_BANK_FIND",
+          "operationId": "LegalCaseBankFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseBankReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseBankRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_UPDATE",
+          "operationId": "LegalCaseAuctionUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_LIST",
+          "operationId": "LegalCaseAuctionList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionListReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_FIND",
+          "operationId": "LegalCaseAuctionFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_UPDATE",
+          "operationId": "LegalCaseAuctionAppointmentUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_LIST_TO",
+          "operationId": "LegalCaseAuctionAppointmentListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_FIND",
+          "operationId": "LegalCaseAuctionAppointmentFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_UPDATE",
+          "operationId": "LegalCaseAuctionAppointmentCollateralUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_LIST_TO",
+          "operationId": "LegalCaseAuctionAppointmentCollateralListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_FIND",
+          "operationId": "LegalCaseAuctionAppointmentCollateralFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_appointment_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_APPOINTMENT_UPDATE",
+          "operationId": "LegalCaseAppointmentUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAppointmentUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAppointmentUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_appointment_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_APPOINTMENT_LIST_TO",
+          "operationId": "legalCaseAppointmentListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAppointmentListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAppointmentListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/legal_case_appointment_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "LEGAL_CASE_APPOINTMENT_FIND",
+          "operationId": "legalCaseAppointmentFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LegalCaseAppointmentReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/LegalCaseAppointmentRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_customer_info_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CUSTOMER_INFO_UPDATE",
+          "operationId": "CbsCustomerInfoUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCustomerInfoUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCustomerInfoUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_customer_info_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CUSTOMER_INFO_LIST_TO",
+          "operationId": "cbsCustomerInfoListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCustomerInfoListTOReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCustomerInfoListTORes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_customer_info_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CUSTOMER_INFO_FIND",
+          "operationId": "CbsCustomerInfoFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCustomerInfoFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCustomerInfoFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_cif_contract_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CIF_CONTRACT_UPDATE",
+          "operationId": "CbsCifContractUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCifContractUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCifContractUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_cif_contract_list": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CIF_CONTRACT_LIST",
+          "operationId": "CbsCifContractList",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCifContractListReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCifContractFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/cbs_cif_contract_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CBS_CIF_CONTRACT_FIND",
+          "operationId": "CbsCifContractFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CbsCifContractFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CbsCifContractFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/case_type_update": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CASE_TYPE_UPDATE",
+          "operationId": "CaseTypeUpdate",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseTypeUpdateReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CaseTypeUpdateRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/case_type_name_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CASE_TYPE_NAME_LIST_TO",
+          "operationId": "caseTypeNameListTO",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CaseTypeNameRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/case_type_list_to": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CASE_TYPE_LIST_TO",
+          "operationId": "caseTypeListTo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseTypeFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CaseTypeFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/legal/case_type_find": {
+        "post": {
+          "tags": [
+            "App Legal Service"
+          ],
+          "summary": "CASE_TYPE_FIND",
+          "operationId": "CaseTypeFind",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CaseTypeFindReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CaseTypeFindRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/common/upload_multipart_file": {
+        "post": {
+          "tags": [
+            "App Common Service"
+          ],
+          "summary": "Upload Multipart File",
+          "operationId": "uploadMultipartFile",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "required": [
+                    "file",
+                    "uploadFileReq"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "uploadFileReq": {
+                      "type": "string"
+                    },
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "required": [
+                    "file",
+                    "uploadFileReq"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "uploadFileReq": {
+                      "type": "string"
+                    },
+                    "file": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UploadFileRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/common/upload_file": {
+        "post": {
+          "tags": [
+            "App Common Service"
+          ],
+          "summary": "Upload File",
+          "operationId": "uploadFile",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UploadFileReq"
+                }
+              }
+            },
+            "required": true
+          },
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/UploadFileRes"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/common/reload_config": {
+        "get": {
+          "tags": [
+            "App Common Service"
+          ],
+          "summary": "Reload Config",
+          "operationId": "reload",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/common/info": {
+        "get": {
+          "tags": [
+            "App Common Service"
+          ],
+          "summary": "App Common Info",
+          "operationId": "info",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AppCommonInfoResp"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/rest/internal/app/common/check_info": {
+        "get": {
+          "tags": [
+            "App Common Service"
+          ],
+          "summary": "Check Info",
+          "operationId": "checkInfo",
+          "parameters": [
+            {
+              "name": "nplToken",
+              "in": "header",
+              "required": false,
+              "schema": {
+                "type": "string",
+                "default": "dev"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "content": {
+                "*/*": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CheckInfoResp"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     },
-    components: {
-        schemas: {
-            CustGuarantorTelephoneUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    },
-                    otherTel: {
-                        type: 'string'
-                    }
-                }
+    "components": {
+      "schemas": {
+        "LegalCasePlaintiffUpdateData": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
             },
-            CustGuarantorTelephoneUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorTelephoneUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "legalCode": {
+              "type": "string"
             },
-            CustGuarantorTelephoneUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "plaintiffId": {
+              "type": "integer",
+              "format": "int32"
             },
-            CustGuarantorTelephoneListTOData: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "personType": {
+              "type": "string"
             },
-            CustGuarantorTelephoneListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorTelephoneListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "juristicPersonType": {
+              "type": "string"
             },
-            CustGuarantorTelephoneListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    otherTel: {
-                        type: 'string'
-                    }
-                }
+            "idNo": {
+              "type": "string"
             },
-            CustGuarantorTelephoneListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorTelephoneListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorTelephoneListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "idCardIssueDate": {
+              "type": "string"
             },
-            CustGuarantorTelephoneFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "idCardExpireDate": {
+              "type": "string"
             },
-            CustGuarantorTelephoneFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorTelephoneFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "otherCardType": {
+              "type": "string"
             },
-            CustGuarantorTelephone: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherTel: {
-                        type: 'string'
-                    }
-                }
+            "otherCardNo": {
+              "type": "string"
             },
-            CustGuarantorTelephoneFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorTelephone'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorTelephone'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "plaintiffTitle": {
+              "type": "string"
             },
-            CustGuarantorInfoUpdateData: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    guarantorType: {
-                        type: 'string'
-                    },
-                    titleNameTh: {
-                        type: 'string'
-                    },
-                    firstNameTh: {
-                        type: 'string'
-                    },
-                    lastNameTh: {
-                        type: 'string'
-                    },
-                    titleNameEn: {
-                        type: 'string'
-                    },
-                    firstNameEn: {
-                        type: 'string'
-                    },
-                    lastNameEn: {
-                        type: 'string'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    juristicType: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    businessType: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    juristicOperationStatus: {
-                        type: 'string'
-                    },
-                    referenceNo: {
-                        type: 'string'
-                    },
-                    creditLimit: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    suretyContractDt: {
-                        type: 'string'
-                    },
-                    suretyReleaseStatus: {
-                        type: 'string'
-                    },
-                    suretyReleaseDt: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
+            "plaintiffName": {
+              "type": "string"
             },
-            CustGuarantorInfoUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "plaintiffSurname": {
+              "type": "string"
             },
-            CustGuarantorInfoUpdateRes: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "plaintiffEnTitle": {
+              "type": "string"
             },
-            CustGuarantorInfoListTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
+            "plaintiffEnName": {
+              "type": "string"
             },
-            CustGuarantorInfoListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "plaintiffEnSurname": {
+              "type": "string"
             },
-            CustGuarantorInfoListTO: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorTypeId: {
-                        type: 'string'
-                    },
-                    guarantorType: {
-                        type: 'string'
-                    },
-                    titleNameId: {
-                        type: 'string'
-                    },
-                    titleName: {
-                        type: 'string'
-                    },
-                    firstNameTh: {
-                        type: 'string'
-                    },
-                    lastNameTh: {
-                        type: 'string'
-                    },
-                    guarantorName: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string'
-                    },
-                    age: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    genderId: {
-                        type: 'string'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    raceId: {
-                        type: 'string'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    nationalityId: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    religionId: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    deceasedStatusDesc: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    },
-                    referenceNo: {
-                        type: 'string'
-                    },
-                    creditLimit: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    suretyContractDt: {
-                        type: 'string'
-                    },
-                    suretyReleaseStatus: {
-                        type: 'string'
-                    },
-                    suretyReleaseStatusDesc: {
-                        type: 'string'
-                    },
-                    suretyReleaseDt: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    }
-                }
+            "gender": {
+              "type": "string"
             },
-            CustGuarantorInfoListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorInfoListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "maritalStatus": {
+              "type": "string"
             },
-            CustGuarantorInfoFindTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
+            "race": {
+              "type": "string"
             },
-            CustGuarantorInfoFindTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoFindTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "nationality": {
+              "type": "string"
             },
-            CustGuarantorInfoFindTO: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorTypeId: {
-                        type: 'string'
-                    },
-                    guarantorType: {
-                        type: 'string'
-                    },
-                    guarantorName: {
-                        type: 'string'
-                    },
-                    referenceNo: {
-                        type: 'string'
-                    },
-                    creditLimit: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    suretyContractDt: {
-                        type: 'string'
-                    },
-                    suretyReleaseStatus: {
-                        type: 'string'
-                    },
-                    suretyReleaseStatusDesc: {
-                        type: 'string'
-                    },
-                    suretyReleaseDt: {
-                        type: 'string'
-                    }
-                }
+            "occupation": {
+              "type": "string"
             },
-            CustGuarantorInfoFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorInfoFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "birthDate": {
+              "type": "string"
             },
-            CustGuarantorInfoFindData: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
+            "age": {
+              "type": "integer",
+              "format": "int32"
             },
-            CustGuarantorInfoFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
+            "updateBy": {
+              "type": "string"
             },
-            CustGuarantorInfo: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    guarantorType: {
-                        type: 'string'
-                    },
-                    titleNameTh: {
-                        type: 'string'
-                    },
-                    firstNameTh: {
-                        type: 'string'
-                    },
-                    lastNameTh: {
-                        type: 'string'
-                    },
-                    titleNameEn: {
-                        type: 'string'
-                    },
-                    firstNameEn: {
-                        type: 'string'
-                    },
-                    lastNameEn: {
-                        type: 'string'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    juristicType: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    businessType: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    juristicOperationStatus: {
-                        type: 'string'
-                    },
-                    referenceNo: {
-                        type: 'string'
-                    },
-                    creditLimit: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    suretyContractDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    suretyReleaseStatus: {
-                        type: 'string'
-                    },
-                    suretyReleaseDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustGuarantorInfoFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorInfo'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfo'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorInfoDebtorInformationData: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorInfoDebtorInformationReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoDebtorInformationData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorInfoDebtorInformation: {
-                type: 'object',
-                properties: {
-                    guarantorTypeId: {
-                        type: 'string'
-                    },
-                    guarantorTypeDesc: {
-                        type: 'string'
-                    },
-                    juristicTypeId: {
-                        type: 'string'
-                    },
-                    juristicTypeName: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    juristicStatusId: {
-                        type: 'string'
-                    },
-                    juristicStatusDesc: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorInfoDebtorInformationRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorInfoDebtorInformation'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorInfoDebtorInformation'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorDeceaseAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorDeceaseAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    urlGuarantorDeceaseFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorDeceaseFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorDeceaseAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorDeceaseAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorDeceaseAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlGuarantorDeceaseFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorDeceaseFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorDeceaseAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorDeceaseAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorDeceaseAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonUpdateData: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonUpdateRes: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonListTOData: {
-                type: 'object',
-                properties: {
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonListTO: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    seqIdPersonCard: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    urlGuarantorContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorContactPersonListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindTOData: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonFindTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindTO: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorContactPersonFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindData: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPerson: {
-                type: 'object',
-                properties: {
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustGuarantorContactPersonFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorContactPerson'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPerson'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonCardAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorContactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlGuarantorContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorContactPersonCardAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorContactPersonCardAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorContactPersonCardAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachListTOData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorClosedownAttachListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    urlGuarantorClosedownFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorClosedownFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorClosedownAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorClosedownAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorClosedownAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlGuarantorClosedownFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorClosedownFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorClosedownAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorClosedownAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorClosedownAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorCardAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorCardAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorCardAttachListTOData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorCardAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorCardAttachListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttachListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    urlGuarantorCardFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorCardAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorCardAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorCardAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorCardAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorCardAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isdelete: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlGuarantorCardFile: {
-                        type: 'string'
-                    },
-                    urlGuarantorCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorCardAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorCardAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorCardAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorAddressUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    addressType: {
-                        type: 'string'
-                    },
-                    otherAddress: {
-                        type: 'string'
-                    },
-                    addressDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    postalCode: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    province: {
-                        type: 'string'
-                    },
-                    district: {
-                        type: 'string'
-                    },
-                    subdistrict: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorAddressUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorAddressUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorAddressUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorAddressListTOData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorAddressListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorAddressListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorAddressListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    addressType: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    address: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorAddressListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorAddressListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorAddressListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorAddressFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustGuarantorAddressFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorAddressFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustGuarantorAddress: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    guarantorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    addressType: {
-                        type: 'string'
-                    },
-                    otherAddress: {
-                        type: 'string'
-                    },
-                    addressDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    postalCode: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    province: {
-                        type: 'string'
-                    },
-                    district: {
-                        type: 'string'
-                    },
-                    subdistrict: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustGuarantorAddressFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustGuarantorAddress'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustGuarantorAddress'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustExecutorInfoUpdateData: {
-                type: 'object',
-                properties: {
-                    executorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    relationshipType: {
-                        type: 'string'
-                    },
-                    relationshipNo: {
-                        type: 'string'
-                    },
-                    otherType: {
-                        type: 'string'
-                    },
-                    executorName: {
-                        type: 'string'
-                    },
-                    executorTel: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustExecutorInfoUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustExecutorInfoUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustExecutorInfoUpdateRes: {
-                type: 'object',
-                properties: {
-                    executorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustExecutorInfoListTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustExecutorInfoListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustExecutorInfoListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustExecutorInfoListTO: {
-                type: 'object',
-                properties: {
-                    executorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    relationshipType: {
-                        type: 'string'
-                    },
-                    relationshipTypeDesc: {
-                        type: 'string'
-                    },
-                    relationshipNo: {
-                        type: 'string'
-                    },
-                    executorName: {
-                        type: 'string'
-                    },
-                    executorTel: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustExecutorInfoListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustExecutorInfoListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustExecutorInfoListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustExecutorInfoFindData: {
-                type: 'object',
-                properties: {
-                    executorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustExecutorInfoFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustExecutorInfoFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustExecutorInfo: {
-                type: 'object',
-                properties: {
-                    executorId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    relationshipType: {
-                        type: 'string'
-                    },
-                    relationshipNo: {
-                        type: 'string'
-                    },
-                    otherType: {
-                        type: 'string'
-                    },
-                    executorName: {
-                        type: 'string'
-                    },
-                    executorTel: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustExecutorInfoFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustExecutorInfo'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustExecutorInfo'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerTelephoneUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    },
-                    otherType: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerTelephoneUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerTelephoneUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerTelephoneUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerTelephoneListTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerTelephoneListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerTelephoneListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerTelephoneListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    telTypeDesc: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    otherType: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerTelephoneListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerTelephoneListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerTelephoneListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerTelephoneFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerTelephoneFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerTelephoneFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerTelephone: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    telType: {
-                        type: 'string'
-                    },
-                    otherType: {
-                        type: 'string'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustCustomerTelephoneFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerTelephone'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerTelephone'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoUpdateData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    },
-                    titleName: {
-                        type: 'string'
-                    },
-                    firstName: {
-                        type: 'string'
-                    },
-                    middleName: {
-                        type: 'string'
-                    },
-                    lastName: {
-                        type: 'string'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    juristicType: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    businessType: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    juristicOperationStatus: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoUpdateRes: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoRelatedPersonTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    accountNo: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    firstNameTh: {
-                        type: 'string'
-                    },
-                    lastNameTh: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    collateralType: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoRelatedPersonTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoRelatedPersonTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'string'
-                    },
-                    customerName: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardTypeCodeDesc: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoRelatedPersonTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoRelatedPersonTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoOwnTO: {
-                type: 'object',
-                properties: {
-                    buyer: {
-                        type: 'string'
-                    },
-                    collateralType: {
-                        type: 'string'
-                    },
-                    mortgageAmount: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    accountNo: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoOwnTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoOwnTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoOwnTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCutomerInfoListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCutomerInfoListTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    portCode: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoGuarantorPersonTO: {
-                type: 'object',
-                properties: {
-                    guarantorName: {
-                        type: 'string'
-                    },
-                    accountNo: {
-                        type: 'string'
-                    },
-                    lnAccountName: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoGuarantorPersonTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoGuarantorPersonTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoGuarantorPersonTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoFindTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoFindTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoFindTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoFindTO: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    customerTypeDesc: {
-                        type: 'string'
-                    },
-                    titleName: {
-                        type: 'string'
-                    },
-                    titleNameDesc: {
-                        type: 'string'
-                    },
-                    firstName: {
-                        type: 'string'
-                    },
-                    middleName: {
-                        type: 'string'
-                    },
-                    lastName: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string'
-                    },
-                    age: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    genderDesc: {
-                        type: 'string'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    raceDesc: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    nationalityDesc: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    religionDesc: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    deceasedStatusDesc: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoFindData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfo: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    },
-                    titleName: {
-                        type: 'string'
-                    },
-                    firstName: {
-                        type: 'string'
-                    },
-                    middleName: {
-                        type: 'string'
-                    },
-                    lastName: {
-                        type: 'string'
-                    },
-                    gender: {
-                        type: 'string'
-                    },
-                    birthDate: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    race: {
-                        type: 'string'
-                    },
-                    nationality: {
-                        type: 'string'
-                    },
-                    religion: {
-                        type: 'string'
-                    },
-                    juristicType: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    businessType: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    deceasedStatus: {
-                        type: 'string'
-                    },
-                    juristicOperationStatus: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustCustomerInfoFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfo'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfo'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoDebtorPersonTO: {
-                type: 'object',
-                properties: {
-                    accountNo: {
-                        type: 'string'
-                    },
-                    lnAccountName: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoDebtorPersonTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoDebtorPersonTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoDebtorPersonTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoDebtorInformation: {
-                type: 'object',
-                properties: {
-                    customerTypeId: {
-                        type: 'string'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    juristicTypeId: {
-                        type: 'string'
-                    },
-                    juristicTypeName: {
-                        type: 'string'
-                    },
-                    juristicTypeOther: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    lineId: {
-                        type: 'string'
-                    },
-                    facebook: {
-                        type: 'string'
-                    },
-                    juristicStatusId: {
-                        type: 'string'
-                    },
-                    juristicStatusDesc: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoDebtorInformationRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoDebtorInformation'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoDebtorInformation'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoCustomerData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoCustomerReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCustomerData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCustomer: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    customerTypeDesc: {
-                        type: 'string'
-                    },
-                    customerName: {
-                        type: 'string'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCustomerRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoCustomer'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCustomer'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoCustDetailListTOData: {
-                type: 'object',
-                properties: {
-                    cifNo: {
-                        type: 'string'
-                    },
-                    firstName: {
-                        type: 'string'
-                    },
-                    middleName: {
-                        type: 'string'
-                    },
-                    lastName: {
-                        type: 'string'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    marketCode: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCustDetailListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCustDetailListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCustDetailListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    customerTypeDesc: {
-                        type: 'string'
-                    },
-                    customerName: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCustDetailListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoCustDetailListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCustDetailListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoCifNoListTOData: {
-                type: 'object',
-                properties: {
-                    cifNo: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCifNoListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCifNoListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCifNoListTO: {
-                type: 'object',
-                properties: {
-                    cifNo: {
-                        type: 'string'
-                    },
-                    customerName: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoCifNoListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoCifNoListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoCifNoListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerGroupCode: {
-                type: 'object',
-                properties: {
-                    borrowerGroupCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerGroupCodeRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoBorrowerGroupCode'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoBorrowerGroupCode'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerCodeOld: {
-                type: 'object',
-                properties: {
-                    borrowerCodeOld: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerCodeOldRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoBorrowerCodeOld'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoBorrowerCodeOld'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerCode: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerInfoBorrowerCodeRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerInfoBorrowerCode'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerInfoBorrowerCode'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerDeceaseAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachListTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerDeceaseAttachListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    urlCustomerDeceaseFile: {
-                        type: 'string'
-                    },
-                    urlCustomerDeceaseFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerDeceaseAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerDeceaseAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerDeceaseAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlCustomerDeceaseFile: {
-                        type: 'string'
-                    },
-                    urlCustomerDeceaseFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerDeceaseAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerDeceaseAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerDeceaseAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachListTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttachListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    urlCustomerClosedownFile: {
-                        type: 'string'
-                    },
-                    urlCustomerClosedownFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerClosedownAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerClosedownAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlCustomerClosedownFile: {
-                        type: 'string'
-                    },
-                    urlCustomerClosedownFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerClosedownAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerClosedownAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerClosedownAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerCardAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerCardAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerCardAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerCardAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerCardAttachIdcardFindTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardTypeCodeDesc: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    urlCustomerCardFile: {
-                        type: 'string'
-                    },
-                    urlCustomerCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerCardAttachIdcardFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerCardAttachIdcardFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerCardAttachIdcardFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerCardAttachFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerCardAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerCardAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerCardAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlCustomerCardFile: {
-                        type: 'string'
-                    },
-                    urlCustomerCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerCardAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerCardAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerCardAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAddressUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    addressType: {
-                        type: 'string'
-                    },
-                    otherAddress: {
-                        type: 'string'
-                    },
-                    addressDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    postalCode: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    mailingFlag: {
-                        type: 'string'
-                    },
-                    province: {
-                        type: 'string'
-                    },
-                    district: {
-                        type: 'string'
-                    },
-                    subdistrict: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    accommodationStatus: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAddressUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAddressUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAddressUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAddressListTOData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAddressListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAddressListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAddressListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    address: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    mailingFlag: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAddressListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerAddressListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAddressListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAddressFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAddressFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAddressFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAddress: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    addressType: {
-                        type: 'string'
-                    },
-                    otherAddress: {
-                        type: 'string'
-                    },
-                    addressDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    postalCode: {
-                        type: 'string'
-                    },
-                    email: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    mailingFlag: {
-                        type: 'string'
-                    },
-                    province: {
-                        type: 'string'
-                    },
-                    district: {
-                        type: 'string'
-                    },
-                    subdistrict: {
-                        type: 'string'
-                    },
-                    partyId: {
-                        type: 'string'
-                    },
-                    accommodationStatus: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustCustomerAddressFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerAddress'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAddress'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAccountUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    accountCode: {
-                        type: 'string'
-                    },
-                    accountRole: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    telNo: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    isactive: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAccountUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAccountUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAccountUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAccountFindData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCustomerAccountFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAccountFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCustomerAccount: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    accountCode: {
-                        type: 'string'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    accountRole: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    isactive: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustCustomerAccountFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCustomerAccount'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCustomerAccount'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonUpdateData: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonUpdateRes: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonListTOData: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonListTO: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardTypeCodeDesc: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    urlContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustContactPersonListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonFindTO: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    urlContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustContactPersonFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonFindData: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPerson: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactName: {
-                        type: 'string'
-                    },
-                    telNo1: {
-                        type: 'string'
-                    },
-                    telNo2: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustContactPersonFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustContactPerson'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustContactPerson'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonCardAttachUpdateData: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttachUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonCardAttachUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttachUpdateRes: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonCardAttachListTOData: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonCardAttachListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonCardAttachListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttachListTO: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    description: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfExpiry: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttachListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustContactPersonCardAttachListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonCardAttachListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonCardAttachFindData: {
-                type: 'object',
-                properties: {
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustContactPersonCardAttachFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonCardAttachFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttach: {
-                type: 'object',
-                properties: {
-                    seqId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    contactPersonId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    placeOfIssue: {
-                        type: 'string'
-                    },
-                    dateOfIssue: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateOfExpiry: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    otherCard: {
-                        type: 'string'
-                    },
-                    attachFileDetail: {
-                        type: 'string'
-                    },
-                    attachFileExt: {
-                        type: 'string'
-                    },
-                    attachFileOriginalName: {
-                        type: 'string'
-                    },
-                    attachFileName: {
-                        type: 'string'
-                    },
-                    isDeleted: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    urlContactPersonCardFile: {
-                        type: 'string'
-                    },
-                    urlContactPersonCardFileThumbnail: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustContactPersonCardAttachFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustContactPersonCardAttach'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustContactPersonCardAttach'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandUpdateData: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    landType: {
-                        type: 'string'
-                    },
-                    otherLandType: {
-                        type: 'string'
-                    },
-                    collateralSource: {
-                        type: 'string'
-                    },
-                    landMainStatus: {
-                        type: 'string'
-                    },
-                    landMainDesc: {
-                        type: 'string'
-                    },
-                    titleDocumentType: {
-                        type: 'string'
-                    },
-                    otherTitleDocument: {
-                        type: 'string'
-                    },
-                    titleDocumentNo: {
-                        type: 'string'
-                    },
-                    projectName: {
-                        type: 'string'
-                    },
-                    locationDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    rai: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    ngan: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    wa: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    areaUsage: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    totalAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    landOwner: {
-                        type: 'string'
-                    },
-                    landAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    buildingAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    appraisalPresentDt: {
-                        type: 'string'
-                    },
-                    appraisalNextDt: {
-                        type: 'string'
-                    },
-                    appraiser: {
-                        type: 'string'
-                    },
-                    collateralDesc: {
-                        type: 'string'
-                    },
-                    forceSalePrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    govAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    officerAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    auctionPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    woodAuctionPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    mortgageType: {
-                        type: 'string'
-                    },
-                    mortgageNo: {
-                        type: 'string'
-                    },
-                    mortgageDt: {
-                        type: 'string'
-                    },
-                    mortgageAmount: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    mortgageAssignmentDt: {
-                        type: 'string'
-                    },
-                    mortgageAssignmentStatus: {
-                        type: 'string'
-                    },
-                    redeemDt: {
-                        type: 'string'
-                    },
-                    lastCollateralStatus: {
-                        type: 'string'
-                    },
-                    redeemStatus: {
-                        type: 'string'
-                    },
-                    joinCollateral: {
-                        type: 'string'
-                    },
-                    joinCreditor: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    provinceDesc: {
-                        type: 'string'
-                    },
-                    districtDesc: {
-                        type: 'string'
-                    },
-                    subdistrictDesc: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    },
-                    landNo: {
-                        type: 'string'
-                    },
-                    surveyNo: {
-                        type: 'string'
-                    },
-                    landOfficeCode: {
-                        type: 'string'
-                    },
-                    landOfficeDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandUpdateRes: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandListTOData: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandListTO: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    titleDocumentNo: {
-                        type: 'string'
-                    },
-                    landNo: {
-                        type: 'string'
-                    },
-                    subdistrictDescription: {
-                        type: 'string'
-                    },
-                    districtDescription: {
-                        type: 'string'
-                    },
-                    provinceDescription: {
-                        type: 'string'
-                    },
-                    mortgageAmount: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    landOwner: {
-                        type: 'string'
-                    },
-                    auctionId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCollateralLandListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandInformationData: {
-                type: 'object',
-                properties: {
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    cifNo: {
-                        type: 'string'
-                    },
-                    firstName: {
-                        type: 'string'
-                    },
-                    middleName: {
-                        type: 'string'
-                    },
-                    lastName: {
-                        type: 'string'
-                    },
-                    customerType: {
-                        type: 'string'
-                    },
-                    cardTypeCode: {
-                        type: 'string'
-                    },
-                    cardNo: {
-                        type: 'string'
-                    },
-                    marketCode: {
-                        type: 'string'
-                    },
-                    companyName: {
-                        type: 'string'
-                    },
-                    taxId: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandInformationReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandInformationData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandInformation: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    titleDocumentType: {
-                        type: 'string'
-                    },
-                    titleDocumentNo: {
-                        type: 'string'
-                    },
-                    landNo: {
-                        type: 'string'
-                    },
-                    subdistrictName: {
-                        type: 'string'
-                    },
-                    districtName: {
-                        type: 'string'
-                    },
-                    provinceName: {
-                        type: 'string'
-                    },
-                    landOwner: {
-                        type: 'string'
-                    },
-                    contractNo: {
-                        type: 'string'
-                    },
-                    mortgageAmount: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    contractId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    deptId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    collateralType: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandInformationRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCollateralLandInformation'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandInformation'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandFindData: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustCollateralLandFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLandFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLand: {
-                type: 'object',
-                properties: {
-                    clLandId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    landType: {
-                        type: 'string'
-                    },
-                    otherLandType: {
-                        type: 'string'
-                    },
-                    collateralSource: {
-                        type: 'string'
-                    },
-                    landMainStatus: {
-                        type: 'string'
-                    },
-                    landMainDesc: {
-                        type: 'string'
-                    },
-                    titleDocumentType: {
-                        type: 'string'
-                    },
-                    otherTitleDocument: {
-                        type: 'string'
-                    },
-                    titleDocumentNo: {
-                        type: 'string'
-                    },
-                    projectName: {
-                        type: 'string'
-                    },
-                    locationDesc: {
-                        type: 'string'
-                    },
-                    provinceCode: {
-                        type: 'string'
-                    },
-                    districtCode: {
-                        type: 'string'
-                    },
-                    subdistrictCode: {
-                        type: 'string'
-                    },
-                    rai: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    ngan: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    wa: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    areaUsage: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    totalAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    landOwner: {
-                        type: 'string'
-                    },
-                    landAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    buildingAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    appraisalPresentDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    appraisalNextDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    appraiser: {
-                        type: 'string'
-                    },
-                    collateralDesc: {
-                        type: 'string'
-                    },
-                    forceSalePrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    govAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    officerAppraisalPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    auctionPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    woodAuctionPrice: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    mortgageType: {
-                        type: 'string'
-                    },
-                    mortgageNo: {
-                        type: 'string'
-                    },
-                    mortgageDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    mortgageAmount: {
-                        type: 'number',
-                        format: 'double'
-                    },
-                    mortgageAssignmentDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    mortgageAssignmentStatus: {
-                        type: 'string'
-                    },
-                    redeemDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    lastCollateralStatus: {
-                        type: 'string'
-                    },
-                    redeemStatus: {
-                        type: 'string'
-                    },
-                    joinCollateral: {
-                        type: 'string'
-                    },
-                    joinCreditor: {
-                        type: 'string'
-                    },
-                    remark: {
-                        type: 'string'
-                    },
-                    provinceDesc: {
-                        type: 'string'
-                    },
-                    districtDesc: {
-                        type: 'string'
-                    },
-                    subdistrictDesc: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    landNo: {
-                        type: 'string'
-                    },
-                    surveyNo: {
-                        type: 'string'
-                    },
-                    landOfficeCode: {
-                        type: 'string'
-                    },
-                    landOfficeDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustCollateralLandFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustCollateralLand'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustCollateralLand'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerMappingUpdateData: {
-                type: 'object',
-                properties: {
-                    mappingId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    accountPartyRole: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerMappingUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerMappingUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerMappingUpdateRes: {
-                type: 'object',
-                properties: {
-                    mappingId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerMappingFindData: {
-                type: 'object',
-                properties: {
-                    mappingId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerMappingFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerMappingFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerMapping: {
-                type: 'object',
-                properties: {
-                    mappingId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    accountPartyRole: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustBorrowerMappingFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerMapping'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerMapping'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoUpdateData: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoUpdateRes: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoListTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    portCode: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portCode: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoFindTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoFindTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoFindTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoCustomerFindTO: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portCode: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoCustomerFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoCustomerFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoFindData: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfo: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustBorrowerInfoFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfo'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfo'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoCustomerListTOData: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoCustomerListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoCustomerListTOData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoCustomerListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    customerName: {
-                        type: 'string'
-                    },
-                    accountNo: {
-                        type: 'string'
-                    },
-                    accountPartyRole: {
-                        type: 'string'
-                    },
-                    accountPartyRoleDesc: {
-                        type: 'string'
-                    },
-                    customerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoCustomerListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoCustomerListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoCustomerListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerGroupCode: {
-                type: 'object',
-                properties: {
-                    borrowerGroupCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerGroupCodeRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoBorrowerGroupCode'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoBorrowerGroupCode'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerFindTO: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    borrowerCode: {
-                        type: 'string'
-                    },
-                    borrowerName: {
-                        type: 'string'
-                    },
-                    borrowerCodeOld: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    statusDesc: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerFindTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoBorrowerFindTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoBorrowerFindTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerCodeOld: {
-                type: 'object',
-                properties: {
-                    borrowerCodeOld: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerCodeOldRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoBorrowerCodeOld'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoBorrowerCodeOld'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerCode: {
-                type: 'object',
-                properties: {
-                    borrowerCode: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerInfoBorrowerCodeRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerInfoBorrowerCode'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerInfoBorrowerCode'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerGroupUpdateData: {
-                type: 'object',
-                properties: {
-                    borrowerGroupId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerGroupUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerGroupUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerGroupUpdateRes: {
-                type: 'object',
-                properties: {
-                    borrowerGroupId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerGroupFindData: {
-                type: 'object',
-                properties: {
-                    borrowerGroupId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerGroupFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerGroupFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerGroup: {
-                type: 'object',
-                properties: {
-                    borrowerGroupId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerGroupCode: {
-                        type: 'string'
-                    },
-                    borrowerGroupName: {
-                        type: 'string'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustBorrowerGroupFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerGroup'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerGroup'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerDetailUpdateData: {
-                type: 'object',
-                properties: {
-                    borrowerDetailId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    debtorType: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerDetailUpdateReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerDetailUpdateData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerDetailUpdateRes: {
-                type: 'object',
-                properties: {
-                    borrowerDetailId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerDetailListTOReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerDetailListToData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerDetailListToData: {
-                type: 'object',
-                properties: {
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerDetailListTO: {
-                type: 'object',
-                properties: {
-                    seq: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portName: {
-                        type: 'string'
-                    },
-                    cutOffDate: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    transferDate: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    dateLastCal: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustBorrowerDetailListTORes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerDetailListTO'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerDetailListTO'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerDetailFindData: {
-                type: 'object',
-                properties: {
-                    borrowerDetailId: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            CustBorrowerDetailFindReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerDetailFindData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            CustBorrowerDetail: {
-                type: 'object',
-                properties: {
-                    borrowerDetailId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    borrowerId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    portId: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    debtorType: {
-                        type: 'string'
-                    },
-                    status: {
-                        type: 'string'
-                    },
-                    createBy: {
-                        type: 'string'
-                    },
-                    createDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    },
-                    updateBy: {
-                        type: 'string'
-                    },
-                    updateDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CustBorrowerDetailFindRes: {
-                type: 'object',
-                properties: {
-                    dataList: {
-                        type: 'array',
-                        items: {
-                            $ref: '#/components/schemas/CustBorrowerDetail'
-                        }
-                    },
-                    data: {
-                        $ref: '#/components/schemas/CustBorrowerDetail'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            UploadFileRes: {
-                type: 'object',
-                properties: {
-                    filename: {
-                        type: 'string'
-                    },
-                    filePath: {
-                        type: 'string'
-                    },
-                    fileUrl: {
-                        type: 'string'
-                    },
-                    filenameThumbnail: {
-                        type: 'string'
-                    },
-                    filePathThumbnail: {
-                        type: 'string'
-                    },
-                    fileUrlThumbnail: {
-                        type: 'string'
-                    },
-                    errorcode: {
-                        type: 'integer',
-                        format: 'int32'
-                    },
-                    errormessage: {
-                        type: 'string'
-                    },
-                    totalCount: {
-                        type: 'integer',
-                        format: 'int32'
-                    }
-                }
-            },
-            UploadFileData: {
-                type: 'object',
-                properties: {
-                    fileType: {
-                        type: 'string'
-                    },
-                    fileBase64: {
-                        type: 'string'
-                    },
-                    isTempFile: {
-                        type: 'boolean'
-                    }
-                }
-            },
-            UploadFileReq: {
-                type: 'object',
-                properties: {
-                    data: {
-                        $ref: '#/components/schemas/UploadFileData'
-                    },
-                    userInfo: {
-                        type: 'string'
-                    },
-                    mode: {
-                        type: 'string'
-                    },
-                    menuCode: {
-                        type: 'string'
-                    },
-                    lang: {
-                        type: 'string'
-                    }
-                }
-            },
-            AppCommonInfoResp: {
-                type: 'object',
-                properties: {
-                    serverId: {
-                        type: 'string'
-                    },
-                    restUuid: {
-                        type: 'string'
-                    },
-                    infoDesc: {
-                        type: 'string'
-                    },
-                    infoLastBuild: {
-                        type: 'string'
-                    },
-                    infoVersion: {
-                        type: 'string'
-                    },
-                    infoCurrentDt: {
-                        type: 'string',
-                        format: 'date-time'
-                    }
-                }
-            },
-            CheckInfoResp: {
-                type: 'object',
-                properties: {
-                    serverId: {
-                        type: 'string'
-                    },
-                    serverDateTime: {
-                        type: 'string'
-                    },
-                    serverContextPath: {
-                        type: 'string'
-                    }
-                }
+            "updateDt": {
+              "type": "string"
             }
+          }
+        },
+        "LegalCasePlaintiffUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffUpdateRes": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffListTO": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "plaintiffId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "plaintiffNameSurname": {
+              "type": "string"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "personType": {
+              "type": "string"
+            },
+            "juristicPersonType": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idCardIssueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "idCardExpireDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "otherCardType": {
+              "type": "string"
+            },
+            "otherCardNo": {
+              "type": "string"
+            },
+            "plaintiffTitle": {
+              "type": "string"
+            },
+            "plaintiffName": {
+              "type": "string"
+            },
+            "plaintiffSurname": {
+              "type": "string"
+            },
+            "plaintiffEnTitle": {
+              "type": "string"
+            },
+            "plaintiffEnName": {
+              "type": "string"
+            },
+            "plaintiffEnSurname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "race": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "age": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCasePlaintiffListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffFindData": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiff": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "plaintiffId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "personType": {
+              "type": "string"
+            },
+            "juristicPersonType": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idCardIssueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "idCardExpireDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "otherCardType": {
+              "type": "string"
+            },
+            "otherCardNo": {
+              "type": "string"
+            },
+            "plaintiffTitle": {
+              "type": "string"
+            },
+            "plaintiffName": {
+              "type": "string"
+            },
+            "plaintiffSurname": {
+              "type": "string"
+            },
+            "plaintiffEnTitle": {
+              "type": "string"
+            },
+            "plaintiffEnName": {
+              "type": "string"
+            },
+            "plaintiffEnSurname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "race": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "age": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCasePlaintiffFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCasePlaintiff"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiff"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressUpdateData": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressType": {
+              "type": "string"
+            },
+            "addno": {
+              "type": "string"
+            },
+            "moo": {
+              "type": "string"
+            },
+            "alley": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "districtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "subdistrictId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "postCode": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressUpdateRes": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressListTOData": {
+          "type": "object",
+          "properties": {
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressListTO": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressDesc": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressFindData": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddress": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "plaintiffSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressType": {
+              "type": "string"
+            },
+            "addno": {
+              "type": "string"
+            },
+            "moo": {
+              "type": "string"
+            },
+            "alley": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "districtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "subdistrictId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "postCode": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCasePlaintiffAddressFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCasePlaintiffAddress"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCasePlaintiffAddress"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantUpdateData": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "defendantId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "defendantType": {
+              "type": "string"
+            },
+            "personType": {
+              "type": "string"
+            },
+            "juristicPersonType": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idCardIssueDate": {
+              "type": "string"
+            },
+            "idCardExpireDate": {
+              "type": "string"
+            },
+            "otherCardType": {
+              "type": "string"
+            },
+            "otherCardNo": {
+              "type": "string"
+            },
+            "defendantTitle": {
+              "type": "string"
+            },
+            "defendantName": {
+              "type": "string"
+            },
+            "defendantSurname": {
+              "type": "string"
+            },
+            "defendantEnTitle": {
+              "type": "string"
+            },
+            "defendantEnName": {
+              "type": "string"
+            },
+            "defendantEnSurname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "race": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string"
+            },
+            "age": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "originalAffiliationCode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hasAttorney": {
+              "type": "string"
+            },
+            "importantPerson": {
+              "type": "string"
+            },
+            "defendantPosition": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantUpdateRes": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantListTO": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "defendantId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "defendantNameSurname": {
+              "type": "string"
+            },
+            "defendantType": {
+              "type": "string"
+            },
+            "personType": {
+              "type": "string"
+            },
+            "juristicPersonType": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idCardIssueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "idCardExpireDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "otherCardType": {
+              "type": "string"
+            },
+            "otherCardNo": {
+              "type": "string"
+            },
+            "defendantTitle": {
+              "type": "string"
+            },
+            "defendantName": {
+              "type": "string"
+            },
+            "defendantSurname": {
+              "type": "string"
+            },
+            "defendantEnTitle": {
+              "type": "string"
+            },
+            "defendantEnName": {
+              "type": "string"
+            },
+            "defendantEnSurname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "race": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "age": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "originalAffiliationCode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hasAttorney": {
+              "type": "string"
+            },
+            "importantPerson": {
+              "type": "string"
+            },
+            "defendantPosition": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDefendantListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantFindData": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendant": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "defendantId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "defendantType": {
+              "type": "string"
+            },
+            "personType": {
+              "type": "string"
+            },
+            "juristicPersonType": {
+              "type": "string"
+            },
+            "idNo": {
+              "type": "string"
+            },
+            "idCardIssueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "idCardExpireDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "otherCardType": {
+              "type": "string"
+            },
+            "otherCardNo": {
+              "type": "string"
+            },
+            "defendantTitle": {
+              "type": "string"
+            },
+            "defendantName": {
+              "type": "string"
+            },
+            "defendantSurname": {
+              "type": "string"
+            },
+            "defendantEnTitle": {
+              "type": "string"
+            },
+            "defendantEnName": {
+              "type": "string"
+            },
+            "defendantEnSurname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "maritalStatus": {
+              "type": "string"
+            },
+            "race": {
+              "type": "string"
+            },
+            "nationality": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "birthDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "age": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "originalAffiliationCode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "hasAttorney": {
+              "type": "string"
+            },
+            "importantPerson": {
+              "type": "string"
+            },
+            "defendantPosition": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseDefendantFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDefendant"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendant"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressUpdateData": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressType": {
+              "type": "string"
+            },
+            "addno": {
+              "type": "string"
+            },
+            "moo": {
+              "type": "string"
+            },
+            "alley": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "districtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "subdistrictId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "postCode": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressUpdateRes": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressListTOData": {
+          "type": "object",
+          "properties": {
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantAddressListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressListTO": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressDesc": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDefendantAddressListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantAddressListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressFindData": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantAddressFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDefendantAddress": {
+          "type": "object",
+          "properties": {
+            "addressSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "defendantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "addressType": {
+              "type": "string"
+            },
+            "addno": {
+              "type": "string"
+            },
+            "moo": {
+              "type": "string"
+            },
+            "alley": {
+              "type": "string"
+            },
+            "street": {
+              "type": "string"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "districtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "subdistrictId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "postCode": {
+              "type": "string"
+            },
+            "telno1": {
+              "type": "string"
+            },
+            "telno2": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseDefendantAddressFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDefendantAddress"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDefendantAddress"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachUpdateData": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "attachTypeDocId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqRequestAttachUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqRequestAttachUpdateRes": {
+          "type": "object",
+          "properties": {
+            "attachId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachListTOData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqRequestAttachListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqRequestAttachListTO": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeDesc": {
+              "type": "string"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "attachTypeDocId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeDocDesc": {
+              "type": "string"
+            },
+            "urlReqRequestFile": {
+              "type": "string"
+            },
+            "urlReqRequestFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqRequestAttachListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqRequestAttachListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqRequestAttachListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachFindData": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqRequestAttachFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqRequestAttachFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqRequestAttach": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "attachTypeDocId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "urlReqRequestFile": {
+              "type": "string"
+            },
+            "urlReqRequestFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqRequestAttachFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqRequestAttach"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqRequestAttach"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestUpdateData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "reqDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestType": {
+              "type": "string"
+            },
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestIdRefer": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestUpdateRes": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestRequestNo": {
+          "type": "object",
+          "properties": {
+            "requestNo": {
+              "type": "string"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestRequestNoRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestRequestNo"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestRequestNo"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesUpdateData": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "meetingDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "meetingType": {
+              "type": "string"
+            },
+            "meetingDt": {
+              "type": "string"
+            },
+            "meetingSubject": {
+              "type": "string"
+            },
+            "meetingDesc": {
+              "type": "string"
+            },
+            "meetingResult": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesUpdateRes": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesListTOData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "meetingType": {
+              "type": "string"
+            },
+            "meetingSubject": {
+              "type": "string"
+            },
+            "meetingDesc": {
+              "type": "string"
+            },
+            "createDtFrom": {
+              "type": "string"
+            },
+            "createDtTo": {
+              "type": "string"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestMinutesListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesListTO": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "meetingDt": {
+              "type": "string"
+            },
+            "meetingType": {
+              "type": "string"
+            },
+            "meetingSubject": {
+              "type": "string"
+            },
+            "meetingDesc": {
+              "type": "string"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "urlReqCaseRequestMinutsFile": {
+              "type": "string"
+            },
+            "urlReqCaseRequestMinutsFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestMinutesListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestMinutesListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesFindData": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestMinutesFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutes": {
+          "type": "object",
+          "properties": {
+            "seqId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "meetingDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "meetingType": {
+              "type": "string"
+            },
+            "meetingDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "meetingSubject": {
+              "type": "string"
+            },
+            "meetingDesc": {
+              "type": "string"
+            },
+            "meetingResult": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachFileDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "urlReqCaseRequestMinutsFile": {
+              "type": "string"
+            },
+            "urlReqCaseRequestMinutsFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestMinutesFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestMinutes"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestMinutes"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestListTOData": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "requestStatus": {
+              "type": "string"
+            },
+            "createDtFrom": {
+              "type": "string"
+            },
+            "createDtTo": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestListTO": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "legalTypeDesc": {
+              "type": "string"
+            },
+            "customerName": {
+              "type": "string"
+            },
+            "branchName": {
+              "type": "string"
+            },
+            "requestDt": {
+              "type": "string"
+            },
+            "requestStatus": {
+              "type": "string"
+            },
+            "requestStatusDesc": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestFindData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequest": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestNo": {
+              "type": "string"
+            },
+            "reqDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestType": {
+              "type": "string"
+            },
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestIdRefer": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ReqCaseRequestFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequest"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequest"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestDetailUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestDetailUpdateRes": {
+          "type": "object",
+          "properties": {
+            "reqDetailId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestDetailFindData": {
+          "type": "object",
+          "properties": {
+            "reqDetailId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestDetailFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestDetailFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestDetail": {
+          "type": "object",
+          "properties": {
+            "reqDetailId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralType": {
+              "type": "string"
+            },
+            "collateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralOwner": {
+              "type": "string"
+            },
+            "totalAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "mortgageAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ReqCaseRequestDetailFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestDetail"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestDetail"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractUpdateData": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestContractUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestContractUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestContractUpdateRes": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractListTOData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestContractListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestContractListTO": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "customerName": {
+              "type": "string"
+            },
+            "mainType": {
+              "type": "string"
+            },
+            "subType": {
+              "type": "string"
+            },
+            "consolidateContract": {
+              "type": "string"
+            },
+            "principalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "openDt": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestContractListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestContractListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractFindData": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestContractFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestContractFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestContract": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractDeptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ReqCaseRequestContractFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestContract"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestContract"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestAndCollateralDataListData": {
+          "type": "object",
+          "properties": {
+            "requestId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestAndCollateralDataListReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestAndCollateralDataList": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "customerName": {
+              "type": "string"
+            },
+            "mainType": {
+              "type": "string"
+            },
+            "subType": {
+              "type": "string"
+            },
+            "consolidateContract": {
+              "type": "string"
+            },
+            "principalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "openDt": {
+              "type": "string"
+            },
+            "occupation": {
+              "type": "string"
+            },
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqCaseRequestCollateralListTO": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestCollateralListTO"
+              }
+            }
+          }
+        },
+        "ReqCaseRequestAndCollateralDataListRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataList"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataList"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralListTO": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "collateralType": {
+              "type": "string"
+            },
+            "collateralTypeDesc": {
+              "type": "string"
+            },
+            "collateralOwner": {
+              "type": "string"
+            },
+            "mortgageAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralUpdateData": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralType": {
+              "type": "string"
+            },
+            "collateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralOwner": {
+              "type": "string"
+            },
+            "totalAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "mortgageAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralUpdateRes": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralNumberData": {
+          "type": "object",
+          "properties": {
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralNumberReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralNumber": {
+          "type": "object",
+          "properties": {
+            "collateralNumber": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralNumberRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralListTOData": {
+          "type": "object",
+          "properties": {
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateralListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralDataList": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "collateralType": {
+              "type": "string"
+            },
+            "collateralTypeDesc": {
+              "type": "string"
+            },
+            "collateralOwner": {
+              "type": "string"
+            },
+            "mortgageAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "reqCaseRequestCollateralNumber": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
+              }
+            }
+          }
+        },
+        "ReqCaseRequestCollateralListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestCollateralDataList"
+              }
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralFindData": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateralFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqCaseRequestCollateral": {
+          "type": "object",
+          "properties": {
+            "reqCollateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "reqContractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralType": {
+              "type": "string"
+            },
+            "collateralId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralOwner": {
+              "type": "string"
+            },
+            "totalAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "mortgageAmount": {
+              "type": "number",
+              "format": "double"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ReqCaseRequestCollateralFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqCaseRequestCollateral"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqCaseRequestCollateral"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionInfoUpdateData": {
+          "type": "object",
+          "properties": {
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalExecutionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "documentNo": {
+              "type": "string"
+            },
+            "documentDt": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "plaintiffName": {
+              "type": "string"
+            },
+            "defendantName": {
+              "type": "string"
+            },
+            "mortgageStatus": {
+              "type": "string"
+            },
+            "principalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "saleAnnounceDt": {
+              "type": "string"
+            },
+            "saleAnnouncePlace": {
+              "type": "string"
+            },
+            "auctionDt": {
+              "type": "string"
+            },
+            "auctionAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "buyer": {
+              "type": "string"
+            },
+            "redeemDt": {
+              "type": "string"
+            },
+            "redeemStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "clLandId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionInfoUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionInfoUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionInfoUpdateRes": {
+          "type": "object",
+          "properties": {
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionInfoFindData": {
+          "type": "object",
+          "properties": {
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionInfoFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionInfoFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionInfo": {
+          "type": "object",
+          "properties": {
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalExecutionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "documentNo": {
+              "type": "string"
+            },
+            "documentDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "plaintiffName": {
+              "type": "string"
+            },
+            "defendantName": {
+              "type": "string"
+            },
+            "mortgageStatus": {
+              "type": "string"
+            },
+            "principalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "saleAnnounceDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "saleAnnouncePlace": {
+              "type": "string"
+            },
+            "auctionDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "auctionAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "buyer": {
+              "type": "string"
+            },
+            "redeemDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "redeemStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "clLandId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionInfoFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqAuctionInfo"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionInfo"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionAppointmentUpdateData": {
+          "type": "object",
+          "properties": {
+            "auctionAptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionAptDt": {
+              "type": "string"
+            },
+            "auctionStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionAppointmentUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionAppointmentUpdateRes": {
+          "type": "object",
+          "properties": {
+            "auctionAptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionAppointmentListTOData": {
+          "type": "object",
+          "properties": {
+            "auctionAptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionStatus": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionAppointmentListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionAppointmentListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "ReqAuctionAppointment": {
+          "type": "object",
+          "properties": {
+            "auctionAptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionAptDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "auctionStatus": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "ReqAuctionAppointmentFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ReqAuctionAppointment"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionAppointment"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionAppointmentFindData": {
+          "type": "object",
+          "properties": {
+            "auctionAptId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "ReqAuctionAppointmentFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/ReqAuctionAppointmentFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "PCreateLegalCodeData": {
+          "type": "object",
+          "properties": {
+            "pdockey": {
+              "type": "string"
+            }
+          }
+        },
+        "PCreateLegalCodeParam": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/PCreateLegalCodeData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "PCreateLegalCodeRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/PCreateLegalCodeSP"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/PCreateLegalCodeSP"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "PCreateLegalCodeSP": {
+          "type": "object",
+          "properties": {
+            "vlastNumber": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalTypeUpdateData": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalTypeUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalTypeUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalTypeUpdateRes": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalTypeFindData": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalTypeFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalTypeFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalType": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalTypeFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalType"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalType"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalStatusUpdateData": {
+          "type": "object",
+          "properties": {
+            "legalStatusCode": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "isBankruptcy": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalStatusUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalStatusUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalStatusUpdateRes": {
+          "type": "object",
+          "properties": {
+            "legalStatusCode": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalStatusFindData": {
+          "type": "object",
+          "properties": {
+            "legalStatusCode": {
+              "type": "string"
+            },
+            "isBankruptcy": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalStatusFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalStatusFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalStatus": {
+          "type": "object",
+          "properties": {
+            "legalStatusCode": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "isBankruptcy": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalStatusFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalStatus"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalStatus"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalNameListTOData": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalNameListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalNameListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalNameListTO": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "deptNm": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalNameListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalNameListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalNameListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseUpdateData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestCode": {
+              "type": "string"
+            },
+            "legalStatus": {
+              "type": "string"
+            },
+            "assignBy": {
+              "type": "string"
+            },
+            "assignDt": {
+              "type": "string"
+            },
+            "lawyerId": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "caseTypeName": {
+              "type": "string"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "bcBlackCasePrefix": {
+              "type": "string"
+            },
+            "bcBlackCaseNumber": {
+              "type": "string"
+            },
+            "bcBlackCaseYear": {
+              "type": "string"
+            },
+            "bcRedCasePrefix": {
+              "type": "string"
+            },
+            "bcRedCaseNumber": {
+              "type": "string"
+            },
+            "bcRedCaseYear": {
+              "type": "string"
+            },
+            "plaintiff": {
+              "type": "string"
+            },
+            "defendant": {
+              "type": "string"
+            },
+            "litigant": {
+              "type": "string"
+            },
+            "charge": {
+              "type": "string"
+            },
+            "sueDate": {
+              "type": "string"
+            },
+            "judgeDate": {
+              "type": "string"
+            },
+            "dueExecutionDate": {
+              "type": "string"
+            },
+            "defaultDate": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string"
+            },
+            "judgementStatus": {
+              "type": "string"
+            },
+            "judgement": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "bankruptcyStatus": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseUpdateRes": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseListTOData": {
+          "type": "object",
+          "properties": {
+            "legalType": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "legalStatus": {
+              "type": "string"
+            },
+            "sueDateFrom": {
+              "type": "string"
+            },
+            "sueDateTo": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseListTO": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "legalTypeDesc": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "cifNameSur": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "deptNmCtl": {
+              "type": "string"
+            },
+            "requestCode": {
+              "type": "string"
+            },
+            "legalStatus": {
+              "type": "string"
+            },
+            "legalNameDesc": {
+              "type": "string"
+            },
+            "assignDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "lawyerId": {
+              "type": "string"
+            },
+            "lawyerName": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "caseTypeName": {
+              "type": "string"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "bcBlackCasePrefix": {
+              "type": "string"
+            },
+            "bcBlackCaseNumber": {
+              "type": "string"
+            },
+            "bcBlackCaseYear": {
+              "type": "string"
+            },
+            "bcRedCasePrefix": {
+              "type": "string"
+            },
+            "bcRedCaseNumber": {
+              "type": "string"
+            },
+            "bcRedCaseYear": {
+              "type": "string"
+            },
+            "plaintiff": {
+              "type": "string"
+            },
+            "defendant": {
+              "type": "string"
+            },
+            "litigant": {
+              "type": "string"
+            },
+            "charge": {
+              "type": "string"
+            },
+            "sueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "judgeDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "dueExecutionDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "defaultDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "judgement_status": {
+              "type": "string"
+            },
+            "judgement": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "babkruptcyStatus": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityUpdateData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "lawyerId": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string"
+            },
+            "liabilityDetail": {
+              "type": "string"
+            },
+            "issueDate": {
+              "type": "string"
+            },
+            "meetingDate": {
+              "type": "string"
+            },
+            "signDate": {
+              "type": "string"
+            },
+            "panelOrderNo": {
+              "type": "string"
+            },
+            "panelOrderDate": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string"
+            },
+            "viNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "orderDate": {
+              "type": "string"
+            },
+            "due2yearDate": {
+              "type": "string"
+            },
+            "recordNo": {
+              "type": "string"
+            },
+            "recordDate": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "offerRecordNo": {
+              "type": "string"
+            },
+            "offerRecordDate": {
+              "type": "string"
+            },
+            "due1yearDate": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "resolution": {
+              "type": "string"
+            },
+            "offerDeal": {
+              "type": "string"
+            },
+            "orderRefNo": {
+              "type": "string"
+            },
+            "orderRefDate": {
+              "type": "string"
+            },
+            "receiveCondition": {
+              "type": "string"
+            },
+            "receiveAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "sendLess1mDate": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityUpdateRes": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelUpdateData": {
+          "type": "object",
+          "properties": {
+            "panelSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelUpdateRes": {
+          "type": "object",
+          "properties": {
+            "panelSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityLegalCodeData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityLegalCodeReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelListTO": {
+          "type": "object",
+          "properties": {
+            "panelSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelFindData": {
+          "type": "object",
+          "properties": {
+            "panelSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanel": {
+          "type": "object",
+          "properties": {
+            "panelSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityPanelFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityPanel"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityPanel"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerUpdateData": {
+          "type": "object",
+          "properties": {
+            "officerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerUpdateRes": {
+          "type": "object",
+          "properties": {
+            "officerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerListTO": {
+          "type": "object",
+          "properties": {
+            "officerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerFindData": {
+          "type": "object",
+          "properties": {
+            "officerSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficer": {
+          "type": "object",
+          "properties": {
+            "officerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityOfficerFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityOfficer"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityOfficer"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantUpdateRes": {
+          "type": "object",
+          "properties": {
+            "litigantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantListTO": {
+          "type": "object",
+          "properties": {
+            "litigantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "litigantType": {
+              "type": "string"
+            },
+            "litigantTypeName": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantFindData": {
+          "type": "object",
+          "properties": {
+            "litigantSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigant": {
+          "type": "object",
+          "properties": {
+            "litigantSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "litigantType": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityLitigant"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityLitigant"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityListTOData": {
+          "type": "object",
+          "properties": {
+            "issueDateFrom": {
+              "type": "string"
+            },
+            "issueDateTo": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalType": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityListTO": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "deptNmCtl": {
+              "type": "string"
+            },
+            "lawyerName": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "liabilityDetail": {
+              "type": "string"
+            },
+            "issueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "meetingDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "signDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "panelOrderNo": {
+              "type": "string"
+            },
+            "panelOrderDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sendDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "viNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "orderDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "due2yearDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "recordNo": {
+              "type": "string"
+            },
+            "recordDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "offerRecordNo": {
+              "type": "string"
+            },
+            "offerRecordDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "due1yearDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "resolution": {
+              "type": "string"
+            },
+            "offerDeal": {
+              "type": "string"
+            },
+            "orderRefNo": {
+              "type": "string"
+            },
+            "orderRefDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "receiveCondition": {
+              "type": "string"
+            },
+            "receiveAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "sendLess1mDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityFindData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiability": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "lawyerId": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "liabilityDetail": {
+              "type": "string"
+            },
+            "issueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "meetingDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "signDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "panelOrderNo": {
+              "type": "string"
+            },
+            "panelOrderDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sendDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "viNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "orderDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "due2yearDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "recordNo": {
+              "type": "string"
+            },
+            "recordDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "offerRecordNo": {
+              "type": "string"
+            },
+            "offerRecordDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "due1yearDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "resolution": {
+              "type": "string"
+            },
+            "offerDeal": {
+              "type": "string"
+            },
+            "orderRefNo": {
+              "type": "string"
+            },
+            "orderRefDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "receiveCondition": {
+              "type": "string"
+            },
+            "receiveAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "sendLess1mDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiability"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiability"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerUpdateData": {
+          "type": "object",
+          "properties": {
+            "exofficerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerUpdateRes": {
+          "type": "object",
+          "properties": {
+            "exofficerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerListTO": {
+          "type": "object",
+          "properties": {
+            "exofficerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerFindData": {
+          "type": "object",
+          "properties": {
+            "exofficerSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficer": {
+          "type": "object",
+          "properties": {
+            "exofficerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityExecutionOfficerFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficer"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficer"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerUpdateData": {
+          "type": "object",
+          "properties": {
+            "embezzlerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "percent": {
+              "type": "number",
+              "format": "double"
+            },
+            "amount": {
+              "type": "number",
+              "format": "double"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerUpdateRes": {
+          "type": "object",
+          "properties": {
+            "embezzlerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerListTO": {
+          "type": "object",
+          "properties": {
+            "embezzlerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "percent": {
+              "type": "number",
+              "format": "double"
+            },
+            "amount": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerFindData": {
+          "type": "object",
+          "properties": {
+            "embezzlerSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzler": {
+          "type": "object",
+          "properties": {
+            "embezzlerSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "percent": {
+              "type": "number",
+              "format": "double"
+            },
+            "amount": {
+              "type": "number",
+              "format": "double"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityEmbezzlerFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzler"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzler"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachUpdateData": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachUpdateRes": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachListTO": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeId": {
+              "type": "string"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "urlLegalCaseLiabilityFile": {
+              "type": "string"
+            },
+            "urlLegalCaseFileLiabilityThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachFindData": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttach": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "urlLegalCaseLiabilityFile": {
+              "type": "string"
+            },
+            "urlLegalCaseFileLiabilityThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityDocumentAttachFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttach"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttach"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalUpdateData": {
+          "type": "object",
+          "properties": {
+            "capitalSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "capitalName": {
+              "type": "string"
+            },
+            "assessmentAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalUpdateRes": {
+          "type": "object",
+          "properties": {
+            "capitalSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalListTO": {
+          "type": "object",
+          "properties": {
+            "capitalSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "capitalName": {
+              "type": "string"
+            },
+            "assessmentAmt": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalFindData": {
+          "type": "object",
+          "properties": {
+            "capitalSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapital": {
+          "type": "object",
+          "properties": {
+            "capitalSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "capitalName": {
+              "type": "string"
+            },
+            "assessmentAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityCapitalFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityCapital"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityCapital"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentUpdateData": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "accountNo": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentUpdateRes": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentListTO": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "accountNo": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentFindData": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupment": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "accountNo": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountRecoupmentFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupment"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupment"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryUpdateRes": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryListTO": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "accountNo": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantAccountInquiryFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseLiabilityLitigantAccountInquiryFindData": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiry": {
+          "type": "object",
+          "properties": {
+            "accountSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "accountNo": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseLiabilityAccountInquiryFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiry"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiry"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseHighCourtUpdateData": {
+          "type": "object",
+          "properties": {
+            "highCourtSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "courtLevel": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string"
+            },
+            "blackCaseNo": {
+              "type": "string"
+            },
+            "redCaseNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "readDate": {
+              "type": "string"
+            },
+            "orderDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseHighCourtUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseHighCourtUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseHighCourtUpdateRes": {
+          "type": "object",
+          "properties": {
+            "highCourtSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseHighCourtListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseHighCourtListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseHighCourtListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseHighCourtListTO": {
+          "type": "object",
+          "properties": {
+            "highCourtSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "courtLevel": {
+              "type": "string"
+            },
+            "courtLevelName": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "blackCaseNo": {
+              "type": "string"
+            },
+            "redCaseNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "readDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "orderDetail": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "update_DT": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseHighCourtListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseHighCourtListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseHighCourtListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseHighCourtData": {
+          "type": "object",
+          "properties": {
+            "highCourtSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseHighCourtReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseHighCourtData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseHighCourt": {
+          "type": "object",
+          "properties": {
+            "highCourtSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "courtLevel": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "blackCaseNo": {
+              "type": "string"
+            },
+            "redCaseNo": {
+              "type": "string"
+            },
+            "orderNo": {
+              "type": "string"
+            },
+            "readDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "orderDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseHighCourtRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseHighCourt"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseHighCourt"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseFindData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCase": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "legalType": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "requestCode": {
+              "type": "string"
+            },
+            "legalStatus": {
+              "type": "string"
+            },
+            "assignBy": {
+              "type": "string"
+            },
+            "assignDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "lawyerId": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "caseTypeName": {
+              "type": "string"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "bcBlackCasePrefix": {
+              "type": "string"
+            },
+            "bcBlackCaseNumber": {
+              "type": "string"
+            },
+            "bcBlackCaseYear": {
+              "type": "string"
+            },
+            "bcRedCasePrefix": {
+              "type": "string"
+            },
+            "bcRedCaseNumber": {
+              "type": "string"
+            },
+            "bcRedCaseYear": {
+              "type": "string"
+            },
+            "plaintiff": {
+              "type": "string"
+            },
+            "defendant": {
+              "type": "string"
+            },
+            "litigant": {
+              "type": "string"
+            },
+            "charge": {
+              "type": "string"
+            },
+            "sueDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "judgeDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "dueExecutionDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "defaultDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "judgementStatus": {
+              "type": "string"
+            },
+            "judgement": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "totalAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "bankruptcyStatus": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCase"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCase"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseEnforcementUpdateData": {
+          "type": "object",
+          "properties": {
+            "enforcementSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string"
+            },
+            "announceDate": {
+              "type": "string"
+            },
+            "seizeDate": {
+              "type": "string"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pauseCase": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseEnforcementUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseEnforcementUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseEnforcementUpdateRes": {
+          "type": "object",
+          "properties": {
+            "enforcementSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseEnforcementListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseEnforcementListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseEnforcementListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseEnforcementListTO": {
+          "type": "object",
+          "properties": {
+            "enforcementSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "announceDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "seizeDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "provinceDescription": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "courtName": {
+              "type": "string"
+            },
+            "blackCasePrefix": {
+              "type": "string"
+            },
+            "blackCaseNumber": {
+              "type": "string"
+            },
+            "blackCaseYear": {
+              "type": "string"
+            },
+            "redCasePrefix": {
+              "type": "string"
+            },
+            "redCaseNumber": {
+              "type": "string"
+            },
+            "redCaseYear": {
+              "type": "string"
+            },
+            "plaintiff": {
+              "type": "string"
+            },
+            "defendant": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pauseCase": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseEnforcementListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseEnforcementListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseEnforcementListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseEnforcementFindData": {
+          "type": "object",
+          "properties": {
+            "enforcementSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseEnforcementFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseEnforcementFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseEnforcement": {
+          "type": "object",
+          "properties": {
+            "enforcementSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "announceDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "seizeDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "provinceId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pauseCase": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "requestDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseEnforcementFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseEnforcement"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseEnforcement"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachUpdateData": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachUpdateRes": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDocumentAttachListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachListTO": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "urlLegalCaseFile": {
+              "type": "string"
+            },
+            "urlLegalCaseFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDocumentAttachListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDocumentAttachListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachData": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDocumentAttachData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttach": {
+          "type": "object",
+          "properties": {
+            "attachSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "attachTypeId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "attachFileExt": {
+              "type": "string"
+            },
+            "attachFileOriginalName": {
+              "type": "string"
+            },
+            "attachFileName": {
+              "type": "string"
+            },
+            "attachDetail": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "createBy": {
+              "type": "string"
+            },
+            "createDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "urlLegalCaseFile": {
+              "type": "string"
+            },
+            "urlLegalCaseFileThumbnail": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseDocumentAttachRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseDocumentAttach"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseDocumentAttach"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseCostUpdateData": {
+          "type": "object",
+          "properties": {
+            "costSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "costType": {
+              "type": "string"
+            },
+            "costCode": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "costAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseCostUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseCostUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseCostUpdateRes": {
+          "type": "object",
+          "properties": {
+            "costSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseCostListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "costType": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseCostListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseCostListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseCostListTO": {
+          "type": "object",
+          "properties": {
+            "costSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "costCode": {
+              "type": "string"
+            },
+            "costCodeDesc": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "costAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseCostListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseCostListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseCostListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseCostFindData": {
+          "type": "object",
+          "properties": {
+            "costSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseCostFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseCostFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseCost": {
+          "type": "object",
+          "properties": {
+            "costSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "costType": {
+              "type": "string"
+            },
+            "costCode": {
+              "type": "string"
+            },
+            "transDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "costAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseCostFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseCost"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseCost"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseBankUpdateData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "haveCapital": {
+              "type": "string"
+            },
+            "capital": {
+              "type": "number",
+              "format": "double"
+            },
+            "capitalBank": {
+              "type": "number",
+              "format": "double"
+            },
+            "howToSend": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string"
+            },
+            "risk": {
+              "type": "string"
+            },
+            "damage": {
+              "type": "string"
+            },
+            "follow": {
+              "type": "string"
+            },
+            "execution": {
+              "type": "string"
+            },
+            "writeOff": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseBankUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseBankUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseBankUpdateRes": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseBankData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseBankReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseBankData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseBank": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            },
+            "haveCapital": {
+              "type": "string"
+            },
+            "capital": {
+              "type": "number",
+              "format": "double"
+            },
+            "capitalBank": {
+              "type": "number",
+              "format": "double"
+            },
+            "howToSend": {
+              "type": "string"
+            },
+            "sendDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "risk": {
+              "type": "string"
+            },
+            "damage": {
+              "type": "string"
+            },
+            "follow": {
+              "type": "string"
+            },
+            "execution": {
+              "type": "string"
+            },
+            "writeOff": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseBankRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseBank"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseBank"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionUpdateData": {
+          "type": "object",
+          "properties": {
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "auctionNo": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pauseCase": {
+              "type": "string"
+            },
+            "remarkPauseCase": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionUpdateRes": {
+          "type": "object",
+          "properties": {
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionListData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionListReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionListData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuction": {
+          "type": "object",
+          "properties": {
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "auctionNo": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "pauseCase": {
+              "type": "string"
+            },
+            "remarkPauseCase": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseAuctionFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAuction"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuction"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionFindData": {
+          "type": "object",
+          "properties": {
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentUpdateData": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentNo": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentDate": {
+              "type": "string"
+            },
+            "sellDate": {
+              "type": "string"
+            },
+            "sellAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "receiveDate": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentUpdateRes": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentListTOData": {
+          "type": "object",
+          "properties": {
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentListTO": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentNo": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sellDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sellAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "receiveDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentFindData": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointment": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "auctionSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentNo": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sellDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "sellAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "nameSur": {
+              "type": "string"
+            },
+            "receiveDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAuctionAppointment"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointment"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralUpdateData": {
+          "type": "object",
+          "properties": {
+            "appCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "clId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isCheck": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralUpdateRes": {
+          "type": "object",
+          "properties": {
+            "appCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralListTOData": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralListTO": {
+          "type": "object",
+          "properties": {
+            "appCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "clId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "collateralDetail": {
+              "type": "string"
+            },
+            "officerAppraisalPrice": {
+              "type": "number",
+              "format": "double"
+            },
+            "isCheck": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralFindData": {
+          "type": "object",
+          "properties": {
+            "appCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateral": {
+          "type": "object",
+          "properties": {
+            "appCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "contractCollSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "clId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isCheck": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseAuctionAppointmentCollateralFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateral"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateral"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAppointmentUpdateData": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "appointmentCode": {
+              "type": "string"
+            },
+            "appointmentDate": {
+              "type": "string"
+            },
+            "timePeriod": {
+              "type": "string"
+            },
+            "appointmentTimeBegin": {
+              "type": "string"
+            },
+            "appointmentTimeEnd": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAppointmentUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAppointmentUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAppointmentUpdateRes": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAppointmentListTOData": {
+          "type": "object",
+          "properties": {
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAppointmentListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAppointmentListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAppointmentListTO": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "appointmentDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "timePeriod": {
+              "type": "string"
+            },
+            "appointmentTimeBegin": {
+              "type": "string"
+            },
+            "appointmentTimeEnd": {
+              "type": "string"
+            },
+            "appointmentCode": {
+              "type": "string"
+            },
+            "appointmentName": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "courtName": {
+              "type": "string"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAppointmentListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAppointmentListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAppointmentListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAppointmentData": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "LegalCaseAppointmentReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAppointmentData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "LegalCaseAppointment": {
+          "type": "object",
+          "properties": {
+            "appointmentSeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "legalCode": {
+              "type": "string"
+            },
+            "appointmentCode": {
+              "type": "string"
+            },
+            "appointmentDate": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "timePeriod": {
+              "type": "string"
+            },
+            "appointmentTimeBegin": {
+              "type": "string"
+            },
+            "appointmentTimeEnd": {
+              "type": "string"
+            },
+            "courtId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "isDeleted": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "remark": {
+              "type": "string"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "LegalCaseAppointmentRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/LegalCaseAppointment"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/LegalCaseAppointment"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCustomerInfoUpdateData": {
+          "type": "object",
+          "properties": {
+            "cifNo": {
+              "type": "string"
+            },
+            "cifNameSur": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCustomerInfoUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCustomerInfoUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfoUpdateRes": {
+          "type": "object",
+          "properties": {
+            "cifNo": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCustomerInfoListTOData": {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "cifNo": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfoListTOReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCustomerInfoListTOData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfoListTO": {
+          "type": "object",
+          "properties": {
+            "customerId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "cifNameSur": {
+              "type": "string"
+            },
+            "cifContractNo": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfoListTORes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CbsCustomerInfoListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/CbsCustomerInfoListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCifContractFindData": {
+          "type": "object",
+          "properties": {
+            "cifNo": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfoFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCifContractFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCustomerInfo": {
+          "type": "object",
+          "properties": {
+            "cifNo": {
+              "type": "string"
+            },
+            "cifNameSur": {
+              "type": "string"
+            },
+            "deptId": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCustomerInfoFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CbsCustomerInfo"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/CbsCustomerInfo"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCifContractUpdateData": {
+          "type": "object",
+          "properties": {
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "contractType": {
+              "type": "string"
+            },
+            "collateral": {
+              "type": "string"
+            },
+            "marketCode": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "suePrincipleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "sueInterestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            },
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCifContractUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCifContractUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCifContractUpdateRes": {
+          "type": "object",
+          "properties": {
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCifContractListData": {
+          "type": "object",
+          "properties": {
+            "cifNo": {
+              "type": "string"
+            },
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCifContractListReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCifContractListData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCifContract": {
+          "type": "object",
+          "properties": {
+            "contractId": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "cifNo": {
+              "type": "string"
+            },
+            "contractNo": {
+              "type": "string"
+            },
+            "contractType": {
+              "type": "string"
+            },
+            "collateral": {
+              "type": "string"
+            },
+            "marketCode": {
+              "type": "string"
+            },
+            "principleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "interestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "suePrincipleAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "sueInterestAmt": {
+              "type": "number",
+              "format": "double"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "legalCode": {
+              "type": "string"
+            }
+          }
+        },
+        "CbsCifContractFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CbsCifContract"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/CbsCifContract"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CbsCifContractFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CbsCifContractFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CaseTypeUpdateData": {
+          "type": "object",
+          "properties": {
+            "caseTypeCode": {
+              "type": "string"
+            },
+            "caseTypeName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "isBranchCase": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string"
+            }
+          }
+        },
+        "CaseTypeUpdateReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CaseTypeUpdateData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CaseTypeUpdateRes": {
+          "type": "object",
+          "properties": {
+            "caseTypeCode": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CaseTypeNameListTO": {
+          "type": "object",
+          "properties": {
+            "caseTypeName": {
+              "type": "string"
+            }
+          }
+        },
+        "CaseTypeNameRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CaseTypeNameListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/CaseTypeNameListTO"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CaseTypeFindData": {
+          "type": "object",
+          "properties": {
+            "caseTypeCode": {
+              "type": "string"
+            },
+            "isBranchCase": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CaseTypeFindReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/CaseTypeFindData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "CaseType": {
+          "type": "object",
+          "properties": {
+            "caseTypeCode": {
+              "type": "string"
+            },
+            "caseTypeName": {
+              "type": "string"
+            },
+            "displaySeq": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "status": {
+              "type": "string"
+            },
+            "isBranchCase": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "updateBy": {
+              "type": "string"
+            },
+            "updateDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CaseTypeFindRes": {
+          "type": "object",
+          "properties": {
+            "dataList": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CaseTypeListTO"
+              }
+            },
+            "data": {
+              "$ref": "#/components/schemas/CaseType"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "CaseTypeListTO": {
+          "type": "object",
+          "properties": {
+            "caseTypeCode": {
+              "type": "string"
+            },
+            "caseTypeName": {
+              "type": "string"
+            }
+          }
+        },
+        "UploadFileRes": {
+          "type": "object",
+          "properties": {
+            "filename": {
+              "type": "string"
+            },
+            "filePath": {
+              "type": "string"
+            },
+            "fileUrl": {
+              "type": "string"
+            },
+            "filenameThumbnail": {
+              "type": "string"
+            },
+            "filePathThumbnail": {
+              "type": "string"
+            },
+            "fileUrlThumbnail": {
+              "type": "string"
+            },
+            "errorcode": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "errormessage": {
+              "type": "string"
+            },
+            "totalCount": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        },
+        "UploadFileData": {
+          "type": "object",
+          "properties": {
+            "fileType": {
+              "type": "string"
+            },
+            "fileBase64": {
+              "type": "string"
+            },
+            "isTempFile": {
+              "type": "boolean"
+            }
+          }
+        },
+        "UploadFileReq": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/components/schemas/UploadFileData"
+            },
+            "userInfo": {
+              "type": "string"
+            },
+            "mode": {
+              "type": "string"
+            },
+            "menuCode": {
+              "type": "string"
+            },
+            "lang": {
+              "type": "string"
+            }
+          }
+        },
+        "AppCommonInfoResp": {
+          "type": "object",
+          "properties": {
+            "serverId": {
+              "type": "string"
+            },
+            "restUuid": {
+              "type": "string"
+            },
+            "infoDesc": {
+              "type": "string"
+            },
+            "infoLastBuild": {
+              "type": "string"
+            },
+            "infoVersion": {
+              "type": "string"
+            },
+            "infoCurrentDt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "CheckInfoResp": {
+          "type": "object",
+          "properties": {
+            "serverId": {
+              "type": "string"
+            },
+            "serverDateTime": {
+              "type": "string"
+            },
+            "serverContextPath": {
+              "type": "string"
+            }
+          }
         }
+      }
     }
-};
+  }

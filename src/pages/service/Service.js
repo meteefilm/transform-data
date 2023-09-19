@@ -4,6 +4,8 @@ import { Button } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import React, { useState } from 'react';
+import { data } from './data';
+import { onCopyText } from 'utils/CopyUtils';
 
 export default function Service() {
 
@@ -13,6 +15,7 @@ export default function Service() {
     const [alert, setAlert] = useState(null)
 
     const onClikcCallDoc = async () => {
+        // renderTransData(data)
         let pathService = "/transform/callapi"
         let data = undefined
         try{
@@ -61,11 +64,18 @@ export default function Service() {
                 newKey = key.substring(index+1);
                 servicePath = key.substring(index+1);
                 newKey = renderPascal(newKey)
-                pathUrl = key.substring(0,index);
+                pathUrl = key.substring(0,index+1);
 
                 let val = paths[key]
                 tags = val?.post?.tags[0] || val?.get?.tags[0] || ""
                 tags = tags.replaceAll(" ","")
+                if(tags.split("/").length > 1){
+                    let _tags = ""
+                    tags.split("/").forEach(e=>{
+                        _tags += renderPascal(e)
+                    })
+                    tags = _tags
+                }
                 let findIndex = headerConst.findIndex(e=>e.tags===tags)
                 let objectHeader = headerConst[findIndex]
                 if(findIndex === -1){
@@ -113,7 +123,6 @@ export default function Service() {
         }catch(err){
             setAlert({ type : 'error', text  : err.toString()})
         }
-      
     }
 
     const renderPascal = (text="") => {
@@ -135,9 +144,9 @@ export default function Service() {
     }
 
     const onClickCopy = (text) => {
-        setAlert({ type : 'success', text : "คัดลอก สำเร็จ !" })
-        navigator.clipboard.writeText(text) 
-    }
+        onCopyText(text)
+        setAlert({ type: 'success', text: 'Copy Success !' });
+    };
 
     return (
         <>
@@ -189,7 +198,6 @@ export default function Service() {
                     </div>
                 </div>
             </div>
-        
         </>
     )
 }

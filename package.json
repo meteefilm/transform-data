@@ -38,7 +38,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "format": "prettier --write \"src/**/*.{js,ts,tsx}\"",
-        "serv" : "react-scripts build && node server/index.js"
+        "serv": "react-scripts build && node server/index.js"
     },
     "eslintConfig": {
         "extends": [
@@ -65,5 +65,4 @@
     "bugs": {
         "url": "https://github.com/meteefilm/transform-data/issues"
     }
-
 }
