@@ -30,11 +30,11 @@ export default function Data() {
         let val = e.value
         setTypeTran(val)
         if(data.text !== ""){
-            onClickTranForm(data,val)
+            onClicktransform(data,val)
         }
     }
 
-    const onClickTranForm = (_data,type) => {
+    const onClicktransform = (_data,type) => {
         let newText = "", newFile = "",newTextList = [], newFileList = [];
         if(_data  && NullString(_data.text) !== "" ){
             let upperCase =  _data.text.toUpperCase();
@@ -76,7 +76,7 @@ export default function Data() {
                 setLineHeight(10)
             }
         }else{
-            setAlert({ type : 'warn' , text : 'กรุณาใส่ข้อมูลที่ต้องการ Tranform !!' })
+            setAlert({ type : 'warn' , text : 'กรุณาใส่ข้อมูลที่ต้องการ transform !!' })
         }
         setTransData(newText)
         setTransFile(newFile)
@@ -179,7 +179,7 @@ export default function Data() {
                                                     <span className="p-inputgroup-addon">
                                                         <i className="pi pi-hashtag"></i>
                                                     </span>
-                                                    <InputText id="appName" type="text" className='font-bold' placeholder="Data for Tranform ..." value={data.appName} onChange={(e) => setData((pre)=>({...pre , appName : e.target.value }))} />
+                                                    <InputText id="appName" type="text" className='font-bold' placeholder="Data for transform ..." value={data.appName} onChange={(e) => setData((pre)=>({...pre , appName : e.target.value }))} />
                                                 </div>
                                             </div>
                                         </div>
@@ -192,13 +192,13 @@ export default function Data() {
                                             <span className="p-inputgroup-addon">
                                                 <i className="pi pi-book"></i>
                                             </span>
-                                            <InputText id="text" type="text" placeholder="Data for Tranform ..."  value={data.text} onChange={(e) => setData((pre)=>({...pre , text : e.target.value }))}/>
+                                            <InputText id="text" type="text" placeholder="Data for transform ..."  value={data.text} onChange={(e) => setData((pre)=>({...pre , text : e.target.value }))}/>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="p-fluid formgrid grid ">
                                     <div className="field col-12 ">
-                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(data,typeTran)} />
+                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClicktransform(data,typeTran)} />
                                         <Button className="p-button-raised p-button-warning w-10rem" label="Clear Data" icon="pi pi-undo" onClick={() => onClearData()} />
                                     </div>
                                 </div>

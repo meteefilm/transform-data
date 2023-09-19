@@ -56,12 +56,12 @@ export default function Params() {
             })
             setLineHeight(10)
         }else{
-            setAlert({ type : 'warn' , text : 'กรุณาใส่ข้อมูลที่ต้องการ Tranform !!' })
+            setAlert({ type : 'warn' , text : 'กรุณาใส่ข้อมูลที่ต้องการ transform !!' })
         }
         setTransDataList(newTextList)
     };
 
-    const onClickTranForm = (list=[],type) => {
+    const onClicktransform = (list=[],type) => {
         let newFile = "", newFileList = [], lineHeight = 4;
         list.forEach((e)=>{
             let text =""
@@ -183,7 +183,7 @@ export default function Params() {
         let val = e.value
         setTypeTran(val)
         // if(data !== ""){
-            onClickTranForm(transDataList,val)
+            onClicktransform(transDataList,val)
         // }
     }
 
@@ -204,7 +204,7 @@ export default function Params() {
                                             <span className="p-inputgroup-addon">
                                                 <i className="pi pi-book"></i>
                                             </span>
-                                            <InputTextarea id="text" type="text" placeholder="Data for Tranform ..."  value={data} onChange={(e) => setData(e.target.value)} />
+                                            <InputTextarea id="text" type="text" placeholder="Data for transform ..."  value={data} onChange={(e) => setData(e.target.value)} />
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +246,7 @@ export default function Params() {
                                             </div>
                                         </div>
                                         {/* <Button onClick={() => setTransDataView('text')} icon="pi pi-code" disabled={transData === ''} /> */}
-                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClickTranForm(transDataList,typeTran)} disabled={transDataList.length === 0} />
+                                        <Button className="p-button-raised w-10rem mr-2" label="Transform" icon="pi pi-arrow-right-arrow-left" onClick={() => onClicktransform(transDataList,typeTran)} disabled={transDataList.length === 0} />
                                         <DataTable value={transDataList} >
                                             {columns.map(({ field, header }) => {
                                                 return <Column key={field} field={field} header={header}

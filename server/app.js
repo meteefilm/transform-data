@@ -11,7 +11,7 @@ app.use(cors());
 app.use(addHeader);
 
 
-app.post('/tranform/callapi', async (req, res) => {
+app.post('/transform/callapi', async (req, res) => {
     let data = { errorcode : 0 , errormessage : '', data : null };
     try{
       let url = req.body?.url || "";
@@ -43,7 +43,7 @@ app.post('/tranform/callapi', async (req, res) => {
 
 })
 
-app.use("/tranform/",express.static(path.resolve(__dirname, "..", "build")));
+app.use("/transform/",express.static(path.resolve(__dirname, "..", "build")));
 
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "..", "build", "index.html"));

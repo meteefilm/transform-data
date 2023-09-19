@@ -13,7 +13,7 @@ export default function Service() {
     const [alert, setAlert] = useState(null)
 
     const onClikcCallDoc = async () => {
-        let pathService = "/tranform/callapi"
+        let pathService = "/transform/callapi"
         let data = undefined
         try{
             data = await new Promise(async (resolve, reject) => {
