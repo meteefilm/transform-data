@@ -17,9 +17,9 @@ import AppMenu from './AppMenu';
 import AppTopbar from './AppTopbar';
 import Params from './pages/params/Params';
 import Service from './pages/service/Service';
+import ServiceParam from 'pages/service/ServiceParam';
 
 const App = (props) => {
-
     const [configActive, setConfigActive] = useState(false);
     const [menuMode] = useState('slim');
     const [overlayMenuActive, setOverlayMenuActive] = useState(false);
@@ -58,8 +58,11 @@ const App = (props) => {
         {
             label: 'Transform Service',
             icon: 'pi pi-link',
-            items: [{ label: 'Service', icon: 'pi pi-sort-alt', to: '/service' }]
-        },
+            items: [
+                { label: 'Service', icon: 'pi pi-sort-alt', to: '/service' },
+                { label: 'Service Params', icon: 'pi pi-sort-alt', to: '/request' }
+            ]
+        }
     ];
 
     let configClick;
@@ -289,10 +292,11 @@ const App = (props) => {
                     onChangeActiveInlineMenu={onChangeActiveInlineMenu}
                     resetActiveIndex={resetActiveIndex}
                 />
-                
+
                 <div className="layout-main-content">
                     <Routes>
                         <Route path="/" exact="true" element={<Dashboard />} />
+                        <Route path="/request" element={<ServiceParam />} />
                         <Route path="/service" element={<Service />} />
                         <Route path="/params" element={<Params />} />
                         <Route path="/data" element={<Data />} />

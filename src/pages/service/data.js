@@ -1,15338 +1,3684 @@
 export const data = {
-    "openapi": "3.0.1",
-    "info": {
-      "title": "GSB App API",
-      "contact": {
-        "name": "Sense Info Tech Software",
-        "url": "http://www.sense-infotech.com/",
-        "email": "sense@sense-infotech.com"
-      },
-      "version": "1.0"
-    },
-    "servers": [
-      {
-        "url": "http://sitdev.dyndns.org:9148/GSBLegalService",
-        "description": "Generated server url"
-      }
+    swagger: '2.0',
+    info: { description: 'Last Build : 2023-09-25 14:18:09', version: '1.0.0', title: 'BAAC Service REST API', license: { name: 'By : Sense Info Tech' } },
+    host: 'sitdev.dyndns.org:9148',
+    tags: [
+        { name: 'App Auth Service', description: 'Auth Controller' },
+        { name: 'App Common Service', description: ' ' },
+        { name: 'App Core Store Service', description: 'Core Store Controller' },
+        { name: 'App Ct Service', description: 'Ct Controller' },
+        { name: 'App Login Service', description: 'Login Controller' },
+        { name: 'Token Service', description: 'Token Rest Controller' }
     ],
-    "paths": {
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_UPDATE",
-          "operationId": "legalCasePlaintiffUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_LIST_TO",
-          "operationId": "legalCasePlaintiffListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_FIND",
-          "operationId": "legalCasePlaintiffFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_UPDATE",
-          "operationId": "legalCasePlaintiffAddressUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_LIST_TO",
-          "operationId": "legalCasePlaintiffListTO_1",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_plaintiff_address_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_PLAINTIFF_ADDRESS_FIND",
-          "operationId": "legalCasePlaintiffAddressFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_UPDATE",
-          "operationId": "legalCaseDefendantUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_LIST_TO",
-          "operationId": "legalCaseDefendantListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_FIND",
-          "operationId": "legalCaseDefendantFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_UPDATE",
-          "operationId": "legalCaseDefendantAddressUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_LIST_TO",
-          "operationId": "legalCaseDefendantListTO_1",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantAddressListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantAddressListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal_case_plaintiff_defendant/legal_case_defendant_address_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Plaintiff/defendant Service"
-          ],
-          "summary": "LEGAL_CASE_DEFENDANT_ADDRESS_FIND",
-          "operationId": "legalCaseDefendantAddressFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDefendantAddressFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDefendantAddressFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_request_attach_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_REQUEST_ATTACH_UPDATE",
-          "operationId": "ReqRequestAttachUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqRequestAttachUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqRequestAttachUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_request_attach_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_REQUEST_ATTACH_LIST_TO",
-          "operationId": "ReqRequestAttachListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqRequestAttachListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqRequestAttachListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_request_attach_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_REQUEST_ATTACH_FIND",
-          "operationId": "ReqRequestAttachFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqRequestAttachFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqRequestAttachFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_UPDATE",
-          "operationId": "ReqCaseRequestUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_request_no": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_REQUEST_NO",
-          "operationId": "ReqCaseRequestRequestNo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestRequestNoRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_minutes_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_MINUTES_UPDATE",
-          "operationId": "ReqCaseRequestMinutesUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_minutes_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_MINUTES_LIST_TO",
-          "operationId": "ReqCaseRequestMinutesListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestMinutesListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestMinutesListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_minutes_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_MINUTES_FIND",
-          "operationId": "ReqCaseRequestMinutesFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestMinutesFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestMinutesFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_LIST_TO",
-          "operationId": "ReqCaseRequestListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_FIND",
-          "operationId": "ReqCaseRequestFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_detail_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_DETAIL_UPDATE",
-          "operationId": "ReqCaseRequestDetailUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestDetailUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestDetailUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_detail_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_DETAIL_FIND",
-          "operationId": "ReqCaseRequestDetailFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestDetailFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestDetailFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_contract_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_CONTRACT_UPDATE",
-          "operationId": "ReqCaseRequestContractUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestContractUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestContractUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_contract_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_CONTRACT_LIST_TO",
-          "operationId": "ReqCaseRequestContractListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestContractListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestContractListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_contract_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_CONTRACT_FIND",
-          "operationId": "ReqCaseRequestContractFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestContractFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestContractFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_contract_and_collateral_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_CONTRACT_AND_COLLATERAL_LIST_TO",
-          "operationId": "ReqCaseRequestContractAndCollateralListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_collateral_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_COLLATERAL_UPDATE",
-          "operationId": "ReqCaseRequestCollateralUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_collateral_number": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_COLLATERAL_NUMBER",
-          "operationId": "ReqCaseRequestCollateralNumber",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_collateral_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_COLLATERAL_LIST_TO",
-          "operationId": "ReqCaseRequestCollateralListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestCollateralListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestCollateralListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_case_request_collateral_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_CASE_REQUEST_COLLATERAL_FIND",
-          "operationId": "ReqCaseRequestContractFind_1",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqCaseRequestCollateralFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqCaseRequestCollateralFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_auction_info_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_AUCTION_INFO_UPDATE",
-          "operationId": "reqAuctionInfoUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqAuctionInfoUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqAuctionInfoUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_auction_info_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_AUCTION_INFO_FIND",
-          "operationId": "reqAuctionInfoFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqAuctionInfoFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqAuctionInfoFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_auction_appointment_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_AUCTION_APPOINTMENT_UPDATE",
-          "operationId": "ReqAuctionAppointmentUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_auction_appointment_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_AUCTION_APPOINTMENT_LIST",
-          "operationId": "ReqAuctionAppointmentList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqAuctionAppointmentListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqAuctionAppointmentFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/req_auction_appointment_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "REQ_AUCTION_APPOINTMENT_FIND",
-          "operationId": "ReqAuctionAppointmentFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ReqAuctionAppointmentFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/ReqAuctionAppointmentFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/p_create_legal_code": {
-        "post": {
-          "tags": [
-            "App Legal Store Service"
-          ],
-          "summary": "Store Procedure : P_CREATE_LEGAL_CODE",
-          "operationId": "pCreateLegalCode",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PCreateLegalCodeParam"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/PCreateLegalCodeRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_type_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_TYPE_UPDATE",
-          "operationId": "LegalTypeUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalTypeUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalTypeUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_type_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_TYPE_LIST",
-          "operationId": "legalTypeList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalTypeFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalTypeFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_type_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_TYPE_FIND",
-          "operationId": "legalTypeFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalTypeFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalTypeFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_status_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_STATUS_UPDATE",
-          "operationId": "LegalStatusUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalStatusUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalStatusUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_status_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_STATUS_LIST",
-          "operationId": "legalStatusList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalStatusFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalStatusFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_status_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_STATUS_FIND",
-          "operationId": "legalStatusFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalStatusFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalStatusFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_name_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_NAME_LIST_TO",
-          "operationId": "legalNameListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalNameListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalNameListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_name_find_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_NAME_FIND_TO",
-          "operationId": "legalNameFindTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalNameListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalNameListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_UPDATE",
-          "operationId": "LegalCaseUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_LIST_TO",
-          "operationId": "legalCaseListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_UPDATE",
-          "operationId": "LegalCaseLiabilityUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_panel_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_PANEL_UPDATE",
-          "operationId": "LegalCaseLiabilityPanelUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_panel_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_PANEL_LIST_TO",
-          "operationId": "LegalCaseLiabilityPanelListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_panel_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_PANEL_FIND",
-          "operationId": "LegalCaseLiabilityPanelFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_officer_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_OFFICER_UPDATE",
-          "operationId": "LegalCaseLiabilityOfficerUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_officer_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_OFFICER_LIST_TO",
-          "operationId": "LegalCaseLiabilityOfficerListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_officer_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_OFFICER_FIND",
-          "operationId": "LegalCaseLiabilityOfficerFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_litigant_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_UPDATE",
-          "operationId": "LegalCaseLiabilityLitigantUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLitigantUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_litigant_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_LIST_TO",
-          "operationId": "LegalCaseLiabilityLitigantListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_litigant_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_LITIGANT_FIND",
-          "operationId": "LegalCaseLiabilityLitigantFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_LIST_TO",
-          "operationId": "LegalCaseLiabilityListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_FIND",
-          "operationId": "LegalCaseLiabilityFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_execution_officer_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_UPDATE",
-          "operationId": "LegalCaseLiabilityExecutionOfficerUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_execution_officer_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_LIST_TO",
-          "operationId": "LegalCaseLiabilityExecutionOfficerListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_execution_officer_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EXECUTION_OFFICER_FIND",
-          "operationId": "LegalCaseLiabilityExecutionOfficerFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_embezzler_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_UPDATE",
-          "operationId": "LegalCaseLiabilityEmbezzlerUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_embezzler_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_LIST_TO",
-          "operationId": "LegalCaseLiabilityEmbezzlerListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_embezzler_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_EMBEZZLER_FIND",
-          "operationId": "LegalCaseLiabilityEmbezzlerFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_document_attach_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_UPDATE",
-          "operationId": "LegalCaseLiabilityDocumentAttachUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_document_attach_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_LIST_TO",
-          "operationId": "LegalCaseLiabilityDocumentAttachListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_document_attach_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_DOCUMENT_ATTACH_FIND",
-          "operationId": "LegalCaseLiabilityDocumentAttachFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_capital_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_UPDATE",
-          "operationId": "LegalCaseLiabilityCapitalUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_capital_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_LIST_TO",
-          "operationId": "LegalCaseLiabilityCapitalListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_capital_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_CAPITAL_FIND",
-          "operationId": "LegalCaseLiabilityCapitalFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_recoupment_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_UPDATE",
-          "operationId": "LegalCaseLiabilityAccountRecoupmentUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_recoupment_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_LIST_TO",
-          "operationId": "LegalCaseLiabilityAccountRecoupmentListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_recoupment_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_RECOUPMENT_FIND",
-          "operationId": "LegalCaseLiabilityAccountRecoupmentFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_inquiry_update": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_UPDATE",
-          "operationId": "LegalCaseLiabilityAccountInquiryUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_inquiry_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_LIST_TO",
-          "operationId": "LegalCaseLiabilityAccountInquiryListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_liability_account_inquiry_find": {
-        "post": {
-          "tags": [
-            "App Legal Case Liability Service"
-          ],
-          "summary": "LEGAL_CASE_LIABILITY_ACCOUNT_INQUIRY_FIND",
-          "operationId": "LegalCaseLiabilityAccountInquiryFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_high_court_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_HIGH_COURT_UPDATE",
-          "operationId": "LegalCaseHighCourtUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseHighCourtUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseHighCourtUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_high_court_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_HIGH_COURT_LIST_TO",
-          "operationId": "legalCaseDocumentAttach",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseHighCourtListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseHighCourtListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_high_court_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_HIGH_COURT_FIND",
-          "operationId": "LegalCaseHighCourtFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseHighCourtReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseHighCourtRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_FIND",
-          "operationId": "legalCaseFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_enforcement_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_ENFORCEMENT_UPDATE",
-          "operationId": "LegalCaseEnforcementUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseEnforcementUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseEnforcementUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_enforcement_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_ENFORCEMENT_LIST_TO",
-          "operationId": "LegalCaseEnforcementListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseEnforcementListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseEnforcementListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_enforcement_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_ENFORCEMENT_FIND",
-          "operationId": "LegalCaseEnforcementFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseEnforcementFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseEnforcementFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_document_attach_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_UPDATE",
-          "operationId": "legalCaseDocumentAttachUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_document_attach_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_LIST_TO",
-          "operationId": "legalCaseDocumentAttach_1",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDocumentAttachListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDocumentAttachListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_document_attach_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_DOCUMENT_ATTACH_FIND",
-          "operationId": "LegalCaseDocumentAttachFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseDocumentAttachReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseDocumentAttachRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_cost_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_COST_UPDATE",
-          "operationId": "LegalCaseCostUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseCostUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseCostUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_cost_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_COST_LIST_TO",
-          "operationId": "legalCaseCostListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseCostListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseCostListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_cost_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_COST_FIND",
-          "operationId": "legalCaseCostFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseCostFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseCostFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_bank_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_BANK_UPDATE",
-          "operationId": "LegalCaseBankUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseBankUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseBankUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_bank_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_BANK_LIST",
-          "operationId": "LegalCaseBankList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseBankReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseBankRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_bank_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_BANK_FIND",
-          "operationId": "LegalCaseBankFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseBankReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseBankRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_UPDATE",
-          "operationId": "LegalCaseAuctionUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_LIST",
-          "operationId": "LegalCaseAuctionList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionListReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_FIND",
-          "operationId": "LegalCaseAuctionFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_UPDATE",
-          "operationId": "LegalCaseAuctionAppointmentUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_LIST_TO",
-          "operationId": "LegalCaseAuctionAppointmentListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_FIND",
-          "operationId": "LegalCaseAuctionAppointmentFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_UPDATE",
-          "operationId": "LegalCaseAuctionAppointmentCollateralUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_LIST_TO",
-          "operationId": "LegalCaseAuctionAppointmentCollateralListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_auction_appointment_collateral_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_AUCTION_APPOINTMENT_COLLATERAL_FIND",
-          "operationId": "LegalCaseAuctionAppointmentCollateralFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_appointment_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_APPOINTMENT_UPDATE",
-          "operationId": "LegalCaseAppointmentUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAppointmentUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAppointmentUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_appointment_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_APPOINTMENT_LIST_TO",
-          "operationId": "legalCaseAppointmentListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAppointmentListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAppointmentListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/legal_case_appointment_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "LEGAL_CASE_APPOINTMENT_FIND",
-          "operationId": "legalCaseAppointmentFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LegalCaseAppointmentReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/LegalCaseAppointmentRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_customer_info_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CUSTOMER_INFO_UPDATE",
-          "operationId": "CbsCustomerInfoUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCustomerInfoUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCustomerInfoUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_customer_info_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CUSTOMER_INFO_LIST_TO",
-          "operationId": "cbsCustomerInfoListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCustomerInfoListTOReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCustomerInfoListTORes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_customer_info_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CUSTOMER_INFO_FIND",
-          "operationId": "CbsCustomerInfoFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCustomerInfoFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCustomerInfoFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_cif_contract_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CIF_CONTRACT_UPDATE",
-          "operationId": "CbsCifContractUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCifContractUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCifContractUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_cif_contract_list": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CIF_CONTRACT_LIST",
-          "operationId": "CbsCifContractList",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCifContractListReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCifContractFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/cbs_cif_contract_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CBS_CIF_CONTRACT_FIND",
-          "operationId": "CbsCifContractFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CbsCifContractFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CbsCifContractFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/case_type_update": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CASE_TYPE_UPDATE",
-          "operationId": "CaseTypeUpdate",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CaseTypeUpdateReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CaseTypeUpdateRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/case_type_name_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CASE_TYPE_NAME_LIST_TO",
-          "operationId": "caseTypeNameListTO",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CaseTypeNameRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/case_type_list_to": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CASE_TYPE_LIST_TO",
-          "operationId": "caseTypeListTo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CaseTypeFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CaseTypeFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/legal/case_type_find": {
-        "post": {
-          "tags": [
-            "App Legal Service"
-          ],
-          "summary": "CASE_TYPE_FIND",
-          "operationId": "CaseTypeFind",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CaseTypeFindReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CaseTypeFindRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/common/upload_multipart_file": {
-        "post": {
-          "tags": [
-            "App Common Service"
-          ],
-          "summary": "Upload Multipart File",
-          "operationId": "uploadMultipartFile",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": true,
-              "schema": {
-                "type": "string"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "multipart/form-data": {
-                "schema": {
-                  "required": [
-                    "file",
-                    "uploadFileReq"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "uploadFileReq": {
-                      "type": "string"
-                    },
-                    "file": {
-                      "type": "string",
-                      "format": "binary"
-                    }
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "required": [
-                    "file",
-                    "uploadFileReq"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "uploadFileReq": {
-                      "type": "string"
-                    },
-                    "file": {
-                      "type": "string",
-                      "format": "binary"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/UploadFileRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/common/upload_file": {
-        "post": {
-          "tags": [
-            "App Common Service"
-          ],
-          "summary": "Upload File",
-          "operationId": "uploadFile",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": true,
-              "schema": {
-                "type": "string"
-              }
-            }
-          ],
-          "requestBody": {
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UploadFileReq"
-                }
-              }
-            },
-            "required": true
-          },
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/UploadFileRes"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/common/reload_config": {
-        "get": {
-          "tags": [
-            "App Common Service"
-          ],
-          "summary": "Reload Config",
-          "operationId": "reload",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/common/info": {
-        "get": {
-          "tags": [
-            "App Common Service"
-          ],
-          "summary": "App Common Info",
-          "operationId": "info",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/AppCommonInfoResp"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "/rest/internal/app/common/check_info": {
-        "get": {
-          "tags": [
-            "App Common Service"
-          ],
-          "summary": "Check Info",
-          "operationId": "checkInfo",
-          "parameters": [
-            {
-              "name": "nplToken",
-              "in": "header",
-              "required": false,
-              "schema": {
-                "type": "string",
-                "default": "dev"
-              }
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK",
-              "content": {
-                "*/*": {
-                  "schema": {
-                    "$ref": "#/components/schemas/CheckInfoResp"
-                  }
-                }
-              }
-            }
-          }
+    paths: {
+        '/BAACCoreService/public/token/auth_iauthen': {
+            post: {
+                tags: ['Token Service'],
+                summary: 'AUTH_IAUTHEN',
+                operationId: 'authIauthenUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthIAuthenReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthIAuthenRes' } } }
+            }
+        },
+        '/BAACCoreService/public/token/core_config_list': {
+            post: {
+                tags: ['Token Service'],
+                summary: 'CORE_CONFIG_LIST',
+                operationId: 'coreConfigListUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CoreConfigListReq' } }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CoreConfigListRes' } } }
+            }
+        },
+        '/BAACCoreService/public/token/ct_language_list': {
+            post: {
+                tags: ['Token Service'],
+                summary: 'CT_LANGUAGE_LIST',
+                operationId: 'ctLanguageListUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLanguageReq' } }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLanguageRes' } } }
+            }
+        },
+        '/BAACCoreService/public/token/genToken': {
+            post: {
+                tags: ['Token Service'],
+                summary: 'Generate Token',
+                operationId: 'genTokenUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ in: 'body', name: 'jwt', description: 'jwt', required: true, schema: { $ref: '#/definitions/AuthPayloadJWTReq' } }],
+                responses: { 200: { description: 'OK', schema: { type: 'object', additionalProperties: { type: 'string' } } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_FIND',
+                operationId: 'authDepartmentFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthDepartmentReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_LIST',
+                operationId: 'authDepartmentListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthDepartmentReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_search': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_SEARCH',
+                operationId: 'authDepartmentListUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthDepartmentSearchReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentSearchRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_search_level_to': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_SEARCH_LEVEL_TO',
+                operationId: 'authDepartmentLevelTOUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthDepartmentSearchLevelTOReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentSearchLevelTORes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_unit': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_UNIT',
+                operationId: 'authDepartmentUnitUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentUnitRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_department_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_DEPARTMENT_UPDATE',
+                operationId: 'authDepartmentUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthDepartmentReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthDepartmentUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_group_program_detail_delete': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_GROUP_PROGRAM_DETAIL_DELETE',
+                operationId: 'authGroupProgramDetailDeleteUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupProgramDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupProgramDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_group_program_detail_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_GROUP_PROGRAM_DETAIL_LIST',
+                operationId: 'authGroupProgramDetailListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupProgramDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupProgramDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_group_program_detail_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_GROUP_PROGRAM_DETAIL_UPDATE',
+                operationId: 'authGroupProgramDetailUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'parcelToken', in: 'header', description: 'parcelToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupProgramDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupProgramDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_group_program_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_GROUP_PROGRAM_LIST',
+                operationId: 'authGroupProgramListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupProgramReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupProgramRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_group_program_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_GROUP_PROGRAM_UPDATE',
+                operationId: 'authGroupProgramUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'parcelToken', in: 'header', description: 'parcelToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupProgramReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupProgramRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_log_error_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_LOG_ERROR_LIST',
+                operationId: 'authLogErrorListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthLogErrorReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthLogErrorRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_log_error_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_LOG_ERROR_UPDATE',
+                operationId: 'authLogErrorUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthLogErrorReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthLogErrorRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_log_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_LOG_LIST',
+                operationId: 'authLogListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthLogReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthLogRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_log_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_LOG_UPDATE',
+                operationId: 'authLogUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthLogReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthLogRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_position_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_POSITION_FIND',
+                operationId: 'authPositionFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthPositionReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthPositionRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_position_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_POSITION_LIST',
+                operationId: 'authPositionListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthPositionRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_position_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_POSITION_UPDATE',
+                operationId: 'authPositionUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthPositionReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthPositionRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_FIND',
+                operationId: 'authSystemFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_LIST',
+                operationId: 'authSystemListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_name_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_NAME_FIND',
+                operationId: 'authSystemNameFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemNameReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_name_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_NAME_LIST',
+                operationId: 'authSystemNameListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemNameReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_name_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_NAME_UPDATE',
+                operationId: 'authSystemUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemNameReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_system_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_SYSTEM_UPDATE',
+                operationId: 'authSystemUpdateUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthSystemReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthSystemRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_FIND',
+                operationId: 'authTaskFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthTaskReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_LIST',
+                operationId: 'authTaskListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthTaskReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_name_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_NAME_FIND',
+                operationId: 'authTaskNameFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthTaskNameReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_name_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_NAME_LIST',
+                operationId: 'authTaskNameListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_name_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_NAME_UPDATE',
+                operationId: 'authTaskUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthTaskNameReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskNameRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_task_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_TASK_UPDATE',
+                operationId: 'authTaskUpdateUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthTaskReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthTaskRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_detail_delete': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_DETAIL_DELETE',
+                operationId: 'authUserInfoDetailDeleteUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_detail_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_DETAIL_LIST',
+                operationId: 'authUserInfoDetailListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_detail_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_DETAIL_UPDATE',
+                operationId: 'authUserInfoDetailUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoDetailReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoDetailRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_find': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_FIND',
+                operationId: 'authUserInfoFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_LIST',
+                operationId: 'authUserInfoListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_search': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_SEARCH',
+                operationId: 'authUserInfoListUsingPOST_1',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoSearchReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoSearchRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_task_list': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_TASK_LIST',
+                operationId: 'authUserInfoTaskListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoTaskReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoTaskRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/auth_user_info_update': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'AUTH_USER_INFO_UPDATE',
+                operationId: 'authUserInfoUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/check_last_login': {
+            post: {
+                tags: ['App Auth Service'],
+                summary: 'CHECK_LAST_LOGIN',
+                operationId: 'checkLastLoginUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CheckLastloginReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CheckLastloginRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/auth/p_find_dept_nm_ctl': {
+            post: {
+                tags: ['App Core Store Service'],
+                summary: 'Store Procedure : P_FIND_DEPT_NM_CTL',
+                operationId: 'pFindDeptNmCtlUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'param', description: 'param', required: true, schema: { $ref: '#/definitions/PFindDeptNmCtlParam' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/PFindDeptNmCtlRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/common/check_info': {
+            get: {
+                tags: ['App Common Service'],
+                summary: 'Check Info',
+                operationId: 'checkInfoUsingGET',
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CheckInfoResp' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/common/info': {
+            get: {
+                tags: ['App Common Service'],
+                summary: 'App Common Info',
+                operationId: 'infoUsingGET',
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AppCommonInfoResp' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/common/reload_config': {
+            get: {
+                tags: ['App Common Service'],
+                summary: 'Reload Config',
+                operationId: 'reloadUsingGET',
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { type: 'string' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/common/upload_file': {
+            post: {
+                tags: ['App Common Service'],
+                summary: 'Upload File',
+                operationId: 'uploadFileUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/UploadFileReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/UploadFileRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/common/upload_multipart_file': {
+            post: {
+                tags: ['App Common Service'],
+                summary: 'Upload Multipart File',
+                operationId: 'uploadMultipartFileUsingPOST',
+                consumes: ['multipart/form-data'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'uploadFileReq', in: 'formData', required: false, type: 'string' },
+                    { name: 'file', in: 'formData', required: false, type: 'file' },
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string' }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/UploadFileRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/core_config_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CORE_CONFIG_LIST',
+                operationId: 'coreConfigListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CoreConfigListReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CoreConfigListRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_bank_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_BANK_FIND',
+                operationId: 'ctBankFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtBankReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtBankRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_bank_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_BANK_LIST_TO',
+                operationId: 'ctBankListToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtBankReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtBankListToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_bank_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_BANK_UPDATE',
+                operationId: 'ctBankUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtBankUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtBankUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_court_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_COURT_FIND',
+                operationId: 'ctCourtFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtCourtReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtCourtRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_court_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_COURT_LIST',
+                operationId: 'ctCourtListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtCourtReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtCourtRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_court_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_COURT_UPDATE',
+                operationId: 'ctCourtUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtCourtUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtCourtUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_district_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_DISTRICT_FIND',
+                operationId: 'ctDistrictFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_district_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_DISTRICT_LIST',
+                operationId: 'ctDistrictListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_district_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_DISTRICT_UPDATE',
+                operationId: 'ctDistrictUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_language_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LANGUAGE_FIND',
+                operationId: 'CtLanguageFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLanguageReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLanguageRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_language_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LANGUAGE_LIST',
+                operationId: 'ctLanguageListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLanguageReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLanguageRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_language_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LANGUAGE_UPDATE',
+                operationId: 'ctLanguageUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLanguageUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLanguageUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_address_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_ADDRESS_FIND',
+                operationId: 'ctLawFirmAddressFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmAddressFindReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmAddressFindRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_address_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_ADDRESS_LIST_TO',
+                operationId: 'ctLawFirmAddressListToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmAddressListToReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmAddressListToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_address_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_ADDRESS_UPDATE',
+                operationId: 'ctLawFirmAddressUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmAddressUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmAddressUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_FIND',
+                operationId: 'ctLawFirmFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmFindReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmFindRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_LIST_TO',
+                operationId: 'ctLawFirmListToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmListToReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmListToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_law_firm_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LAW_FIRM_UPDATE',
+                operationId: 'ctLawFirmUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLawFirmUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLawFirmUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_legal_execution_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LEGAL_EXECUTION_FIND',
+                operationId: 'CtLegalExecutioneFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLegalExecutionReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLegalExecutionRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_legal_execution_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LEGAL_EXECUTION_LIST',
+                operationId: 'ctLegalExecutionListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLegalExecutionReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLegalExecutionRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_legal_execution_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LEGAL_EXECUTION_UPDATE',
+                operationId: 'CtLegalExecutionUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLegalExecutionUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLegalExecutionUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_loan_interest_rate_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LOAN_INTEREST_RATE_FIND',
+                operationId: 'ctLoanInterestRateFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLoanInterestRateFindReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLoanInterestRateFindRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_loan_interest_rate_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LOAN_INTEREST_RATE_LIST_TO',
+                operationId: 'ctLoanInterestRateListToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLoanInterestRateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLoanInterestRateListToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_loan_interest_rate_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_LOAN_INTEREST_RATE_UPDATE',
+                operationId: 'ctLoanInterestRateUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtLoanInterestRateUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtLoanInterestRateUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_main_type_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MAIN_TYPE_FIND',
+                operationId: 'CtMainTypeFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMainTypeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMainTypeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_main_type_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MAIN_TYPE_LIST',
+                operationId: 'CtMainTypeListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMainTypeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMainTypeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_main_type_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MAIN_TYPE_UPDATE',
+                operationId: 'CtMainTypeUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMainTypeUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMainTypeUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_marketcode_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MARKETCODE_FIND',
+                operationId: 'ctMarketcodeFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMarketCodeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMarketCodeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_marketcode_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MARKETCODE_LIST',
+                operationId: 'ctMarketcodeListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMarketCodeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMarketCodeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_marketcode_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_MARKETCODE_UPDATE',
+                operationId: 'ctMarketcodeUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtMarketCodeUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtMarketCodeUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_original_affiliation_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_ORIGINAL_AFFILIATION_FIND',
+                operationId: 'CtOriginalAffiliationFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtOriginalAffiliationReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtOriginalAffiliationRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_original_affiliation_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_ORIGINAL_AFFILIATION_LIST',
+                operationId: 'ctOriginalAffiliationListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtOriginalAffiliationReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtOriginalAffiliationRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_original_affiliation_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_ORIGINAL_AFFILIATION_UPDATE',
+                operationId: 'CtOriginalAffiliationUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtOriginalAffiliationUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtOriginalAffiliationUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_port_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PORT_FIND',
+                operationId: 'ctPortFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtPortFindReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtPortFindRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_port_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PORT_LIST_TO',
+                operationId: 'ctPortListToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtPortListToReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtPortListToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_port_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PORT_UPDATE',
+                operationId: 'ctPortUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtPortUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtPortUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_port_year_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PORT_YEAR_TO',
+                operationId: 'ctPortYearToUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [{ name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' }],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtPortYearToRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_province_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PROVINCE_FIND',
+                operationId: 'ctProvinceFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtProvinceReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtProvinceRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_province_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PROVINCE_LIST',
+                operationId: 'ctProvinceListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtProvinceReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtProvinceRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_province_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_PROVINCE_UPDATE',
+                operationId: 'authUpdateDepartmentUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtProvinceReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtProvinceRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_sub_type_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUB_TYPE_FIND',
+                operationId: 'CtSubTypeFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubTypeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubTypeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_sub_type_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUB_TYPE_LIST',
+                operationId: 'CtSubTypeListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubTypeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubTypeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_sub_type_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUB_TYPE_UPDATE',
+                operationId: 'CtSubTypeUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubTypeUpdateReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubTypeUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_subdistrict_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUBDISTRICT_FIND',
+                operationId: 'ctSubDistrictFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_subdistrict_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUBDISTRICT_LIST',
+                operationId: 'ctSubDistrictListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_subdistrict_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_SUBDISTRICT_UPDATE',
+                operationId: 'ctSubDistrictUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtSubDistrictReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtSubDistrictRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_table_code_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_TABLE_CODE_FIND',
+                operationId: 'ctTableCodeFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtTableCodeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtTableCodeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_table_code_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_TABLE_CODE_LIST',
+                operationId: 'ctTableCodeListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtTableCodeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtTableCodeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_table_code_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_TABLE_CODE_UPDATE',
+                operationId: 'ctTableCodeUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtTableCodeReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtTableCodeRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_address_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ADDRESS_FIND',
+                operationId: 'ctVendorAddressFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAddressReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAddressRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_address_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ADDRESS_LIST',
+                operationId: 'ctVendorAddressListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAddressReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAddressRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_address_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ADDRESS_UPDATE',
+                operationId: 'ctVendorAddressUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAddressReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAddressUpdateRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_attach_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ATTACH_FIND',
+                operationId: 'ctVendorAttachFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAttachReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAttachRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_attach_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ATTACH_LIST',
+                operationId: 'ctVendorAttachListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAttachReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAttachRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_attach_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_ATTACH_UPDATE',
+                operationId: 'ctVendorAttachUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorAttachReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorAttachRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_find': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_FIND',
+                operationId: 'ctVendorFindUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_list': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_LIST',
+                operationId: 'ctVendorListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/ct_vendor_update': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'CT_VENDOR_UPDATE',
+                operationId: 'ctVendorUpdateUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/CtVendorReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/CtVendorRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/ct/postcode_list_to': {
+            post: {
+                tags: ['App Ct Service'],
+                summary: 'POSTCODE_LIST_TO',
+                operationId: 'postcodeListTOUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/PostcodeTOReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/PostcodeTORes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/login/auth_group_menu_list': {
+            post: {
+                tags: ['App Login Service'],
+                summary: 'AUTH_GROUP_MENU_LIST',
+                operationId: 'authGroupMenuListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthGroupMenuReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthGroupMenuRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/login/auth_menu_list': {
+            post: {
+                tags: ['App Login Service'],
+                summary: 'AUTH_MENU_LIST',
+                operationId: 'authMenuListUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthMenuReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthMenuRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/login/changepassword': {
+            post: {
+                tags: ['App Login Service'],
+                summary: 'CHANGEPASSWORD',
+                operationId: 'changePasswordUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/AuthUserInfoReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/AuthUserInfoRes' } } }
+            }
+        },
+        '/BAACCoreService/rest/internal/app/login/user_profile': {
+            post: {
+                tags: ['App Login Service'],
+                summary: 'AUTH_USER_PROFILE',
+                operationId: 'authUserProfileUsingPOST',
+                consumes: ['application/json'],
+                produces: ['*/*'],
+                parameters: [
+                    { name: 'nplToken', in: 'header', description: 'nplToken', required: true, type: 'string', default: 'dev' },
+                    { in: 'body', name: 'requestBody', description: 'requestBody', required: true, schema: { $ref: '#/definitions/UserProfileReq' } }
+                ],
+                responses: { 200: { description: 'OK', schema: { $ref: '#/definitions/UserProfileRes' } } }
+            }
         }
-      }
     },
-    "components": {
-      "schemas": {
-        "LegalCasePlaintiffUpdateData": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "plaintiffId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string"
-            },
-            "idCardExpireDate": {
-              "type": "string"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "plaintiffTitle": {
-              "type": "string"
-            },
-            "plaintiffName": {
-              "type": "string"
-            },
-            "plaintiffSurname": {
-              "type": "string"
-            },
-            "plaintiffEnTitle": {
-              "type": "string"
-            },
-            "plaintiffEnName": {
-              "type": "string"
-            },
-            "plaintiffEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffUpdateRes": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffListTO": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "plaintiffId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "plaintiffNameSurname": {
-              "type": "string"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "idCardExpireDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "plaintiffTitle": {
-              "type": "string"
-            },
-            "plaintiffName": {
-              "type": "string"
-            },
-            "plaintiffSurname": {
-              "type": "string"
-            },
-            "plaintiffEnTitle": {
-              "type": "string"
-            },
-            "plaintiffEnName": {
-              "type": "string"
-            },
-            "plaintiffEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCasePlaintiffListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffFindData": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiff": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "plaintiffId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "idCardExpireDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "plaintiffTitle": {
-              "type": "string"
-            },
-            "plaintiffName": {
-              "type": "string"
-            },
-            "plaintiffSurname": {
-              "type": "string"
-            },
-            "plaintiffEnTitle": {
-              "type": "string"
-            },
-            "plaintiffEnName": {
-              "type": "string"
-            },
-            "plaintiffEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCasePlaintiffFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCasePlaintiff"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiff"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressUpdateData": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressType": {
-              "type": "string"
-            },
-            "addno": {
-              "type": "string"
-            },
-            "moo": {
-              "type": "string"
-            },
-            "alley": {
-              "type": "string"
-            },
-            "street": {
-              "type": "string"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "districtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "subdistrictId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "postCode": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffAddressUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressUpdateRes": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressListTOData": {
-          "type": "object",
-          "properties": {
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressListTO": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressDesc": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffAddressListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressFindData": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffAddressFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddress": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "plaintiffSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressType": {
-              "type": "string"
-            },
-            "addno": {
-              "type": "string"
-            },
-            "moo": {
-              "type": "string"
-            },
-            "alley": {
-              "type": "string"
-            },
-            "street": {
-              "type": "string"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "districtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "subdistrictId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "postCode": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCasePlaintiffAddressFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCasePlaintiffAddress"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCasePlaintiffAddress"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantUpdateData": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "defendantId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "defendantType": {
-              "type": "string"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string"
-            },
-            "idCardExpireDate": {
-              "type": "string"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "defendantTitle": {
-              "type": "string"
-            },
-            "defendantName": {
-              "type": "string"
-            },
-            "defendantSurname": {
-              "type": "string"
-            },
-            "defendantEnTitle": {
-              "type": "string"
-            },
-            "defendantEnName": {
-              "type": "string"
-            },
-            "defendantEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "originalAffiliationCode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "hasAttorney": {
-              "type": "string"
-            },
-            "importantPerson": {
-              "type": "string"
-            },
-            "defendantPosition": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantUpdateRes": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantListTO": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "defendantId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "defendantNameSurname": {
-              "type": "string"
-            },
-            "defendantType": {
-              "type": "string"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "idCardExpireDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "defendantTitle": {
-              "type": "string"
-            },
-            "defendantName": {
-              "type": "string"
-            },
-            "defendantSurname": {
-              "type": "string"
-            },
-            "defendantEnTitle": {
-              "type": "string"
-            },
-            "defendantEnName": {
-              "type": "string"
-            },
-            "defendantEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "originalAffiliationCode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "hasAttorney": {
-              "type": "string"
-            },
-            "importantPerson": {
-              "type": "string"
-            },
-            "defendantPosition": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDefendantListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantFindData": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendant": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "defendantId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "defendantType": {
-              "type": "string"
-            },
-            "personType": {
-              "type": "string"
-            },
-            "juristicPersonType": {
-              "type": "string"
-            },
-            "idNo": {
-              "type": "string"
-            },
-            "idCardIssueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "idCardExpireDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "otherCardType": {
-              "type": "string"
-            },
-            "otherCardNo": {
-              "type": "string"
-            },
-            "defendantTitle": {
-              "type": "string"
-            },
-            "defendantName": {
-              "type": "string"
-            },
-            "defendantSurname": {
-              "type": "string"
-            },
-            "defendantEnTitle": {
-              "type": "string"
-            },
-            "defendantEnName": {
-              "type": "string"
-            },
-            "defendantEnSurname": {
-              "type": "string"
-            },
-            "gender": {
-              "type": "string"
-            },
-            "maritalStatus": {
-              "type": "string"
-            },
-            "race": {
-              "type": "string"
-            },
-            "nationality": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "birthDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "age": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "originalAffiliationCode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "hasAttorney": {
-              "type": "string"
-            },
-            "importantPerson": {
-              "type": "string"
-            },
-            "defendantPosition": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseDefendantFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDefendant"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendant"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressUpdateData": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressType": {
-              "type": "string"
-            },
-            "addno": {
-              "type": "string"
-            },
-            "moo": {
-              "type": "string"
-            },
-            "alley": {
-              "type": "string"
-            },
-            "street": {
-              "type": "string"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "districtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "subdistrictId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "postCode": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantAddressUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressUpdateRes": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressListTOData": {
-          "type": "object",
-          "properties": {
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantAddressListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressListTO": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressDesc": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDefendantAddressListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantAddressListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressFindData": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantAddressFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDefendantAddress": {
-          "type": "object",
-          "properties": {
-            "addressSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "defendantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "addressType": {
-              "type": "string"
-            },
-            "addno": {
-              "type": "string"
-            },
-            "moo": {
-              "type": "string"
-            },
-            "alley": {
-              "type": "string"
-            },
-            "street": {
-              "type": "string"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "districtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "subdistrictId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "postCode": {
-              "type": "string"
-            },
-            "telno1": {
-              "type": "string"
-            },
-            "telno2": {
-              "type": "string"
-            },
-            "email": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseDefendantAddressFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDefendantAddress"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDefendantAddress"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachUpdateData": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "attachTypeDocId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqRequestAttachUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqRequestAttachUpdateRes": {
-          "type": "object",
-          "properties": {
-            "attachId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachListTOData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqRequestAttachListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqRequestAttachListTO": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeDesc": {
-              "type": "string"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "userName": {
-              "type": "string"
-            },
-            "attachTypeDocId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeDocDesc": {
-              "type": "string"
-            },
-            "urlReqRequestFile": {
-              "type": "string"
-            },
-            "urlReqRequestFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqRequestAttachListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqRequestAttachListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqRequestAttachListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachFindData": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqRequestAttachFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqRequestAttachFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqRequestAttach": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "attachTypeDocId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "urlReqRequestFile": {
-              "type": "string"
-            },
-            "urlReqRequestFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqRequestAttachFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqRequestAttach"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqRequestAttach"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestUpdateData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "reqDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestType": {
-              "type": "string"
-            },
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestIdRefer": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestUpdateRes": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestRequestNo": {
-          "type": "object",
-          "properties": {
-            "requestNo": {
-              "type": "string"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestRequestNoRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestRequestNo"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestRequestNo"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesUpdateData": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "meetingDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "meetingType": {
-              "type": "string"
-            },
-            "meetingDt": {
-              "type": "string"
-            },
-            "meetingSubject": {
-              "type": "string"
-            },
-            "meetingDesc": {
-              "type": "string"
-            },
-            "meetingResult": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestMinutesUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesUpdateRes": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesListTOData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "meetingType": {
-              "type": "string"
-            },
-            "meetingSubject": {
-              "type": "string"
-            },
-            "meetingDesc": {
-              "type": "string"
-            },
-            "createDtFrom": {
-              "type": "string"
-            },
-            "createDtTo": {
-              "type": "string"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestMinutesListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesListTO": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "meetingDt": {
-              "type": "string"
-            },
-            "meetingType": {
-              "type": "string"
-            },
-            "meetingSubject": {
-              "type": "string"
-            },
-            "meetingDesc": {
-              "type": "string"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "urlReqCaseRequestMinutsFile": {
-              "type": "string"
-            },
-            "urlReqCaseRequestMinutsFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestMinutesListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestMinutesListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesFindData": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestMinutesFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutes": {
-          "type": "object",
-          "properties": {
-            "seqId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "meetingDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "meetingType": {
-              "type": "string"
-            },
-            "meetingDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "meetingSubject": {
-              "type": "string"
-            },
-            "meetingDesc": {
-              "type": "string"
-            },
-            "meetingResult": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachFileDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "urlReqCaseRequestMinutsFile": {
-              "type": "string"
-            },
-            "urlReqCaseRequestMinutsFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestMinutesFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestMinutes"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestMinutes"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestListTOData": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "requestStatus": {
-              "type": "string"
-            },
-            "createDtFrom": {
-              "type": "string"
-            },
-            "createDtTo": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestListTO": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "legalTypeDesc": {
-              "type": "string"
-            },
-            "customerName": {
-              "type": "string"
-            },
-            "branchName": {
-              "type": "string"
-            },
-            "requestDt": {
-              "type": "string"
-            },
-            "requestStatus": {
-              "type": "string"
-            },
-            "requestStatusDesc": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestFindData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequest": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestNo": {
-              "type": "string"
-            },
-            "reqDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestType": {
-              "type": "string"
-            },
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestIdRefer": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "ReqCaseRequestFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequest"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequest"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestDetailUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestDetailUpdateRes": {
-          "type": "object",
-          "properties": {
-            "reqDetailId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestDetailFindData": {
-          "type": "object",
-          "properties": {
-            "reqDetailId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestDetailFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestDetailFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestDetail": {
-          "type": "object",
-          "properties": {
-            "reqDetailId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralType": {
-              "type": "string"
-            },
-            "collateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralOwner": {
-              "type": "string"
-            },
-            "totalAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            },
-            "mortgageAmount": {
-              "type": "number",
-              "format": "double"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "ReqCaseRequestDetailFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestDetail"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestDetail"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractUpdateData": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestContractUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestContractUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestContractUpdateRes": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractListTOData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestContractListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestContractListTO": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "customerName": {
-              "type": "string"
-            },
-            "mainType": {
-              "type": "string"
-            },
-            "subType": {
-              "type": "string"
-            },
-            "consolidateContract": {
-              "type": "string"
-            },
-            "principalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "openDt": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestContractListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestContractListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractFindData": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestContractFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestContractFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestContract": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractDeptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "ReqCaseRequestContractFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestContract"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestContract"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestAndCollateralDataListData": {
-          "type": "object",
-          "properties": {
-            "requestId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestAndCollateralDataListReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataListData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestAndCollateralDataList": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "customerName": {
-              "type": "string"
-            },
-            "mainType": {
-              "type": "string"
-            },
-            "subType": {
-              "type": "string"
-            },
-            "consolidateContract": {
-              "type": "string"
-            },
-            "principalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "openDt": {
-              "type": "string"
-            },
-            "occupation": {
-              "type": "string"
-            },
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqCaseRequestCollateralListTO": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestCollateralListTO"
-              }
-            }
-          }
-        },
-        "ReqCaseRequestAndCollateralDataListRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataList"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestAndCollateralDataList"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralListTO": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "collateralType": {
-              "type": "string"
-            },
-            "collateralTypeDesc": {
-              "type": "string"
-            },
-            "collateralOwner": {
-              "type": "string"
-            },
-            "mortgageAmount": {
-              "type": "number",
-              "format": "double"
-            },
-            "totalAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralUpdateData": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralType": {
-              "type": "string"
-            },
-            "collateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralOwner": {
-              "type": "string"
-            },
-            "totalAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            },
-            "mortgageAmount": {
-              "type": "number",
-              "format": "double"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateralUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralUpdateRes": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralNumberData": {
-          "type": "object",
-          "properties": {
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralNumberReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateralNumberData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralNumber": {
-          "type": "object",
-          "properties": {
-            "collateralNumber": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralNumberRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralListTOData": {
-          "type": "object",
-          "properties": {
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateralListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralDataList": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "collateralType": {
-              "type": "string"
-            },
-            "collateralTypeDesc": {
-              "type": "string"
-            },
-            "collateralOwner": {
-              "type": "string"
-            },
-            "mortgageAmount": {
-              "type": "number",
-              "format": "double"
-            },
-            "totalAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            },
-            "reqCaseRequestCollateralNumber": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestCollateralNumber"
-              }
-            }
-          }
-        },
-        "ReqCaseRequestCollateralListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestCollateralDataList"
-              }
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralFindData": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateralFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqCaseRequestCollateral": {
-          "type": "object",
-          "properties": {
-            "reqCollateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "reqContractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralType": {
-              "type": "string"
-            },
-            "collateralId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralOwner": {
-              "type": "string"
-            },
-            "totalAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            },
-            "mortgageAmount": {
-              "type": "number",
-              "format": "double"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "ReqCaseRequestCollateralFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqCaseRequestCollateral"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqCaseRequestCollateral"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionInfoUpdateData": {
-          "type": "object",
-          "properties": {
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalExecutionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "documentNo": {
-              "type": "string"
-            },
-            "documentDt": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "plaintiffName": {
-              "type": "string"
-            },
-            "defendantName": {
-              "type": "string"
-            },
-            "mortgageStatus": {
-              "type": "string"
-            },
-            "principalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "saleAnnounceDt": {
-              "type": "string"
-            },
-            "saleAnnouncePlace": {
-              "type": "string"
-            },
-            "auctionDt": {
-              "type": "string"
-            },
-            "auctionAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "buyer": {
-              "type": "string"
-            },
-            "redeemDt": {
-              "type": "string"
-            },
-            "redeemStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "clLandId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionInfoUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionInfoUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionInfoUpdateRes": {
-          "type": "object",
-          "properties": {
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionInfoFindData": {
-          "type": "object",
-          "properties": {
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionInfoFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionInfoFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionInfo": {
-          "type": "object",
-          "properties": {
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalExecutionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "documentNo": {
-              "type": "string"
-            },
-            "documentDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "plaintiffName": {
-              "type": "string"
-            },
-            "defendantName": {
-              "type": "string"
-            },
-            "mortgageStatus": {
-              "type": "string"
-            },
-            "principalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "saleAnnounceDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "saleAnnouncePlace": {
-              "type": "string"
-            },
-            "auctionDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "auctionAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "buyer": {
-              "type": "string"
-            },
-            "redeemDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "redeemStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "clLandId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionInfoFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqAuctionInfo"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionInfo"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionAppointmentUpdateData": {
-          "type": "object",
-          "properties": {
-            "auctionAptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionAptDt": {
-              "type": "string"
-            },
-            "auctionStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionAppointmentUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionAppointmentUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionAppointmentUpdateRes": {
-          "type": "object",
-          "properties": {
-            "auctionAptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionAppointmentListTOData": {
-          "type": "object",
-          "properties": {
-            "auctionAptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionStatus": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionAppointmentListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionAppointmentListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "ReqAuctionAppointment": {
-          "type": "object",
-          "properties": {
-            "auctionAptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionAptDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "auctionStatus": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "ReqAuctionAppointmentFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/ReqAuctionAppointment"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionAppointment"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionAppointmentFindData": {
-          "type": "object",
-          "properties": {
-            "auctionAptId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "ReqAuctionAppointmentFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/ReqAuctionAppointmentFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "PCreateLegalCodeData": {
-          "type": "object",
-          "properties": {
-            "pdockey": {
-              "type": "string"
-            }
-          }
-        },
-        "PCreateLegalCodeParam": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/PCreateLegalCodeData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "PCreateLegalCodeRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/PCreateLegalCodeSP"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/PCreateLegalCodeSP"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "PCreateLegalCodeSP": {
-          "type": "object",
-          "properties": {
-            "vlastNumber": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalTypeUpdateData": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalTypeUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalTypeUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalTypeUpdateRes": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalTypeFindData": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "status": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalTypeFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalTypeFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalType": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalTypeFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalType"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalType"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalStatusUpdateData": {
-          "type": "object",
-          "properties": {
-            "legalStatusCode": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "isBankruptcy": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalStatusUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalStatusUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalStatusUpdateRes": {
-          "type": "object",
-          "properties": {
-            "legalStatusCode": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalStatusFindData": {
-          "type": "object",
-          "properties": {
-            "legalStatusCode": {
-              "type": "string"
-            },
-            "isBankruptcy": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalStatusFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalStatusFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalStatus": {
-          "type": "object",
-          "properties": {
-            "legalStatusCode": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "isBankruptcy": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalStatusFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalStatus"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalStatus"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalNameListTOData": {
-          "type": "object",
-          "properties": {
-            "userId": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalNameListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalNameListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalNameListTO": {
-          "type": "object",
-          "properties": {
-            "userId": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "deptNm": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalNameListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalNameListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalNameListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseUpdateData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestCode": {
-              "type": "string"
-            },
-            "legalStatus": {
-              "type": "string"
-            },
-            "assignBy": {
-              "type": "string"
-            },
-            "assignDt": {
-              "type": "string"
-            },
-            "lawyerId": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "caseTypeName": {
-              "type": "string"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "bcBlackCasePrefix": {
-              "type": "string"
-            },
-            "bcBlackCaseNumber": {
-              "type": "string"
-            },
-            "bcBlackCaseYear": {
-              "type": "string"
-            },
-            "bcRedCasePrefix": {
-              "type": "string"
-            },
-            "bcRedCaseNumber": {
-              "type": "string"
-            },
-            "bcRedCaseYear": {
-              "type": "string"
-            },
-            "plaintiff": {
-              "type": "string"
-            },
-            "defendant": {
-              "type": "string"
-            },
-            "litigant": {
-              "type": "string"
-            },
-            "charge": {
-              "type": "string"
-            },
-            "sueDate": {
-              "type": "string"
-            },
-            "judgeDate": {
-              "type": "string"
-            },
-            "dueExecutionDate": {
-              "type": "string"
-            },
-            "defaultDate": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string"
-            },
-            "judgementStatus": {
-              "type": "string"
-            },
-            "judgement": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "totalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "bankruptcyStatus": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseUpdateRes": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseListTOData": {
-          "type": "object",
-          "properties": {
-            "legalType": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "legalStatus": {
-              "type": "string"
-            },
-            "sueDateFrom": {
-              "type": "string"
-            },
-            "sueDateTo": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseListTO": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "legalTypeDesc": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "cifNameSur": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "deptNmCtl": {
-              "type": "string"
-            },
-            "requestCode": {
-              "type": "string"
-            },
-            "legalStatus": {
-              "type": "string"
-            },
-            "legalNameDesc": {
-              "type": "string"
-            },
-            "assignDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "lawyerId": {
-              "type": "string"
-            },
-            "lawyerName": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "caseTypeName": {
-              "type": "string"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "bcBlackCasePrefix": {
-              "type": "string"
-            },
-            "bcBlackCaseNumber": {
-              "type": "string"
-            },
-            "bcBlackCaseYear": {
-              "type": "string"
-            },
-            "bcRedCasePrefix": {
-              "type": "string"
-            },
-            "bcRedCaseNumber": {
-              "type": "string"
-            },
-            "bcRedCaseYear": {
-              "type": "string"
-            },
-            "plaintiff": {
-              "type": "string"
-            },
-            "defendant": {
-              "type": "string"
-            },
-            "litigant": {
-              "type": "string"
-            },
-            "charge": {
-              "type": "string"
-            },
-            "sueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "judgeDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "dueExecutionDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "defaultDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "judgement_status": {
-              "type": "string"
-            },
-            "judgement": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "totalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "babkruptcyStatus": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityUpdateData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "lawyerId": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string"
-            },
-            "liabilityDetail": {
-              "type": "string"
-            },
-            "issueDate": {
-              "type": "string"
-            },
-            "meetingDate": {
-              "type": "string"
-            },
-            "signDate": {
-              "type": "string"
-            },
-            "panelOrderNo": {
-              "type": "string"
-            },
-            "panelOrderDate": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string"
-            },
-            "viNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "orderDate": {
-              "type": "string"
-            },
-            "due2yearDate": {
-              "type": "string"
-            },
-            "recordNo": {
-              "type": "string"
-            },
-            "recordDate": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "offerRecordNo": {
-              "type": "string"
-            },
-            "offerRecordDate": {
-              "type": "string"
-            },
-            "due1yearDate": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "resolution": {
-              "type": "string"
-            },
-            "offerDeal": {
-              "type": "string"
-            },
-            "orderRefNo": {
-              "type": "string"
-            },
-            "orderRefDate": {
-              "type": "string"
-            },
-            "receiveCondition": {
-              "type": "string"
-            },
-            "receiveAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "sendLess1mDate": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityUpdateRes": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelUpdateData": {
-          "type": "object",
-          "properties": {
-            "panelSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityPanelUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelUpdateRes": {
-          "type": "object",
-          "properties": {
-            "panelSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityLegalCodeData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityLegalCodeReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityLegalCodeData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelListTO": {
-          "type": "object",
-          "properties": {
-            "panelSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityPanelListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelFindData": {
-          "type": "object",
-          "properties": {
-            "panelSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityPanelFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanel": {
-          "type": "object",
-          "properties": {
-            "panelSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityPanelFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityPanel"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityPanel"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerUpdateData": {
-          "type": "object",
-          "properties": {
-            "officerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerUpdateRes": {
-          "type": "object",
-          "properties": {
-            "officerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerListTO": {
-          "type": "object",
-          "properties": {
-            "officerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerFindData": {
-          "type": "object",
-          "properties": {
-            "officerSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityOfficerFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficer": {
-          "type": "object",
-          "properties": {
-            "officerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityOfficerFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityOfficer"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityOfficer"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantUpdateRes": {
-          "type": "object",
-          "properties": {
-            "litigantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantListTO": {
-          "type": "object",
-          "properties": {
-            "litigantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "litigantType": {
-              "type": "string"
-            },
-            "litigantTypeName": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantFindData": {
-          "type": "object",
-          "properties": {
-            "litigantSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigant": {
-          "type": "object",
-          "properties": {
-            "litigantSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "litigantType": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityLitigant"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityLitigant"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityListTOData": {
-          "type": "object",
-          "properties": {
-            "issueDateFrom": {
-              "type": "string"
-            },
-            "issueDateTo": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalType": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityListTO": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "legalName": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "deptNmCtl": {
-              "type": "string"
-            },
-            "lawyerName": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "liabilityDetail": {
-              "type": "string"
-            },
-            "issueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "meetingDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "signDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "panelOrderNo": {
-              "type": "string"
-            },
-            "panelOrderDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sendDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "viNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "orderDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "due2yearDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "recordNo": {
-              "type": "string"
-            },
-            "recordDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "offerRecordNo": {
-              "type": "string"
-            },
-            "offerRecordDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "due1yearDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "resolution": {
-              "type": "string"
-            },
-            "offerDeal": {
-              "type": "string"
-            },
-            "orderRefNo": {
-              "type": "string"
-            },
-            "orderRefDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "receiveCondition": {
-              "type": "string"
-            },
-            "receiveAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "sendLess1mDate": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityFindData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiability": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "lawyerId": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "liabilityDetail": {
-              "type": "string"
-            },
-            "issueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "meetingDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "signDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "panelOrderNo": {
-              "type": "string"
-            },
-            "panelOrderDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sendDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "viNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "orderDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "due2yearDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "recordNo": {
-              "type": "string"
-            },
-            "recordDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "offerRecordNo": {
-              "type": "string"
-            },
-            "offerRecordDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "due1yearDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "resolution": {
-              "type": "string"
-            },
-            "offerDeal": {
-              "type": "string"
-            },
-            "orderRefNo": {
-              "type": "string"
-            },
-            "orderRefDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "receiveCondition": {
-              "type": "string"
-            },
-            "receiveAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "sendLess1mDate": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiability"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiability"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerUpdateData": {
-          "type": "object",
-          "properties": {
-            "exofficerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerUpdateRes": {
-          "type": "object",
-          "properties": {
-            "exofficerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerListTO": {
-          "type": "object",
-          "properties": {
-            "exofficerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerFindData": {
-          "type": "object",
-          "properties": {
-            "exofficerSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficerFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficer": {
-          "type": "object",
-          "properties": {
-            "exofficerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityExecutionOfficerFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficer"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityExecutionOfficer"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerUpdateData": {
-          "type": "object",
-          "properties": {
-            "embezzlerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "percent": {
-              "type": "number",
-              "format": "double"
-            },
-            "amount": {
-              "type": "number",
-              "format": "double"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerUpdateRes": {
-          "type": "object",
-          "properties": {
-            "embezzlerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerListTO": {
-          "type": "object",
-          "properties": {
-            "embezzlerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "percent": {
-              "type": "number",
-              "format": "double"
-            },
-            "amount": {
-              "type": "number",
-              "format": "double"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerFindData": {
-          "type": "object",
-          "properties": {
-            "embezzlerSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzlerFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzler": {
-          "type": "object",
-          "properties": {
-            "embezzlerSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "percent": {
-              "type": "number",
-              "format": "double"
-            },
-            "amount": {
-              "type": "number",
-              "format": "double"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityEmbezzlerFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzler"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityEmbezzler"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachUpdateData": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachUpdateRes": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachListTO": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeId": {
-              "type": "string"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "userName": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "urlLegalCaseLiabilityFile": {
-              "type": "string"
-            },
-            "urlLegalCaseFileLiabilityThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachFindData": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttachFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttach": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "urlLegalCaseLiabilityFile": {
-              "type": "string"
-            },
-            "urlLegalCaseFileLiabilityThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityDocumentAttachFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttach"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityDocumentAttach"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalUpdateData": {
-          "type": "object",
-          "properties": {
-            "capitalSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "capitalName": {
-              "type": "string"
-            },
-            "assessmentAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalUpdateRes": {
-          "type": "object",
-          "properties": {
-            "capitalSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalListTO": {
-          "type": "object",
-          "properties": {
-            "capitalSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "capitalName": {
-              "type": "string"
-            },
-            "assessmentAmt": {
-              "type": "number",
-              "format": "double"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalFindData": {
-          "type": "object",
-          "properties": {
-            "capitalSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityCapitalFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapital": {
-          "type": "object",
-          "properties": {
-            "capitalSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "capitalName": {
-              "type": "string"
-            },
-            "assessmentAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityCapitalFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityCapital"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityCapital"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentUpdateData": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "accountNo": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentUpdateRes": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentListTO": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "accountNo": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentFindData": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupmentFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupment": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "accountNo": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountRecoupmentFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupment"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountRecoupment"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryUpdateRes": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryListTO": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "accountNo": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiryListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityLitigantAccountInquiryFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseLiabilityLitigantAccountInquiryFindData": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiry": {
-          "type": "object",
-          "properties": {
-            "accountSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "accountNo": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseLiabilityAccountInquiryFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiry"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseLiabilityAccountInquiry"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseHighCourtUpdateData": {
-          "type": "object",
-          "properties": {
-            "highCourtSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "courtLevel": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string"
-            },
-            "blackCaseNo": {
-              "type": "string"
-            },
-            "redCaseNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "readDate": {
-              "type": "string"
-            },
-            "orderDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseHighCourtUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseHighCourtUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseHighCourtUpdateRes": {
-          "type": "object",
-          "properties": {
-            "highCourtSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseHighCourtListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseHighCourtListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseHighCourtListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseHighCourtListTO": {
-          "type": "object",
-          "properties": {
-            "highCourtSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "courtLevel": {
-              "type": "string"
-            },
-            "courtLevelName": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "blackCaseNo": {
-              "type": "string"
-            },
-            "redCaseNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "readDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "orderDetail": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "userName": {
-              "type": "string"
-            },
-            "update_DT": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseHighCourtListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseHighCourtListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseHighCourtListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseHighCourtData": {
-          "type": "object",
-          "properties": {
-            "highCourtSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseHighCourtReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseHighCourtData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseHighCourt": {
-          "type": "object",
-          "properties": {
-            "highCourtSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "courtLevel": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "blackCaseNo": {
-              "type": "string"
-            },
-            "redCaseNo": {
-              "type": "string"
-            },
-            "orderNo": {
-              "type": "string"
-            },
-            "readDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "orderDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseHighCourtRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseHighCourt"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseHighCourt"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseFindData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCase": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "legalType": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "requestCode": {
-              "type": "string"
-            },
-            "legalStatus": {
-              "type": "string"
-            },
-            "assignBy": {
-              "type": "string"
-            },
-            "assignDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "lawyerId": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "caseTypeName": {
-              "type": "string"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "bcBlackCasePrefix": {
-              "type": "string"
-            },
-            "bcBlackCaseNumber": {
-              "type": "string"
-            },
-            "bcBlackCaseYear": {
-              "type": "string"
-            },
-            "bcRedCasePrefix": {
-              "type": "string"
-            },
-            "bcRedCaseNumber": {
-              "type": "string"
-            },
-            "bcRedCaseYear": {
-              "type": "string"
-            },
-            "plaintiff": {
-              "type": "string"
-            },
-            "defendant": {
-              "type": "string"
-            },
-            "litigant": {
-              "type": "string"
-            },
-            "charge": {
-              "type": "string"
-            },
-            "sueDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "judgeDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "dueExecutionDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "defaultDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "judgementStatus": {
-              "type": "string"
-            },
-            "judgement": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "totalAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "bankruptcyStatus": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCase"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCase"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseEnforcementUpdateData": {
-          "type": "object",
-          "properties": {
-            "enforcementSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string"
-            },
-            "announceDate": {
-              "type": "string"
-            },
-            "seizeDate": {
-              "type": "string"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "pauseCase": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseEnforcementUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseEnforcementUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseEnforcementUpdateRes": {
-          "type": "object",
-          "properties": {
-            "enforcementSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseEnforcementListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseEnforcementListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseEnforcementListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseEnforcementListTO": {
-          "type": "object",
-          "properties": {
-            "enforcementSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "announceDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "seizeDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "provinceDescription": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "courtName": {
-              "type": "string"
-            },
-            "blackCasePrefix": {
-              "type": "string"
-            },
-            "blackCaseNumber": {
-              "type": "string"
-            },
-            "blackCaseYear": {
-              "type": "string"
-            },
-            "redCasePrefix": {
-              "type": "string"
-            },
-            "redCaseNumber": {
-              "type": "string"
-            },
-            "redCaseYear": {
-              "type": "string"
-            },
-            "plaintiff": {
-              "type": "string"
-            },
-            "defendant": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "pauseCase": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseEnforcementListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseEnforcementListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseEnforcementListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseEnforcementFindData": {
-          "type": "object",
-          "properties": {
-            "enforcementSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseEnforcementFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseEnforcementFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseEnforcement": {
-          "type": "object",
-          "properties": {
-            "enforcementSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "announceDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "seizeDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "provinceId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "pauseCase": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "requestDate": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseEnforcementFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseEnforcement"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseEnforcement"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachUpdateData": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDocumentAttachUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachUpdateRes": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDocumentAttachListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachListTO": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "userName": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "urlLegalCaseFile": {
-              "type": "string"
-            },
-            "urlLegalCaseFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDocumentAttachListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDocumentAttachListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachData": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDocumentAttachData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttach": {
-          "type": "object",
-          "properties": {
-            "attachSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "attachTypeId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "attachFileExt": {
-              "type": "string"
-            },
-            "attachFileOriginalName": {
-              "type": "string"
-            },
-            "attachFileName": {
-              "type": "string"
-            },
-            "attachDetail": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "createBy": {
-              "type": "string"
-            },
-            "createDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "urlLegalCaseFile": {
-              "type": "string"
-            },
-            "urlLegalCaseFileThumbnail": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseDocumentAttachRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseDocumentAttach"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseDocumentAttach"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseCostUpdateData": {
-          "type": "object",
-          "properties": {
-            "costSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "costType": {
-              "type": "string"
-            },
-            "costCode": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "costAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseCostUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseCostUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseCostUpdateRes": {
-          "type": "object",
-          "properties": {
-            "costSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseCostListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "costType": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseCostListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseCostListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseCostListTO": {
-          "type": "object",
-          "properties": {
-            "costSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "costCode": {
-              "type": "string"
-            },
-            "costCodeDesc": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "costAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "userName": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseCostListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseCostListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseCostListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseCostFindData": {
-          "type": "object",
-          "properties": {
-            "costSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseCostFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseCostFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseCost": {
-          "type": "object",
-          "properties": {
-            "costSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "costType": {
-              "type": "string"
-            },
-            "costCode": {
-              "type": "string"
-            },
-            "transDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "costAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseCostFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseCost"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseCost"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseBankUpdateData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "haveCapital": {
-              "type": "string"
-            },
-            "capital": {
-              "type": "number",
-              "format": "double"
-            },
-            "capitalBank": {
-              "type": "number",
-              "format": "double"
-            },
-            "howToSend": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string"
-            },
-            "risk": {
-              "type": "string"
-            },
-            "damage": {
-              "type": "string"
-            },
-            "follow": {
-              "type": "string"
-            },
-            "execution": {
-              "type": "string"
-            },
-            "writeOff": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseBankUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseBankUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseBankUpdateRes": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseBankData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseBankReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseBankData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseBank": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            },
-            "haveCapital": {
-              "type": "string"
-            },
-            "capital": {
-              "type": "number",
-              "format": "double"
-            },
-            "capitalBank": {
-              "type": "number",
-              "format": "double"
-            },
-            "howToSend": {
-              "type": "string"
-            },
-            "sendDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "risk": {
-              "type": "string"
-            },
-            "damage": {
-              "type": "string"
-            },
-            "follow": {
-              "type": "string"
-            },
-            "execution": {
-              "type": "string"
-            },
-            "writeOff": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseBankRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseBank"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseBank"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionUpdateData": {
-          "type": "object",
-          "properties": {
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "auctionNo": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "pauseCase": {
-              "type": "string"
-            },
-            "remarkPauseCase": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionUpdateRes": {
-          "type": "object",
-          "properties": {
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionListData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionListReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionListData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuction": {
-          "type": "object",
-          "properties": {
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "auctionNo": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "pauseCase": {
-              "type": "string"
-            },
-            "remarkPauseCase": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseAuctionFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAuction"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuction"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionFindData": {
-          "type": "object",
-          "properties": {
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentUpdateData": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentNo": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentDate": {
-              "type": "string"
-            },
-            "sellDate": {
-              "type": "string"
-            },
-            "sellAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "receiveDate": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentUpdateRes": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentListTOData": {
-          "type": "object",
-          "properties": {
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentListTO": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentNo": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sellDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sellAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "receiveDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentFindData": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointment": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "auctionSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentNo": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sellDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "sellAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "nameSur": {
-              "type": "string"
-            },
-            "receiveDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAuctionAppointment"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointment"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralUpdateData": {
-          "type": "object",
-          "properties": {
-            "appCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "clId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isCheck": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralUpdateRes": {
-          "type": "object",
-          "properties": {
-            "appCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralListTOData": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralListTO": {
-          "type": "object",
-          "properties": {
-            "appCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "clId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "collateralDetail": {
-              "type": "string"
-            },
-            "officerAppraisalPrice": {
-              "type": "number",
-              "format": "double"
-            },
-            "isCheck": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralFindData": {
-          "type": "object",
-          "properties": {
-            "appCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateralFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateral": {
-          "type": "object",
-          "properties": {
-            "appCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "contractCollSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "clId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isCheck": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseAuctionAppointmentCollateralFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateral"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAuctionAppointmentCollateral"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAppointmentUpdateData": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "appointmentCode": {
-              "type": "string"
-            },
-            "appointmentDate": {
-              "type": "string"
-            },
-            "timePeriod": {
-              "type": "string"
-            },
-            "appointmentTimeBegin": {
-              "type": "string"
-            },
-            "appointmentTimeEnd": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAppointmentUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAppointmentUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAppointmentUpdateRes": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAppointmentListTOData": {
-          "type": "object",
-          "properties": {
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAppointmentListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAppointmentListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAppointmentListTO": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "appointmentDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "timePeriod": {
-              "type": "string"
-            },
-            "appointmentTimeBegin": {
-              "type": "string"
-            },
-            "appointmentTimeEnd": {
-              "type": "string"
-            },
-            "appointmentCode": {
-              "type": "string"
-            },
-            "appointmentName": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "courtName": {
-              "type": "string"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAppointmentListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAppointmentListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAppointmentListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAppointmentData": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "LegalCaseAppointmentReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAppointmentData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "LegalCaseAppointment": {
-          "type": "object",
-          "properties": {
-            "appointmentSeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "legalCode": {
-              "type": "string"
-            },
-            "appointmentCode": {
-              "type": "string"
-            },
-            "appointmentDate": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "timePeriod": {
-              "type": "string"
-            },
-            "appointmentTimeBegin": {
-              "type": "string"
-            },
-            "appointmentTimeEnd": {
-              "type": "string"
-            },
-            "courtId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "isDeleted": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "remark": {
-              "type": "string"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "LegalCaseAppointmentRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/LegalCaseAppointment"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/LegalCaseAppointment"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCustomerInfoUpdateData": {
-          "type": "object",
-          "properties": {
-            "cifNo": {
-              "type": "string"
-            },
-            "cifNameSur": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCustomerInfoUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCustomerInfoUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfoUpdateRes": {
-          "type": "object",
-          "properties": {
-            "cifNo": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCustomerInfoListTOData": {
-          "type": "object",
-          "properties": {
-            "firstName": {
-              "type": "string"
-            },
-            "cifNo": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfoListTOReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCustomerInfoListTOData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfoListTO": {
-          "type": "object",
-          "properties": {
-            "customerId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "cifNameSur": {
-              "type": "string"
-            },
-            "cifContractNo": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfoListTORes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CbsCustomerInfoListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/CbsCustomerInfoListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCifContractFindData": {
-          "type": "object",
-          "properties": {
-            "cifNo": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfoFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCifContractFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCustomerInfo": {
-          "type": "object",
-          "properties": {
-            "cifNo": {
-              "type": "string"
-            },
-            "cifNameSur": {
-              "type": "string"
-            },
-            "deptId": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCustomerInfoFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CbsCustomerInfo"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/CbsCustomerInfo"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCifContractUpdateData": {
-          "type": "object",
-          "properties": {
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "contractType": {
-              "type": "string"
-            },
-            "collateral": {
-              "type": "string"
-            },
-            "marketCode": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "suePrincipleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "sueInterestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            },
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCifContractUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCifContractUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCifContractUpdateRes": {
-          "type": "object",
-          "properties": {
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCifContractListData": {
-          "type": "object",
-          "properties": {
-            "cifNo": {
-              "type": "string"
-            },
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCifContractListReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCifContractListData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCifContract": {
-          "type": "object",
-          "properties": {
-            "contractId": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "cifNo": {
-              "type": "string"
-            },
-            "contractNo": {
-              "type": "string"
-            },
-            "contractType": {
-              "type": "string"
-            },
-            "collateral": {
-              "type": "string"
-            },
-            "marketCode": {
-              "type": "string"
-            },
-            "principleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "interestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "suePrincipleAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "sueInterestAmt": {
-              "type": "number",
-              "format": "double"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "legalCode": {
-              "type": "string"
-            }
-          }
-        },
-        "CbsCifContractFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CbsCifContract"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/CbsCifContract"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CbsCifContractFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CbsCifContractFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CaseTypeUpdateData": {
-          "type": "object",
-          "properties": {
-            "caseTypeCode": {
-              "type": "string"
-            },
-            "caseTypeName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "isBranchCase": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string"
-            }
-          }
-        },
-        "CaseTypeUpdateReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CaseTypeUpdateData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CaseTypeUpdateRes": {
-          "type": "object",
-          "properties": {
-            "caseTypeCode": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CaseTypeNameListTO": {
-          "type": "object",
-          "properties": {
-            "caseTypeName": {
-              "type": "string"
-            }
-          }
-        },
-        "CaseTypeNameRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CaseTypeNameListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/CaseTypeNameListTO"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CaseTypeFindData": {
-          "type": "object",
-          "properties": {
-            "caseTypeCode": {
-              "type": "string"
-            },
-            "isBranchCase": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CaseTypeFindReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/CaseTypeFindData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "CaseType": {
-          "type": "object",
-          "properties": {
-            "caseTypeCode": {
-              "type": "string"
-            },
-            "caseTypeName": {
-              "type": "string"
-            },
-            "displaySeq": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "status": {
-              "type": "string"
-            },
-            "isBranchCase": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "updateBy": {
-              "type": "string"
-            },
-            "updateDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "CaseTypeFindRes": {
-          "type": "object",
-          "properties": {
-            "dataList": {
-              "type": "array",
-              "items": {
-                "$ref": "#/components/schemas/CaseTypeListTO"
-              }
-            },
-            "data": {
-              "$ref": "#/components/schemas/CaseType"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "CaseTypeListTO": {
-          "type": "object",
-          "properties": {
-            "caseTypeCode": {
-              "type": "string"
-            },
-            "caseTypeName": {
-              "type": "string"
-            }
-          }
-        },
-        "UploadFileRes": {
-          "type": "object",
-          "properties": {
-            "filename": {
-              "type": "string"
-            },
-            "filePath": {
-              "type": "string"
-            },
-            "fileUrl": {
-              "type": "string"
-            },
-            "filenameThumbnail": {
-              "type": "string"
-            },
-            "filePathThumbnail": {
-              "type": "string"
-            },
-            "fileUrlThumbnail": {
-              "type": "string"
-            },
-            "errorcode": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "errormessage": {
-              "type": "string"
-            },
-            "totalCount": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        },
-        "UploadFileData": {
-          "type": "object",
-          "properties": {
-            "fileType": {
-              "type": "string"
-            },
-            "fileBase64": {
-              "type": "string"
-            },
-            "isTempFile": {
-              "type": "boolean"
-            }
-          }
-        },
-        "UploadFileReq": {
-          "type": "object",
-          "properties": {
-            "data": {
-              "$ref": "#/components/schemas/UploadFileData"
-            },
-            "userInfo": {
-              "type": "string"
-            },
-            "mode": {
-              "type": "string"
-            },
-            "menuCode": {
-              "type": "string"
-            },
-            "lang": {
-              "type": "string"
-            }
-          }
-        },
-        "AppCommonInfoResp": {
-          "type": "object",
-          "properties": {
-            "serverId": {
-              "type": "string"
-            },
-            "restUuid": {
-              "type": "string"
-            },
-            "infoDesc": {
-              "type": "string"
-            },
-            "infoLastBuild": {
-              "type": "string"
-            },
-            "infoVersion": {
-              "type": "string"
-            },
-            "infoCurrentDt": {
-              "type": "string",
-              "format": "date-time"
-            }
-          }
-        },
-        "CheckInfoResp": {
-          "type": "object",
-          "properties": {
-            "serverId": {
-              "type": "string"
-            },
-            "serverDateTime": {
-              "type": "string"
-            },
-            "serverContextPath": {
-              "type": "string"
-            }
-          }
+    definitions: {
+        AppCommonInfoResp: {
+            type: 'object',
+            properties: { infoCurrentDt: { type: 'string', format: 'date-time' }, infoDesc: { type: 'string' }, infoLastBuild: { type: 'string' }, infoVersion: { type: 'string' }, restUuid: { type: 'string' }, serverId: { type: 'string' } },
+            title: 'AppCommonInfoResp'
+        },
+        AuthDepartment: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                deptCd: { type: 'string' },
+                deptCtl: { type: 'integer', format: 'int32' },
+                deptEngNm: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptLev: { type: 'string' },
+                deptNm: { type: 'string' },
+                deptNmCtl: { type: 'string' },
+                deptShNm: { type: 'string' },
+                email: { type: 'string' },
+                fax: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                telephone: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'AuthDepartment'
+        },
+        AuthDepartmentData: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                deptCd: { type: 'string' },
+                deptCtl: { type: 'integer', format: 'int32' },
+                deptEngNm: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptLev: { type: 'string' },
+                deptNm: { type: 'string' },
+                deptNmCtl: { type: 'string' },
+                deptShNm: { type: 'string' },
+                email: { type: 'string' },
+                fax: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                telephone: { type: 'string' },
+                updateBy: { type: 'string' }
+            },
+            title: 'AuthDepartmentData'
+        },
+        AuthDepartmentReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthDepartmentData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthDepartmentReq'
+        },
+        AuthDepartmentRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthDepartment' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthDepartmentTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthDepartmentRes'
+        },
+        AuthDepartmentSearchData: { type: 'object', properties: { deptId: { type: 'integer', format: 'int32' }, deptLev: { type: 'string' }, deptNm: { type: 'string' } }, title: 'AuthDepartmentSearchData' },
+        AuthDepartmentSearchLevelTO: {
+            type: 'object',
+            properties: { deptBranch: { type: 'string' }, deptId: { type: 'integer', format: 'int32' }, deptProvince: { type: 'string' }, deptSector: { type: 'string' } },
+            title: 'AuthDepartmentSearchLevelTO'
+        },
+        AuthDepartmentSearchLevelTOData: { type: 'object', properties: { deptId: { type: 'integer', format: 'int32' } }, title: 'AuthDepartmentSearchLevelTOData' },
+        AuthDepartmentSearchLevelTOReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthDepartmentSearchLevelTOData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthDepartmentSearchLevelTOReq'
+        },
+        AuthDepartmentSearchLevelTORes: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthDepartmentSearchLevelTO' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthDepartmentSearchLevelTORes'
+        },
+        AuthDepartmentSearchReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthDepartmentSearchData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthDepartmentSearchReq'
+        },
+        AuthDepartmentSearchRes: {
+            type: 'object',
+            properties: { dataList: { type: 'array', items: { $ref: '#/definitions/AuthDepartmentSearchTO' } }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthDepartmentSearchRes'
+        },
+        AuthDepartmentSearchTO: {
+            type: 'object',
+            properties: {
+                deptCd: { type: 'string' },
+                deptCtl: { type: 'integer', format: 'int32' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptLev: { type: 'string' },
+                deptNm: { type: 'string' },
+                deptNmCtl: { type: 'string' },
+                deptShNm: { type: 'string' }
+            },
+            title: 'AuthDepartmentSearchTO'
+        },
+        AuthDepartmentTO: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                deptCd: { type: 'string' },
+                deptCtl: { type: 'integer', format: 'int32' },
+                deptEngNm: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptLev: { type: 'integer', format: 'int32' },
+                deptNm: { type: 'string' },
+                deptNmCtl: { type: 'string' },
+                deptShNm: { type: 'string' },
+                email: { type: 'string' },
+                fax: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                telephone: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'AuthDepartmentTO'
+        },
+        AuthDepartmentUnit: { type: 'object', properties: { deptId: { type: 'integer', format: 'int32' }, deptNmCtl: { type: 'string' } }, title: 'AuthDepartmentUnit' },
+        AuthDepartmentUnitRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthDepartmentUnit' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthDepartmentUnit' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthDepartmentUnitRes'
+        },
+        AuthDepartmentUpdateRes: {
+            type: 'object',
+            properties: { deptId: { type: 'integer', format: 'int32' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthDepartmentUpdateRes'
+        },
+        AuthGroupMenuData: { type: 'object', properties: { userId: { type: 'string' } }, title: 'AuthGroupMenuData' },
+        AuthGroupMenuReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthGroupMenuData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthGroupMenuReq'
+        },
+        AuthGroupMenuRes: {
+            type: 'object',
+            properties: { dataList: { type: 'array', items: { $ref: '#/definitions/AuthGroupMenuTO' } }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthGroupMenuRes'
+        },
+        AuthGroupMenuTO: {
+            type: 'object',
+            properties: {
+                icon: { type: 'string' },
+                menuLevel: { type: 'integer', format: 'int32' },
+                parentSystemId: { type: 'string' },
+                rowNum: { type: 'integer', format: 'int32' },
+                seq: { type: 'integer', format: 'int32' },
+                systemId: { type: 'string' },
+                systemName: { type: 'string' }
+            },
+            title: 'AuthGroupMenuTO'
+        },
+        AuthGroupProgram: { type: 'object', properties: { groupProgramCode: { type: 'string' }, groupProgramName: { type: 'string' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' } }, title: 'AuthGroupProgram' },
+        AuthGroupProgramData: {
+            type: 'object',
+            properties: { groupProgramCode: { type: 'string' }, groupProgramName: { type: 'string' }, taskCodeList: { type: 'array', items: { type: 'string' } }, updateBy: { type: 'string' } },
+            title: 'AuthGroupProgramData'
+        },
+        AuthGroupProgramDetail: {
+            type: 'object',
+            properties: {
+                actionDelete: { type: 'integer', format: 'int32' },
+                actionExport: { type: 'integer', format: 'int32' },
+                actionImport: { type: 'integer', format: 'int32' },
+                actionInsert: { type: 'integer', format: 'int32' },
+                actionUpdate: { type: 'integer', format: 'int32' },
+                actionView: { type: 'integer', format: 'int32' },
+                id: { $ref: '#/definitions/AuthGroupProgramDetailPK' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'AuthGroupProgramDetail'
+        },
+        AuthGroupProgramDetailData: {
+            type: 'object',
+            properties: {
+                actionDelete: { type: 'integer', format: 'int32' },
+                actionExport: { type: 'integer', format: 'int32' },
+                actionImport: { type: 'integer', format: 'int32' },
+                actionInsert: { type: 'integer', format: 'int32' },
+                actionUpdate: { type: 'integer', format: 'int32' },
+                actionView: { type: 'integer', format: 'int32' },
+                groupProgramCode: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                taskCode: { type: 'string' },
+                updateBy: { type: 'string' }
+            },
+            title: 'AuthGroupProgramDetailData'
+        },
+        AuthGroupProgramDetailPK: { type: 'object', properties: { groupProgramCode: { type: 'string' }, seq: { type: 'integer', format: 'int32' }, taskCode: { type: 'string' } }, title: 'AuthGroupProgramDetailPK' },
+        AuthGroupProgramDetailReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthGroupProgramDetailData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthGroupProgramDetailReq'
+        },
+        AuthGroupProgramDetailRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthGroupProgramDetail' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthGroupProgramDetail' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthGroupProgramDetailRes'
+        },
+        AuthGroupProgramReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthGroupProgramData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthGroupProgramReq'
+        },
+        AuthGroupProgramRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthGroupProgram' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthGroupProgramTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                groupProgramCode: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthGroupProgramRes'
+        },
+        AuthGroupProgramTO: {
+            type: 'object',
+            properties: { groupProgramCode: { type: 'string' }, groupProgramName: { type: 'string' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' }, userName: { type: 'string' } },
+            title: 'AuthGroupProgramTO'
+        },
+        AuthIAuthenData: { type: 'object', properties: { ipaddress: { type: 'string' }, password: { type: 'string' }, userId: { type: 'string' } }, title: 'AuthIAuthenData' },
+        AuthIAuthenReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthIAuthenData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthIAuthenReq' },
+        AuthIAuthenRes: {
+            type: 'object',
+            properties: { data: { type: 'object' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, token: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthIAuthenRes'
+        },
+        AuthLog: {
+            type: 'object',
+            properties: {
+                actionType: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                ipAddress: { type: 'string' },
+                logDt: { type: 'string', format: 'date-time' },
+                logId: { type: 'string', format: 'date-time' },
+                logResult: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthLog'
+        },
+        AuthLogData: {
+            type: 'object',
+            properties: {
+                actionType: { type: 'string' },
+                dateFrom: { type: 'string' },
+                dateTo: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                ipAddress: { type: 'string' },
+                logResult: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthLogData'
+        },
+        AuthLogError: {
+            type: 'object',
+            properties: { logDt: { type: 'string', format: 'date-time' }, logIdErr: { type: 'string', format: 'date-time' }, taskCode: { type: 'string' }, textError: { type: 'string' }, userId: { type: 'string' } },
+            title: 'AuthLogError'
+        },
+        AuthLogErrorData: {
+            type: 'object',
+            properties: { dateFrom: { type: 'string' }, dateTo: { type: 'string' }, logDt: { type: 'string' }, logIdErr: { type: 'string' }, taskCode: { type: 'string' }, textError: { type: 'string' }, userId: { type: 'string' } },
+            title: 'AuthLogErrorData'
+        },
+        AuthLogErrorReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthLogErrorData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthLogErrorReq'
+        },
+        AuthLogErrorRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthLogError' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthLogErrorTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthLogErrorRes'
+        },
+        AuthLogErrorTO: {
+            type: 'object',
+            properties: {
+                deptName: { type: 'string' },
+                logDt: { type: 'string', format: 'date-time' },
+                logIdErr: { type: 'string', format: 'date-time' },
+                nameSurname: { type: 'string' },
+                taskCode: { type: 'string' },
+                taskName: { type: 'string' },
+                textError: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthLogErrorTO'
+        },
+        AuthLogReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthLogData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthLogReq'
+        },
+        AuthLogRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthLog' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthLogTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthLogRes'
+        },
+        AuthLogTO: {
+            type: 'object',
+            properties: {
+                actionDesc: { type: 'string' },
+                actionType: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptName: { type: 'string' },
+                ipAddress: { type: 'string' },
+                logDt: { type: 'string', format: 'date-time' },
+                logId: { type: 'string', format: 'date-time' },
+                logResult: { type: 'string' },
+                nameSurname: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthLogTO'
+        },
+        AuthMenuData: { type: 'object', properties: { userId: { type: 'string' } }, title: 'AuthMenuData' },
+        AuthMenuReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthMenuData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthMenuReq' },
+        AuthMenuRes: {
+            type: 'object',
+            properties: { dataList: { type: 'array', items: { $ref: '#/definitions/AuthMenuTO' } }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthMenuRes'
+        },
+        AuthMenuTO: {
+            type: 'object',
+            properties: {
+                icon: { type: 'string' },
+                icon2: { type: 'string' },
+                separatorFlag: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                systemId: { type: 'string' },
+                systemName: { type: 'string' },
+                taskCode: { type: 'string' },
+                taskName: { type: 'string' }
+            },
+            title: 'AuthMenuTO'
+        },
+        AuthPayloadJWTReq: {
+            type: 'object',
+            properties: { createDt: { type: 'string', format: 'date-time' }, expireDt: { type: 'string', format: 'date-time' }, ipAddress: { type: 'string' }, password: { type: 'string' }, userId: { type: 'string' } },
+            title: 'AuthPayloadJWTReq'
+        },
+        AuthPosition: { type: 'object', properties: { positionId: { type: 'integer', format: 'int32' }, positionName: { type: 'string' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' } }, title: 'AuthPosition' },
+        AuthPositionData: { type: 'object', properties: { positionId: { type: 'integer', format: 'int32' }, positionName: { type: 'string' }, updateBy: { type: 'string' } }, title: 'AuthPositionData' },
+        AuthPositionReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthPositionData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthPositionReq' },
+        AuthPositionRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthPosition' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthPosition' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthPositionRes'
+        },
+        AuthSystem: {
+            type: 'object',
+            properties: {
+                icon: { type: 'string' },
+                menuLevel: { type: 'string' },
+                parentSystemId: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                systemId: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'AuthSystem'
+        },
+        AuthSystemData: {
+            type: 'object',
+            properties: {
+                icon: { type: 'string' },
+                menuLevel: { type: 'string' },
+                parentSystemId: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                systemId: { type: 'string' },
+                systemName: { type: 'string' },
+                updateBy: { type: 'string' }
+            },
+            title: 'AuthSystemData'
+        },
+        AuthSystemName: { type: 'object', properties: { id: { $ref: '#/definitions/AuthSystemNamePK' }, systemName: { type: 'string' } }, title: 'AuthSystemName' },
+        AuthSystemNameData: { type: 'object', properties: { langType: { type: 'string' }, systemId: { type: 'string' }, systemName: { type: 'string' } }, title: 'AuthSystemNameData' },
+        AuthSystemNamePK: { type: 'object', properties: { langType: { type: 'string' }, systemId: { type: 'string' } }, title: 'AuthSystemNamePK' },
+        AuthSystemNameReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/AuthSystemNameData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'AuthSystemNameReq'
+        },
+        AuthSystemNameRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthSystemName' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthSystemName' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthSystemNameRes'
+        },
+        AuthSystemReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthSystemData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthSystemReq' },
+        AuthSystemRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthSystem' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthSystemTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthSystemRes'
+        },
+        AuthSystemTO: {
+            type: 'object',
+            properties: {
+                icon: { type: 'string' },
+                menuLevel: { type: 'string' },
+                parentSystemId: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                systemId: { type: 'string' },
+                systemName: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'AuthSystemTO'
+        },
+        AuthTask: {
+            type: 'object',
+            properties: {
+                grpTask: { type: 'string' },
+                icon: { type: 'string' },
+                referencedBy: { type: 'string' },
+                separatorFlag: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                showInMenuFlag: { type: 'string' },
+                status: { type: 'string' },
+                subtaskName: { type: 'string' },
+                systemId: { type: 'string' },
+                taskCode: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                url: { type: 'string' }
+            },
+            title: 'AuthTask'
+        },
+        AuthTaskData: {
+            type: 'object',
+            properties: {
+                grpTask: { type: 'string' },
+                icon: { type: 'string' },
+                referencedBy: { type: 'string' },
+                separatorFlag: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                showInMenuFlag: { type: 'string' },
+                status: { type: 'string' },
+                subtaskName: { type: 'string' },
+                systemId: { type: 'string' },
+                taskCode: { type: 'string' },
+                taskName: { type: 'string' },
+                updateBy: { type: 'string' },
+                url: { type: 'string' }
+            },
+            title: 'AuthTaskData'
+        },
+        AuthTaskName: { type: 'object', properties: { id: { $ref: '#/definitions/AuthTaskNamePK' }, taskName: { type: 'string' } }, title: 'AuthTaskName' },
+        AuthTaskNameData: { type: 'object', properties: { langType: { type: 'string' }, taskCode: { type: 'string' }, taskName: { type: 'string' } }, title: 'AuthTaskNameData' },
+        AuthTaskNamePK: { type: 'object', properties: { langType: { type: 'string' }, taskCode: { type: 'string' } }, title: 'AuthTaskNamePK' },
+        AuthTaskNameReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthTaskNameData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthTaskNameReq' },
+        AuthTaskNameRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthTaskName' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthTaskName' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthTaskNameRes'
+        },
+        AuthTaskReq: { type: 'object', properties: { data: { $ref: '#/definitions/AuthTaskData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'AuthTaskReq' },
+        AuthTaskRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthTask' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthTaskTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthTaskRes'
+        },
+        AuthTaskTO: {
+            type: 'object',
+            properties: {
+                grpTask: { type: 'string' },
+                icon: { type: 'string' },
+                referencedBy: { type: 'string' },
+                separatorFlag: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                showInMenuFlag: { type: 'string' },
+                status: { type: 'string' },
+                subtaskName: { type: 'string' },
+                systemId: { type: 'string' },
+                systemName: { type: 'string' },
+                taskCode: { type: 'string' },
+                taskName: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                url: { type: 'string' },
+                userName: { type: 'string' }
+            },
+            title: 'AuthTaskTO'
+        },
+        AuthUserInfo: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                deptId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                enableSound: { type: 'string' },
+                homePageCode: { type: 'string' },
+                lastLogin: { type: 'string', format: 'date-time' },
+                locale: { type: 'string' },
+                name: { type: 'string' },
+                password: { type: 'string' },
+                photoPathName: { type: 'string' },
+                pid: { type: 'string' },
+                positionId: { type: 'integer', format: 'int32' },
+                pwdDt: { type: 'string', format: 'date-time' },
+                roleId: { type: 'string' },
+                soundName: { type: 'string' },
+                status: { type: 'string' },
+                surName: { type: 'string' },
+                telephone: { type: 'string' },
+                theme: { type: 'string' },
+                title: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userId: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthUserInfo'
+        },
+        AuthUserInfoData: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                deptId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                enableSound: { type: 'string' },
+                homePageCode: { type: 'string' },
+                locale: { type: 'string' },
+                name: { type: 'string' },
+                password: { type: 'string' },
+                photoPathName: { type: 'string' },
+                pid: { type: 'string' },
+                positionId: { type: 'integer', format: 'int32' },
+                roleId: { type: 'string' },
+                soundName: { type: 'string' },
+                status: { type: 'string' },
+                surName: { type: 'string' },
+                telephone: { type: 'string' },
+                theme: { type: 'string' },
+                title: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                userId: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthUserInfoData'
+        },
+        AuthUserInfoDetail: {
+            type: 'object',
+            properties: { id: { $ref: '#/definitions/AuthUserInfoDetailPK' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' }, userGroupProgramCode: { type: 'string' } },
+            title: 'AuthUserInfoDetail'
+        },
+        AuthUserInfoDetailData: { type: 'object', properties: { seq: { type: 'integer', format: 'int32' }, updateBy: { type: 'string' }, userGroupProgramCode: { type: 'string' }, userId: { type: 'string' } }, title: 'AuthUserInfoDetailData' },
+        AuthUserInfoDetailPK: { type: 'object', properties: { seq: { type: 'integer', format: 'int32' }, userId: { type: 'string' } }, title: 'AuthUserInfoDetailPK' },
+        AuthUserInfoDetailReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoDetailData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthUserInfoDetailReq'
+        },
+        AuthUserInfoDetailRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoDetail' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthUserInfoDetailTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthUserInfoDetailRes'
+        },
+        AuthUserInfoDetailTO: {
+            type: 'object',
+            properties: {
+                groupProgramName: { type: 'string' },
+                id: { $ref: '#/definitions/AuthUserInfoDetailTOPK' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userGroupProgramCode: { type: 'string' },
+                userName: { type: 'string' }
+            },
+            title: 'AuthUserInfoDetailTO'
+        },
+        AuthUserInfoDetailTOPK: { type: 'object', properties: { seq: { type: 'integer', format: 'int32' }, userId: { type: 'string' } }, title: 'AuthUserInfoDetailTOPK' },
+        AuthUserInfoReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthUserInfoReq'
+        },
+        AuthUserInfoRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfo' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthUserInfoTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthUserInfoRes'
+        },
+        AuthUserInfoSearchData: { type: 'object', properties: { deptId: { type: 'integer', format: 'int32' }, name: { type: 'string' }, surName: { type: 'string' }, userId: { type: 'string' } }, title: 'AuthUserInfoSearchData' },
+        AuthUserInfoSearchReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoSearchData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthUserInfoSearchReq'
+        },
+        AuthUserInfoSearchRes: {
+            type: 'object',
+            properties: { dataList: { type: 'array', items: { $ref: '#/definitions/AuthUserInfoSearchTO' } }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'AuthUserInfoSearchRes'
+        },
+        AuthUserInfoSearchTO: {
+            type: 'object',
+            properties: {
+                deptId: { type: 'integer', format: 'int32' },
+                deptNm: { type: 'string' },
+                email: { type: 'string' },
+                nameSur: { type: 'string' },
+                positionCommandId: { type: 'integer', format: 'int32' },
+                positionCommandName: { type: 'string' },
+                telephone: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'AuthUserInfoSearchTO'
+        },
+        AuthUserInfoTO: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                deptId: { type: 'integer', format: 'int32' },
+                deptNm: { type: 'string' },
+                email: { type: 'string' },
+                enableSound: { type: 'string' },
+                homePageCode: { type: 'string' },
+                locale: { type: 'string' },
+                name: { type: 'string' },
+                password: { type: 'string' },
+                photoPathName: { type: 'string' },
+                pid: { type: 'string' },
+                positionId: { type: 'integer', format: 'int32' },
+                pwdDt: { type: 'string', format: 'date-time' },
+                roleId: { type: 'string' },
+                soundName: { type: 'string' },
+                status: { type: 'string' },
+                surName: { type: 'string' },
+                telephone: { type: 'string' },
+                theme: { type: 'string' },
+                title: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userId: { type: 'string' },
+                userName: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthUserInfoTO'
+        },
+        AuthUserInfoTaskData: { type: 'object', properties: { taskCode: { type: 'string' }, userId: { type: 'string' } }, title: 'AuthUserInfoTaskData' },
+        AuthUserInfoTaskReq: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoTaskData' },
+                lang: { type: 'string' },
+                maxRange: { type: 'integer', format: 'int32' },
+                menuCode: { type: 'string' },
+                minRange: { type: 'integer', format: 'int32' },
+                mode: { type: 'string' },
+                userInfo: { type: 'string' }
+            },
+            title: 'AuthUserInfoTaskReq'
+        },
+        AuthUserInfoTaskRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/AuthUserInfoTaskTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/AuthUserInfoTaskTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'AuthUserInfoTaskRes'
+        },
+        AuthUserInfoTaskTO: { type: 'object', properties: { id: { $ref: '#/definitions/AuthUserInfoTaskTOPK' }, isRead: { type: 'integer', format: 'int32' }, taskCode: { type: 'string' } }, title: 'AuthUserInfoTaskTO' },
+        AuthUserInfoTaskTOPK: { type: 'object', properties: { seq: { type: 'integer', format: 'int32' }, userId: { type: 'string' } }, title: 'AuthUserInfoTaskTOPK' },
+        CheckInfoResp: { type: 'object', properties: { serverContextPath: { type: 'string' }, serverDateTime: { type: 'string' }, serverId: { type: 'string' } }, title: 'CheckInfoResp' },
+        CheckLastloginData: { type: 'object', properties: { userId: { type: 'string' } }, title: 'CheckLastloginData' },
+        CheckLastloginReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CheckLastloginData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CheckLastloginReq'
+        },
+        CheckLastloginRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, lastLogin: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CheckLastloginRes'
+        },
+        CoreConfig: { type: 'object', properties: { isDeleted: { type: 'string' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' }, varCode: { type: 'string' }, varValue: { type: 'string' } }, title: 'CoreConfig' },
+        CoreConfigListData: { type: 'object', properties: { varCode: { type: 'string' } }, title: 'CoreConfigListData' },
+        CoreConfigListReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CoreConfigListData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CoreConfigListReq'
+        },
+        CoreConfigListRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CoreConfig' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CoreConfig' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CoreConfigListRes'
+        },
+        CtBank: {
+            type: 'object',
+            properties: {
+                abbreviation: { type: 'string' },
+                bankCode: { type: 'string' },
+                bankName: { type: 'string' },
+                displaySeq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                updateUserId: { type: 'string' }
+            },
+            title: 'CtBank'
+        },
+        CtBankData: { type: 'object', properties: { bankCode: { type: 'string' }, bankName: { type: 'string' } }, title: 'CtBankData' },
+        CtBankListTO: { type: 'object', properties: { abbreviation: { type: 'string' }, bankCode: { type: 'string' }, bankName: { type: 'string' } }, title: 'CtBankListTO' },
+        CtBankListToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtBankListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtBankListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtBankListToRes'
+        },
+        CtBankReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtBankData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtBankReq' },
+        CtBankRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtBank' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtBank' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtBankRes'
+        },
+        CtBankUpdateData: {
+            type: 'object',
+            properties: { abbreviation: { type: 'string' }, bankCode: { type: 'string' }, bankName: { type: 'string' }, displaySeq: { type: 'integer', format: 'int32' }, status: { type: 'string' }, updateUserId: { type: 'string' } },
+            title: 'CtBankUpdateData'
+        },
+        CtBankUpdateReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtBankUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtBankUpdateReq' },
+        CtBankUpdateRes: { type: 'object', properties: { bankCode: { type: 'string' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } }, title: 'CtBankUpdateRes' },
+        CtCourt: {
+            type: 'object',
+            properties: {
+                courtAddress1: { type: 'string' },
+                courtAddress2: { type: 'string' },
+                courtAddress3: { type: 'string' },
+                courtAddress4: { type: 'string' },
+                courtCode: { type: 'string' },
+                courtId: { type: 'integer', format: 'int32' },
+                courtName: { type: 'string' },
+                courtType: { type: 'string' },
+                district: { type: 'string' },
+                email: { type: 'string' },
+                fax: { type: 'string' },
+                postCode: { type: 'string' },
+                province: { type: 'string' },
+                status: { type: 'string' },
+                subdistrict: { type: 'string' },
+                telephone: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtCourt'
+        },
+        CtCourtData: { type: 'object', properties: { courtId: { type: 'integer', format: 'int32' } }, title: 'CtCourtData' },
+        CtCourtReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtCourtData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtCourtReq' },
+        CtCourtRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtCourt' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtCourt' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtCourtRes'
+        },
+        CtCourtUpdateData: {
+            type: 'object',
+            properties: {
+                courtAddress1: { type: 'string' },
+                courtAddress2: { type: 'string' },
+                courtAddress3: { type: 'string' },
+                courtAddress4: { type: 'string' },
+                courtCode: { type: 'string' },
+                courtId: { type: 'integer', format: 'int32' },
+                courtName: { type: 'string' },
+                courtType: { type: 'string' },
+                district: { type: 'string' },
+                email: { type: 'string' },
+                fax: { type: 'string' },
+                postCode: { type: 'string' },
+                province: { type: 'string' },
+                status: { type: 'string' },
+                subdistrict: { type: 'string' },
+                telephone: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtCourtUpdateData'
+        },
+        CtCourtUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtCourtUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtCourtUpdateReq'
+        },
+        CtCourtUpdateRes: {
+            type: 'object',
+            properties: { courtId: { type: 'integer', format: 'int32' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtCourtUpdateRes'
+        },
+        CtDistrict: {
+            type: 'object',
+            properties: {
+                districtDescription: { type: 'string' },
+                id: { $ref: '#/definitions/CtDistrictPK' },
+                postCode: { type: 'string' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtDistrict'
+        },
+        CtDistrictData: {
+            type: 'object',
+            properties: { districtCode: { type: 'string' }, districtDescription: { type: 'string' }, postCode: { type: 'string' }, provinceCode: { type: 'string' }, status: { type: 'string' }, updateBy: { type: 'string' } },
+            title: 'CtDistrictData'
+        },
+        CtDistrictPK: { type: 'object', properties: { districtCode: { type: 'string' }, provinceCode: { type: 'string' } }, title: 'CtDistrictPK' },
+        CtDistrictReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtDistrictData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtDistrictReq' },
+        CtDistrictRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtDistrict' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtDistrictTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtDistrictRes'
+        },
+        CtDistrictTO: {
+            type: 'object',
+            properties: {
+                districtDescription: { type: 'string' },
+                id: { $ref: '#/definitions/CtDistrictTOPK' },
+                postCode: { type: 'string' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'CtDistrictTO'
+        },
+        CtDistrictTOPK: { type: 'object', properties: { districtCode: { type: 'string' }, provinceCode: { type: 'string' } }, title: 'CtDistrictTOPK' },
+        CtLanguage: {
+            type: 'object',
+            properties: {
+                displaySeq: { type: 'integer', format: 'int32' },
+                id: { type: 'integer', format: 'int32' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                languageCode: { type: 'string' },
+                languageShow: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                updateUserId: { type: 'string' }
+            },
+            title: 'CtLanguage'
+        },
+        CtLanguageData: { type: 'object', properties: { id: { type: 'integer', format: 'int32' } }, title: 'CtLanguageData' },
+        CtLanguageReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtLanguageData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtLanguageReq' },
+        CtLanguageRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLanguage' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLanguage' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLanguageRes'
+        },
+        CtLanguageUpdateData: {
+            type: 'object',
+            properties: {
+                displaySeq: { type: 'integer', format: 'int32' },
+                id: { type: 'integer', format: 'int32' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                languageCode: { type: 'string' },
+                languageShow: { type: 'string' },
+                updateDts: { type: 'string' },
+                updateUserId: { type: 'string' }
+            },
+            title: 'CtLanguageUpdateData'
+        },
+        CtLanguageUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLanguageUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLanguageUpdateReq'
+        },
+        CtLanguageUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, id: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtLanguageUpdateRes'
+        },
+        CtLawFirm: {
+            type: 'object',
+            properties: {
+                birthDt: { type: 'string', format: 'date-time' },
+                cardNo: { type: 'string' },
+                cardTypeId: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                facebook: { type: 'string' },
+                genderId: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                lawFirmFname: { type: 'string' },
+                lawFirmId: { type: 'integer', format: 'int32' },
+                lawFirmLname: { type: 'string' },
+                lawFirmNameEng: { type: 'string' },
+                lawFirmType: { type: 'string' },
+                line: { type: 'string' },
+                nationalityId: { type: 'string' },
+                phoneNo1: { type: 'string' },
+                phoneNo2: { type: 'string' },
+                raceId: { type: 'string' },
+                remark: { type: 'string' },
+                titleCode: { type: 'string' },
+                titleId: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtLawFirm'
+        },
+        CtLawFirmAddress: {
+            type: 'object',
+            properties: {
+                addno: { type: 'string' },
+                addressId: { type: 'integer', format: 'int32' },
+                alley: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                districtId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                lawFirmId: { type: 'integer', format: 'int32' },
+                moo: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceId: { type: 'integer', format: 'int32' },
+                street: { type: 'string' },
+                subdistrictId: { type: 'integer', format: 'int32' },
+                telno1: { type: 'string' },
+                telno2: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtLawFirmAddress'
+        },
+        CtLawFirmAddressFindData: { type: 'object', properties: { addressId: { type: 'integer', format: 'int32' } }, title: 'CtLawFirmAddressFindData' },
+        CtLawFirmAddressFindReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmAddressFindData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmAddressFindReq'
+        },
+        CtLawFirmAddressFindRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLawFirmAddress' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLawFirmAddress' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLawFirmAddressFindRes'
+        },
+        CtLawFirmAddressListTO: {
+            type: 'object',
+            properties: { addressDesc: { type: 'string' }, addressId: { type: 'integer', format: 'int32' }, email: { type: 'string' }, isDeleted: { type: 'integer', format: 'int32' }, telno1: { type: 'string' }, telno2: { type: 'string' } },
+            title: 'CtLawFirmAddressListTO'
+        },
+        CtLawFirmAddressListToData: { type: 'object', properties: { lawFirmId: { type: 'integer', format: 'int32' } }, title: 'CtLawFirmAddressListToData' },
+        CtLawFirmAddressListToReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmAddressListToData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmAddressListToReq'
+        },
+        CtLawFirmAddressListToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLawFirmAddressListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLawFirmAddressListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLawFirmAddressListToRes'
+        },
+        CtLawFirmAddressUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmAddressUpdateReq'
+        },
+        CtLawFirmAddressUpdateRes: {
+            type: 'object',
+            properties: { addressId: { type: 'integer', format: 'int32' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtLawFirmAddressUpdateRes'
+        },
+        CtLawFirmFindData: { type: 'object', properties: { lawFirmId: { type: 'integer', format: 'int32' } }, title: 'CtLawFirmFindData' },
+        CtLawFirmFindReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmFindData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmFindReq'
+        },
+        CtLawFirmFindRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLawFirm' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLawFirm' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLawFirmFindRes'
+        },
+        CtLawFirmListTO: {
+            type: 'object',
+            properties: {
+                isDeleted: { type: 'integer', format: 'int32' },
+                isDeletedDesc: { type: 'string' },
+                lawFirmFname: { type: 'string' },
+                lawFirmId: { type: 'integer', format: 'int32' },
+                lawFirmType: { type: 'string' },
+                lawFirmTypeDesc: { type: 'string' },
+                nameSur: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtLawFirmListTO'
+        },
+        CtLawFirmListToData: { type: 'object', properties: { isDeleted: { type: 'integer', format: 'int32' }, lawFirmFname: { type: 'string' }, lawFirmType: { type: 'string' } }, title: 'CtLawFirmListToData' },
+        CtLawFirmListToReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmListToData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmListToReq'
+        },
+        CtLawFirmListToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLawFirmListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLawFirmListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLawFirmListToRes'
+        },
+        CtLawFirmUpdateData: {
+            type: 'object',
+            properties: {
+                addno: { type: 'string' },
+                addressId: { type: 'integer', format: 'int32' },
+                alley: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                districtId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                lawFirmId: { type: 'integer', format: 'int32' },
+                moo: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceId: { type: 'integer', format: 'int32' },
+                street: { type: 'string' },
+                subdistrictId: { type: 'integer', format: 'int32' },
+                telno1: { type: 'string' },
+                telno2: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtLawFirmUpdateData'
+        },
+        CtLawFirmUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLawFirmUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLawFirmUpdateReq'
+        },
+        CtLawFirmUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, lawFirmId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtLawFirmUpdateRes'
+        },
+        CtLegalExecution: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                description: { type: 'string' },
+                legalExecutionId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtLegalExecution'
+        },
+        CtLegalExecutionData: { type: 'object', properties: { legalExecutionId: { type: 'integer', format: 'int32' } }, title: 'CtLegalExecutionData' },
+        CtLegalExecutionReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLegalExecutionData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLegalExecutionReq'
+        },
+        CtLegalExecutionRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLegalExecution' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLegalExecution' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLegalExecutionRes'
+        },
+        CtLegalExecutionUpdateData: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                description: { type: 'string' },
+                legalExecutionId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtLegalExecutionUpdateData'
+        },
+        CtLegalExecutionUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLegalExecutionUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLegalExecutionUpdateReq'
+        },
+        CtLegalExecutionUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, legalExecutionId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtLegalExecutionUpdateRes'
+        },
+        CtLoanInterestRate: {
+            type: 'object',
+            properties: {
+                bankCode: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                dateEnd: { type: 'string', format: 'date-time' },
+                dateStart: { type: 'string', format: 'date-time' },
+                defaultRate: { type: 'number', format: 'double' },
+                intId: { type: 'integer', format: 'int32' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                mlrRate: { type: 'number', format: 'double' },
+                morRate: { type: 'number', format: 'double' },
+                mrrRate: { type: 'number', format: 'double' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtLoanInterestRate'
+        },
+        CtLoanInterestRateData: { type: 'object', properties: { bankCode: { type: 'string' } }, title: 'CtLoanInterestRateData' },
+        CtLoanInterestRateFindData: { type: 'object', properties: { intId: { type: 'integer', format: 'int32' } }, title: 'CtLoanInterestRateFindData' },
+        CtLoanInterestRateFindReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLoanInterestRateFindData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLoanInterestRateFindReq'
+        },
+        CtLoanInterestRateFindRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLoanInterestRate' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLoanInterestRate' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLoanInterestRateFindRes'
+        },
+        CtLoanInterestRateListTO: {
+            type: 'object',
+            properties: {
+                bankCode: { type: 'string' },
+                dateEnd: { type: 'string', format: 'date-time' },
+                dateStart: { type: 'string', format: 'date-time' },
+                defaultRate: { type: 'number', format: 'double' },
+                intId: { type: 'integer', format: 'int32' },
+                mlrRate: { type: 'number', format: 'double' },
+                morRate: { type: 'number', format: 'double' },
+                mrrRate: { type: 'number', format: 'double' },
+                seq: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLoanInterestRateListTO'
+        },
+        CtLoanInterestRateListToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtLoanInterestRateListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtLoanInterestRateListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtLoanInterestRateListToRes'
+        },
+        CtLoanInterestRateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLoanInterestRateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLoanInterestRateReq'
+        },
+        CtLoanInterestRateUpdateData: {
+            type: 'object',
+            properties: {
+                bankCode: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                dateEnd: { type: 'string' },
+                dateStart: { type: 'string' },
+                defaultRate: { type: 'number', format: 'double' },
+                intId: { type: 'integer', format: 'int32' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                mlrRate: { type: 'number', format: 'double' },
+                morRate: { type: 'number', format: 'double' },
+                mrrRate: { type: 'number', format: 'double' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtLoanInterestRateUpdateData'
+        },
+        CtLoanInterestRateUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtLoanInterestRateUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtLoanInterestRateUpdateReq'
+        },
+        CtLoanInterestRateUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, intId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtLoanInterestRateUpdateRes'
+        },
+        CtMainType: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                description: { type: 'string' },
+                mainType: { type: 'integer', format: 'int32' },
+                seqId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtMainType'
+        },
+        CtMainTypeData: { type: 'object', properties: { seqId: { type: 'integer', format: 'int32' } }, title: 'CtMainTypeData' },
+        CtMainTypeReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtMainTypeData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtMainTypeReq' },
+        CtMainTypeRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtMainType' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtMainType' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtMainTypeRes'
+        },
+        CtMainTypeUpdateData: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                description: { type: 'string' },
+                mainType: { type: 'integer', format: 'int32' },
+                seqId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtMainTypeUpdateData'
+        },
+        CtMainTypeUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtMainTypeUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtMainTypeUpdateReq'
+        },
+        CtMainTypeUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, seqId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtMainTypeUpdateRes'
+        },
+        CtMarketCode: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                description: { type: 'string' },
+                mainType: { type: 'integer', format: 'int32' },
+                marketCode: { type: 'string' },
+                seqId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                subType: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtMarketCode'
+        },
+        CtMarketCodeData: { type: 'object', properties: { seqId: { type: 'integer', format: 'int32' } }, title: 'CtMarketCodeData' },
+        CtMarketCodeReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtMarketCodeData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtMarketCodeReq' },
+        CtMarketCodeRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtMarketCode' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtMarketCode' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtMarketCodeRes'
+        },
+        CtMarketCodeUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtMainTypeUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtMarketCodeUpdateReq'
+        },
+        CtMarketCodeUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, seqId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtMarketCodeUpdateRes'
+        },
+        CtOriginalAffiliation: {
+            type: 'object',
+            properties: {
+                affiliationId: { type: 'integer', format: 'int32' },
+                affiliationName: { type: 'string' },
+                displaySeq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtOriginalAffiliation'
+        },
+        CtOriginalAffiliationData: { type: 'object', properties: { affiliationId: { type: 'integer', format: 'int32' } }, title: 'CtOriginalAffiliationData' },
+        CtOriginalAffiliationReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtOriginalAffiliationData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtOriginalAffiliationReq'
+        },
+        CtOriginalAffiliationRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtOriginalAffiliation' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtOriginalAffiliation' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtOriginalAffiliationRes'
+        },
+        CtOriginalAffiliationUpdateData: {
+            type: 'object',
+            properties: {
+                affiliationId: { type: 'integer', format: 'int32' },
+                affiliationName: { type: 'string' },
+                displaySeq: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtOriginalAffiliationUpdateData'
+        },
+        CtOriginalAffiliationUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtOriginalAffiliationUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtOriginalAffiliationUpdateReq'
+        },
+        CtOriginalAffiliationUpdateRes: {
+            type: 'object',
+            properties: { affiliationId: { type: 'integer', format: 'int32' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtOriginalAffiliationUpdateRes'
+        },
+        CtPortFindData: { type: 'object', properties: { portId: { type: 'integer', format: 'int32' } }, title: 'CtPortFindData' },
+        CtPortFindReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtPortFindData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtPortFindReq' },
+        CtPortFindRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtPortFindTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtPortFindTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtPortFindRes'
+        },
+        CtPortFindTO: {
+            type: 'object',
+            properties: {
+                bankCode: { type: 'string' },
+                bankName: { type: 'string' },
+                collateralAmount: { type: 'number', format: 'double' },
+                costAmount: { type: 'number', format: 'double' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                cutOffDate: { type: 'string', format: 'date-time' },
+                dateLastCal: { type: 'string', format: 'date-time' },
+                debtAmount: { type: 'number', format: 'double' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                nameSur: { type: 'string' },
+                portCode: { type: 'string' },
+                portId: { type: 'integer', format: 'int32' },
+                sumCount: { type: 'integer', format: 'int32' },
+                transferDate: { type: 'string', format: 'date-time' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                year: { type: 'string' }
+            },
+            title: 'CtPortFindTO'
+        },
+        CtPortListTO: {
+            type: 'object',
+            properties: {
+                bankName: { type: 'string' },
+                collateralAmount: { type: 'number', format: 'double' },
+                costAmount: { type: 'number', format: 'double' },
+                debtAmount: { type: 'number', format: 'double' },
+                nameSur: { type: 'string' },
+                portCode: { type: 'string' },
+                portId: { type: 'integer', format: 'int32' },
+                seq: { type: 'integer', format: 'int32' },
+                sumCount: { type: 'integer', format: 'int32' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtPortListTO'
+        },
+        CtPortListToData: { type: 'object', properties: { bankCode: { type: 'string' }, year: { type: 'string' } }, title: 'CtPortListToData' },
+        CtPortListToReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtPortListToData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtPortListToReq' },
+        CtPortListToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtPortListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtPortListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtPortListToRes'
+        },
+        CtPortUpdateData: {
+            type: 'object',
+            properties: {
+                bankCode: { type: 'string' },
+                collateralAmount: { type: 'number', format: 'double' },
+                costAmount: { type: 'number', format: 'double' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                cutOffDate: { type: 'string' },
+                dateLastCal: { type: 'string' },
+                debtAmount: { type: 'number', format: 'double' },
+                isDeleted: { type: 'integer', format: 'int32' },
+                portCode: { type: 'string' },
+                portId: { type: 'integer', format: 'int32' },
+                sumCount: { type: 'integer', format: 'int32' },
+                transferDate: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' },
+                year: { type: 'string' }
+            },
+            title: 'CtPortUpdateData'
+        },
+        CtPortUpdateReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtPortUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtPortUpdateReq' },
+        CtPortUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, portId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtPortUpdateRes'
+        },
+        CtPortYearTO: { type: 'object', properties: { year: { type: 'integer', format: 'int32' } }, title: 'CtPortYearTO' },
+        CtPortYearToRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtPortYearTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtPortYearTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtPortYearToRes'
+        },
+        CtProvince: {
+            type: 'object',
+            properties: {
+                provinceCode: { type: 'string' },
+                provinceDescription: { type: 'string' },
+                regionNo: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtProvince'
+        },
+        CtProvinceData: {
+            type: 'object',
+            properties: { provinceCode: { type: 'string' }, provinceDescription: { type: 'string' }, regionNo: { type: 'integer', format: 'int32' }, status: { type: 'string' }, updateBy: { type: 'string' } },
+            title: 'CtProvinceData'
+        },
+        CtProvinceReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtProvinceData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtProvinceReq' },
+        CtProvinceRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtProvince' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtProvinceTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                provinceCode: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtProvinceRes'
+        },
+        CtProvinceTO: {
+            type: 'object',
+            properties: {
+                provinceCode: { type: 'string' },
+                provinceDescription: { type: 'string' },
+                regionNo: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'CtProvinceTO'
+        },
+        CtSubDistrict: {
+            type: 'object',
+            properties: { id: { $ref: '#/definitions/CtSubDistrictPK' }, status: { type: 'string' }, subdistrictDescription: { type: 'string' }, updateBy: { type: 'string' }, updateDt: { type: 'string', format: 'date-time' } },
+            title: 'CtSubDistrict'
+        },
+        CtSubDistrictData: {
+            type: 'object',
+            properties: { districtCode: { type: 'string' }, provinceCode: { type: 'string' }, status: { type: 'string' }, subdistrictCode: { type: 'string' }, subdistrictDescription: { type: 'string' }, updateBy: { type: 'string' } },
+            title: 'CtSubDistrictData'
+        },
+        CtSubDistrictPK: { type: 'object', properties: { districtCode: { type: 'string' }, provinceCode: { type: 'string' }, subdistrictCode: { type: 'string' } }, title: 'CtSubDistrictPK' },
+        CtSubDistrictReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtSubDistrictData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtSubDistrictReq'
+        },
+        CtSubDistrictRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtSubDistrict' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtSubDistrictTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtSubDistrictRes'
+        },
+        CtSubDistrictTO: {
+            type: 'object',
+            properties: {
+                id: { $ref: '#/definitions/CtSubDistrictTOPK' },
+                status: { type: 'string' },
+                subdistrictDescription: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'CtSubDistrictTO'
+        },
+        CtSubDistrictTOPK: { type: 'object', properties: { districtCode: { type: 'string' }, provinceCode: { type: 'string' }, subdistrictCode: { type: 'string' } }, title: 'CtSubDistrictTOPK' },
+        CtSubType: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                description: { type: 'string' },
+                mainType: { type: 'integer', format: 'int32' },
+                seqId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                subType: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtSubType'
+        },
+        CtSubTypeData: { type: 'object', properties: { seqId: { type: 'integer', format: 'int32' } }, title: 'CtSubTypeData' },
+        CtSubTypeReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtSubTypeData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtSubTypeReq' },
+        CtSubTypeRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtSubType' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtSubType' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtSubTypeRes'
+        },
+        CtSubTypeUpdateData: {
+            type: 'object',
+            properties: {
+                createBy: { type: 'string' },
+                createDt: { type: 'string' },
+                description: { type: 'string' },
+                mainType: { type: 'integer', format: 'int32' },
+                seqId: { type: 'integer', format: 'int32' },
+                status: { type: 'string' },
+                subType: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string' }
+            },
+            title: 'CtSubTypeUpdateData'
+        },
+        CtSubTypeUpdateReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtSubTypeUpdateData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtSubTypeUpdateReq'
+        },
+        CtSubTypeUpdateRes: {
+            type: 'object',
+            properties: { errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, seqId: { type: 'integer', format: 'int32' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtSubTypeUpdateRes'
+        },
+        CtTableCode: {
+            type: 'object',
+            properties: {
+                description: { type: 'string' },
+                displaySeq: { type: 'integer', format: 'int32' },
+                id: { $ref: '#/definitions/CtTableCodePK' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' }
+            },
+            title: 'CtTableCode'
+        },
+        CtTableCodeData: {
+            type: 'object',
+            properties: { ctCode: { type: 'string' }, ctType: { type: 'string' }, description: { type: 'string' }, displaySeq: { type: 'integer', format: 'int32' }, status: { type: 'string' }, updateBy: { type: 'string' } },
+            title: 'CtTableCodeData'
+        },
+        CtTableCodePK: { type: 'object', properties: { ctCode: { type: 'string' }, ctType: { type: 'string' } }, title: 'CtTableCodePK' },
+        CtTableCodeReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtTableCodeData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtTableCodeReq' },
+        CtTableCodeRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtTableCode' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtTableCodeTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtTableCodeRes'
+        },
+        CtTableCodeTO: {
+            type: 'object',
+            properties: {
+                description: { type: 'string' },
+                displaySeq: { type: 'integer', format: 'int32' },
+                id: { $ref: '#/definitions/CtTableCodeTOPK' },
+                status: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' }
+            },
+            title: 'CtTableCodeTO'
+        },
+        CtTableCodeTOPK: { type: 'object', properties: { ctCode: { type: 'string' }, ctType: { type: 'string' } }, title: 'CtTableCodeTOPK' },
+        CtVendor: {
+            type: 'object',
+            properties: {
+                birthDt: { type: 'string', format: 'date-time' },
+                cardNo: { type: 'string' },
+                cardTypeid: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                facebook: { type: 'string' },
+                genderId: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                line: { type: 'string' },
+                nationalityId: { type: 'string' },
+                phoneNo1: { type: 'string' },
+                phoneNo2: { type: 'string' },
+                raceId: { type: 'string' },
+                remark: { type: 'string' },
+                titleCode: { type: 'string' },
+                titleId: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                vendorFname: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' },
+                vendorLname: { type: 'string' },
+                vendorNameEng: { type: 'string' },
+                vendorType: { type: 'string' }
+            },
+            title: 'CtVendor'
+        },
+        CtVendorAddress: {
+            type: 'object',
+            properties: {
+                addno: { type: 'string' },
+                addressId: { type: 'integer', format: 'int32' },
+                alley: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                districtId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                moo: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceId: { type: 'integer', format: 'int32' },
+                street: { type: 'string' },
+                subdistrictId: { type: 'integer', format: 'int32' },
+                telno1: { type: 'string' },
+                telno2: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAddress'
+        },
+        CtVendorAddressData: {
+            type: 'object',
+            properties: {
+                addno: { type: 'string' },
+                addressId: { type: 'integer', format: 'int32' },
+                alley: { type: 'string' },
+                createBy: { type: 'string' },
+                districtId: { type: 'integer', format: 'int32' },
+                email: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                moo: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceId: { type: 'integer', format: 'int32' },
+                street: { type: 'string' },
+                subdistrictId: { type: 'integer', format: 'int32' },
+                telno1: { type: 'string' },
+                telno2: { type: 'string' },
+                updateBy: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAddressData'
+        },
+        CtVendorAddressReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtVendorAddressData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtVendorAddressReq'
+        },
+        CtVendorAddressRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtVendorAddress' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtVendorAddressTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAddressRes'
+        },
+        CtVendorAddressTO: {
+            type: 'object',
+            properties: {
+                addno: { type: 'string' },
+                addressId: { type: 'integer', format: 'int32' },
+                alley: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                districtId: { type: 'integer', format: 'int32' },
+                districtName: { type: 'string' },
+                email: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                moo: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceId: { type: 'integer', format: 'int32' },
+                provinceName: { type: 'string' },
+                street: { type: 'string' },
+                subdistrictId: { type: 'integer', format: 'int32' },
+                subdistrictName: { type: 'string' },
+                telno1: { type: 'string' },
+                telno2: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAddressTO'
+        },
+        CtVendorAddressUpdateRes: {
+            type: 'object',
+            properties: { addressId: { type: 'integer', format: 'int32' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'CtVendorAddressUpdateRes'
+        },
+        CtVendorAttach: {
+            type: 'object',
+            properties: {
+                attachDetail: { type: 'string' },
+                attachFileext: { type: 'string' },
+                attachFilename: { type: 'string' },
+                attachFileoriginalName: { type: 'string' },
+                attachId: { type: 'integer', format: 'int32' },
+                attachTypeid: { type: 'integer', format: 'int32' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                urlFile: { type: 'string' },
+                urlFileThumbnail: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAttach'
+        },
+        CtVendorAttachData: {
+            type: 'object',
+            properties: {
+                attachDetail: { type: 'string' },
+                attachFileext: { type: 'string' },
+                attachFilename: { type: 'string' },
+                attachFileoriginalName: { type: 'string' },
+                attachId: { type: 'integer', format: 'int32' },
+                attachTypeid: { type: 'integer', format: 'int32' },
+                createBy: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                updateBy: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAttachData'
+        },
+        CtVendorAttachReq: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/CtVendorAttachData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'CtVendorAttachReq'
+        },
+        CtVendorAttachRes: {
+            type: 'object',
+            properties: {
+                attachId: { type: 'integer', format: 'int32' },
+                data: { $ref: '#/definitions/CtVendorAttach' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtVendorAttach' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorAttachRes'
+        },
+        CtVendorData: {
+            type: 'object',
+            properties: {
+                birthDt: { type: 'string' },
+                cardNo: { type: 'string' },
+                cardTypeid: { type: 'string' },
+                createBy: { type: 'string' },
+                facebook: { type: 'string' },
+                genderId: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                line: { type: 'string' },
+                nationalityId: { type: 'string' },
+                phoneNo1: { type: 'string' },
+                phoneNo2: { type: 'string' },
+                raceId: { type: 'string' },
+                remark: { type: 'string' },
+                titleCode: { type: 'string' },
+                titleId: { type: 'string' },
+                updateBy: { type: 'string' },
+                vendorFname: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' },
+                vendorLname: { type: 'string' },
+                vendorNameEng: { type: 'string' },
+                vendorType: { type: 'string' }
+            },
+            title: 'CtVendorData'
+        },
+        CtVendorReq: { type: 'object', properties: { data: { $ref: '#/definitions/CtVendorData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'CtVendorReq' },
+        CtVendorRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/CtVendor' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/CtVendorTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' },
+                vendorId: { type: 'integer', format: 'int32' }
+            },
+            title: 'CtVendorRes'
+        },
+        CtVendorTO: {
+            type: 'object',
+            properties: {
+                birthDt: { type: 'string', format: 'date-time' },
+                cardNo: { type: 'string' },
+                cardTypeid: { type: 'string' },
+                createBy: { type: 'string' },
+                createDt: { type: 'string', format: 'date-time' },
+                facebook: { type: 'string' },
+                genderId: { type: 'string' },
+                isdeleted: { type: 'integer', format: 'int32' },
+                line: { type: 'string' },
+                nationalityId: { type: 'string' },
+                phoneNo1: { type: 'string' },
+                phoneNo2: { type: 'string' },
+                raceId: { type: 'string' },
+                remark: { type: 'string' },
+                titleCode: { type: 'string' },
+                titleId: { type: 'string' },
+                updateBy: { type: 'string' },
+                updateDt: { type: 'string', format: 'date-time' },
+                userName: { type: 'string' },
+                vendorFname: { type: 'string' },
+                vendorId: { type: 'integer', format: 'int32' },
+                vendorLname: { type: 'string' },
+                vendorNameEng: { type: 'string' },
+                vendorType: { type: 'string' },
+                vendorTypeName: { type: 'string' }
+            },
+            title: 'CtVendorTO'
+        },
+        PFindDeptNmCtlData: { type: 'object', properties: { pdeptId: { type: 'integer', format: 'int32' }, pdeptLev: { type: 'string' } }, title: 'PFindDeptNmCtlData' },
+        PFindDeptNmCtlParam: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/PFindDeptNmCtlData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } },
+            title: 'PFindDeptNmCtlParam'
+        },
+        PFindDeptNmCtlRes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/PFindDeptNmCtlSP' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/PFindDeptNmCtlSP' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'PFindDeptNmCtlRes'
+        },
+        PFindDeptNmCtlSP: { type: 'object', properties: { deptNmCtl: { type: 'string' } }, title: 'PFindDeptNmCtlSP' },
+        PostcodeListTO: {
+            type: 'object',
+            properties: {
+                districtCode: { type: 'string' },
+                districtDescription: { type: 'string' },
+                postCode: { type: 'string' },
+                provinceCode: { type: 'string' },
+                provinceDescription: { type: 'string' },
+                seq: { type: 'integer', format: 'int32' },
+                subdistrictCode: { type: 'string' },
+                subdistrictDescription: { type: 'string' }
+            },
+            title: 'PostcodeListTO'
+        },
+        PostcodeTOData: { type: 'object', properties: { postCode: { type: 'string' }, provinceCode: { type: 'string' } }, title: 'PostcodeTOData' },
+        PostcodeTOReq: { type: 'object', properties: { data: { $ref: '#/definitions/PostcodeTOData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'PostcodeTOReq' },
+        PostcodeTORes: {
+            type: 'object',
+            properties: {
+                data: { $ref: '#/definitions/PostcodeListTO' },
+                dataList: { type: 'array', items: { $ref: '#/definitions/PostcodeListTO' } },
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'PostcodeTORes'
+        },
+        UploadFileData: { type: 'object', properties: { fileBase64: { type: 'string' }, fileType: { type: 'string' }, isTempFile: { type: 'boolean' } }, title: 'UploadFileData' },
+        UploadFileReq: { type: 'object', properties: { data: { $ref: '#/definitions/UploadFileData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'UploadFileReq' },
+        UploadFileRes: {
+            type: 'object',
+            properties: {
+                errorcode: { type: 'integer', format: 'int32' },
+                errormessage: { type: 'string' },
+                filePath: { type: 'string' },
+                filePathThumbnail: { type: 'string' },
+                fileUrl: { type: 'string' },
+                fileUrlThumbnail: { type: 'string' },
+                filename: { type: 'string' },
+                filenameThumbnail: { type: 'string' },
+                totalCount: { type: 'integer', format: 'int32' }
+            },
+            title: 'UploadFileRes'
+        },
+        UserProfileData: { type: 'object', properties: { userId: { type: 'string' } }, title: 'UserProfileData' },
+        UserProfileReq: { type: 'object', properties: { data: { $ref: '#/definitions/UserProfileData' }, lang: { type: 'string' }, menuCode: { type: 'string' }, mode: { type: 'string' }, userInfo: { type: 'string' } }, title: 'UserProfileReq' },
+        UserProfileRes: {
+            type: 'object',
+            properties: { data: { $ref: '#/definitions/UserProfileTO' }, errorcode: { type: 'integer', format: 'int32' }, errormessage: { type: 'string' }, totalCount: { type: 'integer', format: 'int32' } },
+            title: 'UserProfileRes'
+        },
+        UserProfileTO: {
+            type: 'object',
+            properties: {
+                deptId: { type: 'integer', format: 'int32' },
+                deptLev: { type: 'string' },
+                deptNm: { type: 'string' },
+                name: { type: 'string' },
+                password: { type: 'string' },
+                positionName: { type: 'string' },
+                surName: { type: 'string' },
+                title: { type: 'string' },
+                titleDescription: { type: 'string' },
+                userId: { type: 'string' }
+            },
+            title: 'UserProfileTO'
         }
-      }
     }
-  }
+};

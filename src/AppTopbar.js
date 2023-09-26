@@ -2,9 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import AppMenu from './AppMenu';
+import Lottie from 'react-lottie-player';
+import * as logoIcon from 'logo.json';
 
 const AppTopbar = (props) => {
-
     const navigate = useNavigate();
 
     return (
@@ -15,8 +16,11 @@ const AppTopbar = (props) => {
                         <i className="pi pi-bars"></i>
                     </button>
 
-                    <button className="logo p-link" onClick={() => navigate('/')}>
+                    {/* <button className="logo p-link" onClick={() => navigate('/')}>
                         <img src={`assets/layout/images/logo-${props.colorScheme === 'light' ? 'dark' : 'light'}.png`} alt="logo" />
+                    </button> */}
+                    <button className="logo p-link" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+                        <Lottie loop animationData={logoIcon} play style={{ width: 60, height: 70 }} />
                     </button>
 
                     {/* <button className="p-link" onClick={() => navigate('/')}>
@@ -38,7 +42,6 @@ const AppTopbar = (props) => {
                     onRootMenuItemClick={props.onRootMenuItemClick}
                     onMenuItemClick={props.onMenuItemClick}
                 />
-
             </div>
         </>
     );

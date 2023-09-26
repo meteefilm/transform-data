@@ -3,7 +3,6 @@ import { classNames } from 'primereact/utils';
 import { RadioButton } from 'primereact/radiobutton';
 
 const AppConfig = (props) => {
-
     const componentThemes = [
         { name: 'blue', color: '#0F8BFD' },
         { name: 'green', color: '#0BD18A' },

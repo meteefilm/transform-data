@@ -7,7 +7,6 @@ import Lottie from 'react-lottie-player';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 
-
 const AppSubmenu = forwardRef((props, ref) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
@@ -205,18 +204,16 @@ const AppMenu = (props) => {
                     <img src={`assets/layout/images/connection.gif`} alt="logo" onClick={() => navigate('/')} />
                     connection.gif
                 </button> */}
-                <button className="logo p-link" style={{ cursor: 'pointer' }}  onClick={() => navigate('/')} >
-                        <Lottie 
-                            loop
-                            animationData={logoIcon}
-                            play
-                            style={{ width: 60, height: 70 }}
-                        />
-                        {/* <img src={`assets/layout/images/yip.png`} alt="logo" style={{ width: 50, height: 50 }}/> */}
-                    </button>
-                <button href="#" className="app-name p-link">
-                    <img src={`assets/layout/images/appname-${props.colorScheme === 'light' ? 'dark' : 'light'}.png`} alt="app-name" onClick={() => navigate('/')} />
+                <button className="logo p-link" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
+                    <Lottie loop animationData={logoIcon} play style={{ width: 60, height: 70 }} />
                 </button>
+
+                <div className="footer-logo-container ml-2">
+                    <span className="app-name font-bold">Transform Data</span>
+                </div>
+                {/* <button href="#" className="app-name p-link">
+                    <img src={`assets/layout/images/appname-${props.colorScheme === 'light' ? 'dark' : 'light'}.png`} alt="app-name" onClick={() => navigate('/')} />
+                </button> */}
                 <button href="#" className="menu-pin p-link" onClick={props.onToggleMenu}>
                     {isOverlay() && <span className="pi pi-times"></span>}
                     {isSidebar() && !props.sidebarStatic && props.pinActive && <span className="pi pi-unlock"></span>}

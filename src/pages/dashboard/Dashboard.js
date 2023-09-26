@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export default function Dashboard() {
-  return (
-    <div className="grid">
+    return (
+        <div className="grid">
             <div className="col-12">
                 <div className="card">
                     {/* <h5>Empty Page</h5>
@@ -10,5 +10,5 @@ export default function Dashboard() {
                 </div>
             </div>
         </div>
-  )
+    );
 }
