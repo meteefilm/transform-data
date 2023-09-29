@@ -10,7 +10,7 @@ import { onCopyText } from 'utils/CopyUtils';
 
 export default function Data() {
     const initData = {
-        appName: 'APP',
+        appName: '',
         text: ''
     };
     const [data, setData] = useState(initData);
@@ -44,8 +44,13 @@ export default function Data() {
             let lowerCase = _data.text.toLowerCase();
             if (type === 'rest') {
                 let appName = NullString(_data.appName) !== '' ? _data.appName.toUpperCase() + '_' : '';
-                newText = 'public final static String SERVICE_NAME_' + appName + upperCase + ' = "' + lowerCase + '";';
+                // newText = 'public final static String SERVICE_NAME_' + appName + upperCase + ' = "' + lowerCase + '";\n';
+                newText += 'public final static String SERVICE_NAME_' + appName + upperCase + '_FIND = "' + lowerCase + '_find";\n';
+                newText += 'public final static String SERVICE_NAME_' + appName + upperCase + '_LIST = "' + lowerCase + '_list";\n';
+                newText += 'public final static String SERVICE_NAME_' + appName + upperCase + '_UPDATE = "' + lowerCase + '_update";\n';
+
                 setTransDataView('text');
+                setLineHeight(6)
                 // setTypeTran('file')
             } else {
                 setTransDataView('list');

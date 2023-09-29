@@ -1,6 +1,6 @@
 {
     "name": "transform-data",
-    "version": "2.3.0",
+    "version": "2.5.0",
     "description": "transform to swagger doc to service list and transform data to help codeing spring boot",
     "homepage": ".",
     "author": "Metee Khumchat",

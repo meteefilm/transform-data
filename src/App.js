@@ -18,6 +18,7 @@ import AppTopbar from './AppTopbar';
 import Params from './pages/params/Params';
 import Service from './pages/service/Service';
 import ServiceParam from 'pages/service/ServiceParam';
+import SetEntity from 'pages/params/SetEntity';
 
 const App = (props) => {
     const [configActive, setConfigActive] = useState(false);
@@ -53,7 +54,10 @@ const App = (props) => {
         {
             label: 'Transform Params',
             icon: 'pi pi-server',
-            items: [{ label: 'Params', icon: 'pi pi-sort-alt', to: '/params' }]
+            items: [
+                { label: 'Params', icon: 'pi pi-sort-alt', to: '/params' },
+                { label: 'Set Entity', icon: 'pi pi-sort-alt', to: '/set-entity' }
+            ]
         },
         {
             label: 'Transform Service',
@@ -299,6 +303,7 @@ const App = (props) => {
                         <Route path="/request" element={<ServiceParam />} />
                         <Route path="/service" element={<Service />} />
                         <Route path="/params" element={<Params />} />
+                        <Route path="/set-entity" element={<SetEntity />} />
                         <Route path="/data" element={<Data />} />
                     </Routes>
                 </div>

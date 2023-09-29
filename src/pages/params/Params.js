@@ -35,7 +35,7 @@ export default function Params() {
         { value: 'Double', label: 'Double ' },
         { value: 'Boolean', label: 'Boolean ' },
         { value: 'Byte', label: 'Byte ' },
-        { value: 'long', label: 'long ' }
+        { value: 'Long', label: 'Long ' }
     ];
 
     // useEffect(() => {
@@ -65,14 +65,22 @@ export default function Params() {
         let newFile = '',
             newFileList = [],
             lineHeight = 4;
-        list.forEach((e) => {
+        if (type === 'res') {
+            let serviceUID = Math.floor(Math.random()*Math.pow(10, 16))
+            newFile += 'private static final long serialVersionUID = '+serviceUID+'L;\n\n';
+            lineHeight += 2;
+        }
+        list.forEach((e,i) => {
             let text = '';
             let lowerCase = e.text.toLowerCase();
             let camelCase = renderCamel(lowerCase);
             let param = 'private ' + e.type + ' ' + camelCase + ';';
             let column = '';
+            if(i === 0){
+                column += '@Id\n';
+            }
             if (e.type === 'Date') {
-                column = '@Temporal(TemporalType.TIMESTAMP)\n';
+                column += '@Temporal(TemporalType.TIMESTAMP)\n';
             }
             column += '@Column(name = "' + lowerCase.toUpperCase() + '")\n';
             column += param;
@@ -136,7 +144,7 @@ export default function Params() {
         let val = e.target && e.target.value !== undefined ? e.target.value : '';
         const id = key && key !== '' ? key : (e.target && e.target.id) || '';
         let newList = [...transDataList];
-        let findIndex = newList.findIndex((item) => item.i === rowData.i);
+        let findIndex = newList.findIndex((item) => item.id === rowData.id);
 
         if (findIndex > -1) {
             newList[findIndex] = {
