@@ -121,8 +121,8 @@ export default function Service() {
 
             let text = '';
             //** service name */
-            text += "const service =  { path: '" + serversName + "', token: '" + token + "'  }; \n";
-            text += "//const service = '" + serversName + "';\n";
+            text += "const service =  { path: '/" + serversName + "', token: '" + token + "'  }; \n";
+            text += "//const service = '/" + serversName + "';\n";
             text += '// or service config \n\n';
 
             //** Tags list */
